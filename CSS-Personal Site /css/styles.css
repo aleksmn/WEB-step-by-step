@@ -1,0 +1,19 @@
+body {
+    background-color: #EAF6F6;
+}
+
+hr {
+    /* background-color: white; */
+    border-top: dotted;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-width: 6px;
+    border-color: grey;
+    height: 0px;
+    /* width: 10%; */
+}
+
+.web {
+    text-decoration: underline;
+}
