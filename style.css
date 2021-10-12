@@ -27,6 +27,12 @@ ul {
 }
 
 li {
+    list-style-type: '⭐ ';
+    list-style-position: inside;
+}
+
+
+.sites > li {
     list-style-type: '🚀 ';
     list-style-position: inside;
 }
