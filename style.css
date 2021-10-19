@@ -5,6 +5,14 @@ body {
     margin: 3em auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: mediumvioletred;
+}
+
 h1, h2{
     color: #4287DF;
 }
@@ -23,18 +31,23 @@ h2 {
 }
 
 ul {
-    padding-left: 15px;
+    padding-left: 0px;
 }
 
 li {
     list-style-type: '⭐ ';
-    list-style-position: inside;
+    line-height: 1.6rem;
+    margin-left: 28px;
+    padding-left: 4px;
 }
-
 
 .sites > li {
     list-style-type: '🚀 ';
-    list-style-position: inside;
+
+}
+
+.tools > li {
+    list-style-type: '⛏️ ';
 }
 
 footer {
