@@ -2,19 +2,34 @@ body {
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 90%;
-    margin: 3em auto;
+    margin: 60px auto;
 }
 
+/* Links */
+
 a {
+    color: #0d52ac;
     text-decoration: none;
 }
 
-a:hover {
-    color: #468eeb;
+a:hover, a:focus {
+    text-decoration: underline dotted 3px;
+    cursor: pointer;
 }
 
+a:active {
+    color: #43638d;
+  }
+  
+a:visited {
+    color: #a31aa3;
+  }
+
+/* Headings */
+
 h1, h2{
-    color: #4287DF;
+    color: #4287DF; 
+    font-weight: bold;
 }
 
 h1 {
@@ -23,12 +38,26 @@ h1 {
 
 h2 {
    font-size: 1.2em;
-   margin-top: 10px;
+   margin-top: 14px;
+   margin-bottom: 18px;
 }
+
+.subheading {
+    display: block;
+    color: gray;
+    margin-left: 28px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+}
+
+/* Card */
 
 .card {
     margin: 40px 0;
 }
+
+/* Lists */
 
 ul {
     padding-left: 0px;
@@ -36,7 +65,7 @@ ul {
 
 li {
     list-style-type: '⭐ ';
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     margin-left: 28px;
     padding-left: 4px;
 }
@@ -50,9 +79,19 @@ li {
     list-style-type: '⛏️ ';
 }
 
+/* Footer */
+
 footer {
     font-size: 0.9em;
     color: #597bac;
     margin-top: 80px;
 
 }
+
+/* Debugging */
+
+/* 
+* {
+    outline: red solid 1px;
+} 
+*/
