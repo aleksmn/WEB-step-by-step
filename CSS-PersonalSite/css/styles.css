@@ -118,7 +118,9 @@ hr {
   }
   
 .btn:hover {
-    background: #209dc7;
+    background: #9cd3f3;
+    color: #108cb5;
+    border: 2px solid #108cb5;
     text-decoration: none;
   }
 
