@@ -10,10 +10,53 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="Михаил Александров">
 
-  <title>😎 Персональный сайт Михаила Александрова 😅</title>
+  <title>Персональный сайт Михаила Александрова</title>
 
   <style>
+    body {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     
+    .header {
+      text-align: center;
+      background-color: #2dbde9;
+      background-image: url(images/river.jpg);
+      background-size: cover;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .header h1 {
+      color: white;
+      font-size: 56px; 
+    }
+    .header p {
+      color: white;
+      font-size: 24px;
+      line-height: 1.4;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(55, 91, 175, 0.698);
+    }
+    .header-avatar {
+      margin: 40px;
+      filter: saturate(1.8) drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.329));;
+      
+
+    }
+
   </style>
 
 </head>
@@ -21,31 +64,24 @@
 <body>
   <!-- Урок 8. Синтаксис CSS -->
 
+  <div class="wrapper">
 
   <div class="header">
-    <center>
-      <h1 style="color: dodgerblue; font-size: 48px;">
-        Веб привет! 😅
+
+      <h1>
+        Веб привет! 🏄
       </h1>
 
-      <img src="images/profile-pic.jpg" style="border-radius: 50%; width: 160px;" alt="Фото Михаила">
+      <div class="header-avatar">
+        <img src="images/profile-pic.jpg" style="border-radius: 50%; width: 160px;" alt="Фото Михаила">  
+      </div>
 
       <p>
-        <span style="color: brown;">Персональный сайт</span> Михаила Александрова,<br>преподавателя веб-разработки.
+        <span style="font-style: italic;">Персональный сайт</span> Михаила&nbsp;Александрова,<br>преподавателя веб-разработки
       </p>
-    </center>
+
   </div>
 
-  <hr>
-
-  <div class="pictures">
-
-    <img src="images/cheese.png" alt="">
-    <img src="images/hamburger.png" alt="">
-    <img src="images/green-apple.png" alt="">
-    <img src="images/pizza.png" alt="">
-    
-  </div>
   
   <hr>
 
@@ -99,7 +135,7 @@
   <div class="footer" style="color: grey;">
     &copy; Михаил Александров, 2021
   </div>
-
+</div>
 </body>
 
 </html>
