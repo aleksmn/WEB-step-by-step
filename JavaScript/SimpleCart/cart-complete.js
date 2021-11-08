@@ -1,29 +1,22 @@
-// Проверяем, что страница загрузилась
-
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
-// Функция запуститься только когда страница будет полностью загружена
-
 function ready() {
-
-    // Кнопка "Удалить"
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItemButtons)
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
-    // Изменение количества
+
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[0]
+        var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
-    // Кнопка "Добавить в корзину"
+
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
@@ -33,7 +26,6 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-// Нажатие на кнопку "Купить"
 function purchaseClicked() {
     alert('Спасибо за покупку!')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -44,7 +36,6 @@ function purchaseClicked() {
 }
 
 function removeCartItem(event) {
-    // Удалить родителя родителя по клику на кнопку
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
@@ -68,11 +59,9 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
-// Добавление в корзину
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
-    // Проверяем, есть ли в корзине уже такой товар
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
@@ -92,31 +81,23 @@ function addItemToCart(title, price, imageSrc) {
             <button class="btn btn-danger" type="button">Удалить</button>
         </div>`
     cartRow.innerHTML = cartRowContents
-    cartItems.appendChild(cartRow)
-    // Добавить event listeners
+    cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
-
-
-// Обновить "Итого"
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
-
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        console.log(priceElement, quantityElement)
         var price = parseFloat(priceElement.innerText.replace('руб.', ''))
-        var quantity = parseInt(quantityElement.value)
+        var quantity = quantityElement.value
         total = total + (price * quantity)
-        console.log(total)
     }
-    // Округляем до двух знаков после запятой
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = total + ' руб.'
 }

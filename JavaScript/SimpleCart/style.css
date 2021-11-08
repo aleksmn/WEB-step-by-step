@@ -113,6 +113,10 @@ section h2 {
     margin-top: 10px;
 }
 
+.cart-column:last-child {
+    margin-right: 0;
+}
+
 .cart-row {
     display: flex;
 }
