@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="cart.js" async></script>
+  <title>Мир Кактусов</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Блог</a></li>
+      </ul>
+      <h1>Мир Кактусов</h1>
+    </nav>
+  </header>
+
+  <!-- Галерея товаров -->
+  <section>
+    <h2>Наши кактусы</h2>
+    <div class="shop-items">
+      <div class="shop-item">
+        <span class="shop-item-title">Кактус 1</span>
+        <img class="shop-item-image" src="images/cactus-1.jpg">
+        <div class="shop-item-details">
+          <span class="shop-item-price">299 руб.</span>
+          <button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+        </div>
+      </div>
+
+      <div class="shop-item">
+        <span class="shop-item-title">Кактус 2</span>
+        <img class="shop-item-image" src="images/cactus-2.jpg">
+        <div class="shop-item-details">
+          <span class="shop-item-price">199 руб.</span>
+          <button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+        </div>
+      </div>
+
+      <div class="shop-item">
+        <span class="shop-item-title">Кактус 3</span>
+        <img class="shop-item-image" src="images/cactus-3.jpg">
+        <div class="shop-item-details">
+          <span class="shop-item-price">249 руб.</span>
+          <button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+        </div>
+      </div>
+
+      <div class="shop-item">
+        <span class="shop-item-title">Кактус 4</span>
+        <img class="shop-item-image" src="images/cactus-4.jpg">
+        <div class="shop-item-details">
+          <span class="shop-item-price">599 руб.</span>
+          <button class="btn btn-primary shop-item-button" type="button">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Корзина -->
+  <section>
+    <h2>Корзина</h2>
+    <div class="cart-row">
+      <span class="cart-item cart-header cart-column">Товар</span>
+      <span class="cart-price cart-header cart-column">Цена</span>
+      <span class="cart-quantity cart-header cart-column">Количество</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+      <strong class="cart-total-title">Итого</strong>
+      <span class="cart-total-price">0 руб.</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">Купить</button>
+  </section>
+</body>
+
+</html>
