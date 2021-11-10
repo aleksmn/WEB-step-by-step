@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 x 3 Grid Squares Flexbox Pattern</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            background-color: lightblue;
+            width: 32%;
+            padding-bottom: 32%;
+            /* (100-32*3)/2 = 2% */
+            margin-bottom: 2%;
+            /* Так как элемент состоит только из паддинга
+            и не остается места для контента, нужно установить
+            "position: relative" а для вложенного элемента 
+            с контентом задать "position: absolute"  */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-content {
+            padding: 10px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="item-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti natus asperiores deleniti. Earum
+                voluptates sit, ab fugit placeat nihil, eum aut eaque id sed illo vitae neque magni a.
+            </div>
+        </div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">
+            <div class="item-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti natus asperiores deleniti. Earum
+                voluptates sit, ab fugit placeat nihil, eum aut eaque id sed illo vitae neque magni a.
+            </div>
+        </div>
+        <div class="item"></div>
+        <div class="item">
+            <div class="item-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad corrupti natus asperiores deleniti. Earum
+                voluptates sit, ab fugit placeat nihil, eum aut eaque id sed illo vitae neque magni a.
+            </div>
+        </div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
