@@ -2,17 +2,24 @@
     height: 400px;
     background-color: bisque;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .card {
     width: 200px;
-    height: 200px;
-    background-color: dodgerblue;
+    height: 60%;
+    background-color: rgb(113, 182, 250);
     margin: 10px;   
 }
 
 #card-1 {
+    background-color: lightgreen;
+
+    /* Добавляем картинку на фон */
     
+    /* background-image: url(kriper.jpg);
+    background-position: center;
+    background-size: cover; */
 }
