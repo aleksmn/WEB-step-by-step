@@ -1,0 +1,74 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wrapper > * {
+  padding: 20px;
+  margin: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: #ff8dd3;
+  padding: 40px;
+  text-align: center;
+}
+
+.footer {
+  background: #769fbe;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  height: 400px;
+  text-align: left;
+  background: #ffc078;
+}
+
+.aside-1 {
+  background: #7aff97;
+}
+
+.aside-2 {
+  background: #6cbfff;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    /* Доступное пространство будет разделено поровну 
+    между элеметами с классом aside */
+    flex: 1;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    /* .main будет в 3 раза шире, чем .aside */
+    flex: 3;
+  }
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}
+
+/* 
+@media all and (min-width: 1200px) {
+  .wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+*/
