@@ -43,8 +43,8 @@ footer {
 /* Button */
 
 .btn {
-  background-color: #9C060C;
-  border: none;
+  background-color: #3eaa86;
+  border: 1px solid #2dc995;
   border-radius: 5px;
   color: white;
   padding: 16px 52px;
@@ -61,5 +61,9 @@ footer {
 }
 
 .btn:hover {
-  background-color: #5f0407;
+  background-color: #4ECCA3;
+}
+
+.btn:active {
+  background-color: #389173;
 }
