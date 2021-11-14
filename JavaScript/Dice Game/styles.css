@@ -39,3 +39,27 @@ footer {
   font-family: 'Indie Flower', cursive;
 
 }
+
+/* Button */
+
+.btn {
+  background-color: #9C060C;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.2s;
+  margin-top: 60px;
+}
+
+.btn:hover {
+  background-color: #5f0407;
+}
