@@ -1,0 +1,88 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: brown;
+  font-size: 20px;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  text-align: center;
+  background-color: #2dbde9;
+  background-image: url(images/river.jpg);
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around ;
+
+}
+
+.header h1 {
+  color: white;
+  font-size: 56px;
+  text-shadow: 1px 2px rgb(252, 26, 203);
+}
+
+.header p {
+  color: white;
+  font-size: 24px;
+  line-height: 1.4;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(55, 91, 175, 0.698);
+  text-shadow: 1px 2px rgb(41, 26, 252);
+}
+
+.header-avatar {
+  margin: 40px;
+  filter: saturate(1.6) drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.329)) brightness(1.2);
+}
+
+#welcome {
+  background-color: rgb(53, 159, 230);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 8px;
+  margin-bottom: 20px;
+}
+
+.pictures {
+  display: flex;
+  justify-content: space-around;
+}
+
+figcaption {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 6px dotted rgb(52, 199, 236);
+  margin: 40px 0;
+}
+
+#web {
+  color: rgb(235, 99, 20);
+  text-decoration: underline;
+  font-size: larger;
+}
