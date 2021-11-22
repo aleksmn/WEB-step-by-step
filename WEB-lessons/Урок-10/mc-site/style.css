@@ -1,0 +1,73 @@
+body {
+	background-image: url("images/fon.png");
+	color: white;
+	font-family: Roboto, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.enter-menu {
+	text-align: right;
+}
+
+.enter-menu a {
+	color: white;
+	margin-left: 10px;
+}
+
+.menu_header {
+
+	margin: 10px 0;
+	display: flex;
+	
+}
+
+.menu_item {
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+}
+
+
+.welcome { 
+	background-color:black;	
+	position: relative;
+}
+
+
+.welcome-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about_text {
+	font-size: 22px;
+	line-height: 1.2em;
+	text-shadow: 2px 3px 4px #000000;
+	max-width: 500px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 25%;
+}
+
+.welcome-buttons {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.welcome-buttons button {
+	width: 160px;
+	text-align: left;
+	font-weight: bold;
+}
+
+button img {
+	vertical-align: middle;
+}
