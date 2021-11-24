@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Relative Position</title>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    .box-content {
+      color: rgb(28, 238, 185);
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .red {
+      background-color: red;
+      position: relative;
+      top: 0px;
+      left: 200px;
+    }
+
+    .green {
+      background-color: green;
+      position: relative;
+      top: -100px;
+      left: 100px;
+    }
+
+    .yellow {
+      background-color: yellow;
+      position: relative;
+      top: -200px;
+      left: 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class='box red'>
+    <div class="box-content">3</div>
+  </div>
+
+  <div class='box green'>
+    <div class="box-content">2</div>
+  </div>
+
+  <div class='box yellow'>
+    <div class="box-content">1</div>
+  </div>
+
+</body>
+
+</html>
