@@ -24,13 +24,24 @@ header {
     font-size: 20px; 
 }
 
-.sale {
-    text-align: center;
-    width: 200px;
-    margin: 20px auto 0; 
-}
-
-.sale p {
+.price-text {
+    font-size: 18px;
     background-color: red;
     color: white;
 }
+
+.header-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.header-image {
+    margin: 0 30px;
+    text-align: center;
+}
+
+
+
+
