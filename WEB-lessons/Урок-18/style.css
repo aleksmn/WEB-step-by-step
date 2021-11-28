@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4fc05;
+    padding: 20px 0;
+
+}
+
+.header-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    font-size: 40px;
+}
+
+.price sup {
+    font-size: 20px; 
+}
+
+.price-text {
+    font-size: 18px;
+    background-color: red;
+    color: white;
+}
+
+.header-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.header-image {
+    margin: 0 30px;
+    text-align: center;
+}
+
+/* Main */
+
+main {
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 4px;
+}
+
+.main-items {
+    display: flex;
+    justify-content: center;
+}
