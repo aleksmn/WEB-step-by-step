@@ -78,9 +78,43 @@
             <img src="images/money.jpg" width="200" height="200">
         </div>
     </section>
+    <br><br>
 
-    <br><br><br>
+    <!-- Заказ -->
 
+    <section class="order">
+        <h2>ВАШ ЗАКАЗ</h2>
+        <div class="yellow">
+            <h3>Корзина пуста</h3>
+        </div>
+        <div class="grey">В корзине пусто!</div>
+    </section>
+
+    <!-- Форма для оформления заказа -->
+
+    <section class="order-form">
+        <form action="/action-page.php">
+            <h2>Оформление заказа</h2>
+            <label for="fname">Имя</label><br>
+            <input type="text" id="fname" name="fame" placeholder="Имя" required><br>
+
+            <label for="lname">Фамилия</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Фамилия"  required><br>
+
+            <label for="email">Электронная почта</label><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+            <label for="phone">Телефон</label><br>
+            <input type="text" id="phone" name="phone" placeholder="Номер телефона" required><br>
+        
+            <div class="payment-text">Оплата онлайн</div>
+            <hr>
+            <button>Перейти к оплате</button>
+        </form>
+
+    </section>
+
+<br><br>
 </body>
 
 </html>

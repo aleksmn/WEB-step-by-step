@@ -106,3 +106,78 @@ main h2 {
     object-fit: cover;
     object-position: center;
 }
+
+
+/* Заказ */
+
+.order {
+    margin-top: 50px;
+    margin-left: 45px;
+}
+
+.order .yellow {
+    background-color: yellow;
+}
+
+.order .yellow h3 {
+    padding: 20px 0 20px 20px;
+}
+
+.order .grey {
+    color: rgb(70, 70, 70);
+}
+
+/* Форма для оформления заказа */
+
+.order-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.order-form input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: 2px 1px 5px 0.5px black;
+}
+
+.order-form label {
+    font-weight: bold;
+}
+
+.order-form hr {
+    width: 107%;
+    border: none;
+    box-shadow: 2px 2px 5px 0.5px black;
+    margin-bottom: 24px;
+}
+
+.order-form .payment-text {
+    font-weight: bold;
+    color: rgb(50, 184, 43);
+    margin-top: 16px;
+}
+
+
+/* Кнопка заказа */
+
+.order-form button {
+    background: #34d94d;
+    background-image: linear-gradient(to bottom, #34d94d, #32b82b);
+    border: 1px solid rgb(51, 189, 51);
+    border-radius: 12px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+  }
+  
+  .order-form button:hover {
+    background: #3cfc69;
+    background-image: linear-gradient(to bottom, #3cfc69, #34d93f);
+    text-decoration: none;
+  }
