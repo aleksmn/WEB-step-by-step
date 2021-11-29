@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4fc05;
+    padding: 20px 0;
+
+}
+
+.header-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    font-size: 40px;
+}
+
+.price sup {
+    font-size: 20px;
+}
+
+.price-text {
+    font-size: 18px;
+    background-color: red;
+    color: white;
+}
+
+.header-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.header-image {
+    margin: 0 30px;
+    text-align: center;
+}
+
+/* Main */
+
+main {
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 4px;
+}
+
+.main-items {
+    display: flex;
+    justify-content: center;
+}
+
+.main-item {
+    margin: 30px 20px;
+}
+
+.main-item button {
+    background-color: rgb(238, 38, 38);
+    color: white;
+    border: 1px solid rgb(93, 3, 3);
+    margin-top: 10px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+.main-item button:hover {
+    background-color: rgb(175, 26, 26);
+}
+
+/* Купон "Розыгрыш" */
+
+.kupon {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(228, 36, 36);
+}
+
+.kupon-text {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2em;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.kupon-text .accent {
+    color: yellow;
+    text-transform: uppercase;
+}
+
+/*  Object-fit property
+    https://www.w3schools.com/css/css3_object-fit.asp */
+
+.kupon-image img {
+    padding: 0px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
