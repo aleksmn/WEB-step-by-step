@@ -1,3 +1,5 @@
+/* Разрабатываем дизайн страницы для смартфона */
+
 .wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -35,6 +37,8 @@
   background: #6cbfff;
 }
 
+/* Медиазапрос для экрана планшета */
+
 @media all and (min-width: 600px) {
   .aside {
     /* Доступное пространство будет разделено поровну 
@@ -42,6 +46,8 @@
     flex: 1;
   }
 }
+
+/* Медиазапрос для больших экранов */
 
 @media all and (min-width: 800px) {
   .main {
