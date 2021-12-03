@@ -19,7 +19,8 @@ h2 {
 .header {
     text-align: center;
     background-color: #2dbde9;
-    background-image: url(images/river.jpg);
+    background-image: linear-gradient(rgb(90, 90, 90), rgba(0, 0, 0, 0.301)), url(images/river.jpg);
+    background-blend-mode: overlay;
     background-size: cover;
     background-position: top;
     padding: 20px;
