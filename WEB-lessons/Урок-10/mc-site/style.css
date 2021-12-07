@@ -22,14 +22,14 @@ header {
 	margin-left: 10px;
 }
 
-.menu_header {
+.menu-header {
 
 	margin: 10px 0;
 	display: flex;
 	
 }
 
-.menu_item {
+.menu-item {
 	display: flex;
 	margin-left: 20px;
 	align-items: center;
@@ -48,7 +48,7 @@ header {
 	margin-right: auto;
 }
 
-.about_text {
+.about-text {
 	font-size: 22px;
 	line-height: 1.2em;
 	text-shadow: 2px 3px 4px #000000;

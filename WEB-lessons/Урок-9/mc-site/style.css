@@ -10,12 +10,12 @@ header {
 	align-items: center;
 }
 
-.menu_header {
+.menu-header {
 	display: flex;
 	
 }
 
-.menu_item {
+.menu-item {
 	display: flex;
 	margin-left: 20px;
 	align-items: center;
