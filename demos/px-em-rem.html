@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>px, em, rem</title>
+
+    <style>
+
+        div {
+            margin-top: 10px;
+            background-color: bisque;
+        }
+
+        .px {
+            font-size: 16px;
+            height: 16px;
+        }
+
+        .em {
+            font-size: 1em;
+        }
+
+        .rem {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="px">Размер задан в единицах px.</div>
+
+    <div class="em">
+        Размер задан в единицах em
+        <div style="font-size: 1.4em;">
+            Увеличенные текст в em
+            <div style="font-size: 1.4em;">
+                Увеличенный текст в em
+            </div>
+        </div>
+    </div>
+
+    <div class="rem">
+        Размер задан в единицах rem
+        <div style="font-size: 1.4rem;">
+            Увеличенные текст в rem
+            <div style="font-size: 1.4rem;">
+                Увеличенный текст в rem
+            </div>
+        </div>
+    </div>
+
+    <div class="px">Высота этого контейнера 16 px = 1em (исходное) = 1rem (по умолчанию)</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+        :root {
+            /* Задаем переменные цветов */
+            --color-bg: white;
+            --color-text: rgb(8, 27, 136);
+            --color-primary: rgb(187, 73, 207);
+            --color-secondary: rgb(255, 202, 104);
+            /* Размер шрифта */
+            --base-font-size: 18px;
+        }
+
+        body {
+            background-color: var(--color-secondary);
+            font-size: var(--base-font-size);
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        h1 {
+            color: var(--color-primary);
+            font-size: calc(var(--base-font-size) * 1.4);
+        }
+
+        button {
+            background-color: var(--color-primary);
+            font-weight: bold;
+            color: white;
+            padding: 4px 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Переменные в CSS</h1>
+
+        <p>
+            CSS переменные (пользовательские CSS-свойства) это сущности, определяемые автором CSS, хранящие конкретные
+            значения, которые можно повторно использовать в документе. Они устанавливаются с использованием custom
+            property нотации (например. --main-color: black;) и доступны через функцию var() (например. color:
+            var(--main-color);) .
+        </p>
+
+        <button>Узнать больше</button>
+
+    </div>
+
+</body>
+
+</html>
