@@ -1,31 +1,44 @@
-<h1>Контакты</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>Email: mymail@gmail.com</p>
-<p>Тел.: +7(123)640-12-34</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+</head>
 
-<h3>Обратная связь</h3>
-<form>
-    <label>Оценка от 1 до 10:</label>
-    <input type="range" min="1" max="10"><br>
-    <label>Любимый цвет:</label>
-    <input type="color"><br>
-    <label>Дата рождения:</label>
-    <input type="date"><br>
-    <label>Хотите получать email уведомления?</label>
-    <input type="checkbox" name="subscibe"><br>
-</form>
-<hr>
+<body>
+    <h1>Контакты</h1>
 
-<h3>Обратная связь</h3>
-<form action="mailto:mymail@gmail.com" method="post" enctype="text/plain">
-    <label>Имя:</label>
-    <input type="text" name="username" placeholder="Введите ваше имя"><br>
-    <label>Email:</label>
-    <input type="email" name="useremail" placeholder="Электронная почта"><br>
-    <label>Сообщение:</label><br>
-    <textarea name="message" id="" cols="30" rows="10"></textarea><br>
+    <p>Email: mymail@gmail.com</p>
+    <p>Тел.: +7(123)640-12-34</p>
 
-    <input type="submit" value="Отправить">
+    <h3>Обратная связь</h3>
+    <form>
+        <label>Оценка от 1 до 10:</label>
+        <input type="range" min="1" max="10"><br>
+        <label>Любимый цвет:</label>
+        <input type="color"><br>
+        <label>Дата рождения:</label>
+        <input type="date"><br>
+        <label>Хотите получать email уведомления?</label>
+        <input type="checkbox" name="subscibe"><br>
+    </form>
+    <hr>
 
-</form>
+    <h3>Обратная связь</h3>
+    <form action="mailto:mymail@gmail.com" method="post" enctype="text/plain">
+        <label>Имя:</label>
+        <input type="text" name="username" placeholder="Введите ваше имя"><br>
+        <label>Email:</label>
+        <input type="email" name="useremail" placeholder="Электронная почта"><br>
+        <label>Сообщение:</label><br>
+        <textarea name="message" id="" cols="30" rows="10"></textarea><br>
 
+        <input type="submit" value="Отправить">
+
+    </form>
+</body>
+
+</html>
