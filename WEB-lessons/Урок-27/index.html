@@ -3,12 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Модальное окно</title>
-
     <link rel="stylesheet" href="style.css">
-
-
 </head>
 
 <body>
@@ -25,37 +21,12 @@
         <div class="modal-content">
             <!-- Кнопка для закрытия окна (x) -->
             <span class="close">&times;</span>
-            <p>Привет из модального окна</p>
+            <p>Привет из модального окна!</p>
         </div>
 
     </div>
 
-    <script>
-
-        var modal = document.getElementById("myModal");
-
-        var btn = document.getElementById("myBtn");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        // Открыть модальное окно
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // По клику на <span> (x), закрыть модальное окно
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // По клику на свободное место, закрыть модальное окно
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
