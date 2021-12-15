@@ -1,0 +1,11 @@
+.big-title {
+   font-size: 6rem;
+   color: rgb(149, 7, 149); 
+   font-family: cursive;
+}
+
+.red-btn {
+    background-color: red;
+    color: white;
+    padding: 2px 8px;
+}
