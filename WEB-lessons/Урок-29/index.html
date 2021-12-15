@@ -51,6 +51,18 @@
                     star.src = "star_1.png";
                 }
             }
+
+            // если звезда заполена
+            else {
+
+                for (let i=0; i<ids.length; i++) {
+                    if (i > k) {
+                        id = ids[i];
+                        document.getElementById(id).src = "star_2.png";
+
+                    }
+                }
+            }
         }
 
         function resetRating() {
@@ -59,7 +71,6 @@
             var ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
 
             for (let i = 0; i < ids.length; i++) {
-                console.log(i)
                 let id = ids[i];
                 document.getElementById(id).src = "star_2.png";
             }
