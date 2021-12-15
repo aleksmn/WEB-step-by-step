@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг сайта</title>
+    <style>
+        h1 {
+            color: rgb(12, 117, 221);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Оцени наш сайт!</h1>
+
+    <div class="rating">
+        <img src="star_2.png" width="75" id="star-1" onmouseenter="star(1)">
+        <img src="star_2.png" width="75" id="star-2" onmouseenter="star(2)">
+        <img src="star_2.png" width="75" id="star-3" onmouseenter="star(3)">
+        <img src="star_2.png" width="75" id="star-4" onmouseenter="star(4)">
+        <img src="star_2.png" width="75" id="star-5" onmouseenter="star(5)">
+    </div>
+
+    <p onclick="resetRating()">Сброс</p>
+
+    <button>Сохранить</button>
+
+    <p id="rating-result"></p>
+
+
+    <script>
+        function star(k) {
+            // k - номер звезды на которую навел пользователь
+            k = k - 1;
+
+            var ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
+
+            let id = ids[k]
+            let star = document.getElementById(id);
+
+            // если звезда пустая
+            if (star.src.indexOf("star_2.png") > -1) {
+
+                // то меняем ее на заполненную
+                for (let i = 0; i <= k; i++) {
+                    id = ids[i]
+                    star = document.getElementById(id);
+                    star.src = "star_1.png";
+                }
+            }
+        }
+
+        function resetRating() {
+
+            // сбросить рейтинг
+            var ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
+
+            for (let i = 0; i < ids.length; i++) {
+                console.log(i)
+                let id = ids[i];
+                document.getElementById(id).src = "star_2.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
