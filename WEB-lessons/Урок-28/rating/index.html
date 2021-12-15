@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг сайта</title>
+    <style>
+        h1 {
+            color: rgb(12, 117, 221);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://github.com/gellerby/jquery-emoji-ratings -->
+    <h1>Оцени наш сайт!</h1>
+
+    <div id="rating"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="jquery.emojiRatings.min.js"></script>
+
+    <script>
+
+        options = {
+            emoji: 'star',
+            // emoji: 'smile',
+            count: 5,
+            fontSize: 40,
+            inputName: 'rating',
+            onUpdate: function () { }
+        }
+
+        $('#rating').emojiRating(options);
+    </script>
+</body>
+
+</html>
