@@ -134,13 +134,12 @@ button img {
 
 .slider-image {
 	display: flex;
+	align-items: center;
 }
 
 .arrow {
 	font-size: 50px;
 	color: white;
-	padding-top: 45%;
-	padding-bottom: 45%;
 	padding-left: 20px;
 	padding-right: 20px;
 }
