@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h2>Скоро подарок!</h2>
+
+        <!-- Кнопка для открытия модального окна -->
+        <!-- <button id="myBtn" onclick="showModal()">Модальное окно</button> -->
+
+        <div class="gift-btn" id="gift-btn" onclick="showModal()" style="opacity: 0;">
+            <img src="images/podarok.png" width="150">
+        </div>
+
+        <!-- Модальное окно -->
+        <div id="myModal" class="modal">
+
+            <!-- Содержимое модального окна -->
+            <div class="modal-content">
+                <!-- Кнопка для закрытия окна (x) -->
+                <span class="close">&times;</span>
+                <p>Привет из модального окна! Вам подарок!</p>
+            </div>
+
+        </div>
+
+    </header>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
