@@ -2,87 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма обратной связи</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма обратной связи</title>
 
-    <style>
-        .message-form {
-            border: 2px dotted rgb(30, 128, 104);
-            max-width: 300px;
-            border-radius: 6px;
-            padding: 20px;
-        }
+  <style>
+    .message-form {
+      border: 2px dotted rgb(30, 128, 104);
+      max-width: 300px;
+      border-radius: 6px;
+      padding: 20px;
+    }
 
-        .message-form legend {
-            font-weight: bold;
-        }
+    .message-form fieldset {
+      border: 4px double rgb(11, 114, 8);
+    }
 
-        .form-input {
-            background-color: rgb(209, 209, 209);
-            border: 1px solid rgb(71, 71, 71);
-            padding: 10px;
-            width: 90%;
-        }
+    .message-form legend {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(13, 98, 13);
+    }
 
-        .label-text {
-            display: block;
-            margin-top: 5px;
-        }
+    .message-input {
+      background-color: rgb(240, 240, 240);
+      border: 1px solid rgb(57, 144, 7);
+      padding: 10px;
+      width: 90%;
+    }
+
+    .label-text {
+      display: block;
+      margin-top: 16px;
+      font-weight: bold;
+      font-size: 16px;
+    }
 
 
-        .message-form button {
-            padding: 9px;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            background-color: rgb(40, 167, 135);
-            border: 1px solid black;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 8px;
-        }
+    .message-form button {
+      padding: 9px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: rgb(40, 167, 135);
+      border: 1px solid black;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8px;
+    }
 
-        .message-form button:hover {
-            background-color: rgb(30, 128, 104);
-        }
-
-    </style>
+    .message-form button:hover {
+      background-color: rgb(30, 128, 104);
+    }
+  </style>
 
 </head>
 
 <body>
-    <!-- Урок 14. Форма обратной связи -->
+  <!-- Урок 14. Форма обратной связи -->
 
-    <form class="message-form" action="/action-page.php">
+  <form class="message-form" action="/action-page.php">
 
-        <fieldset>
+    <fieldset>
 
-            <legend>Обратная связь</legend>
-
-
-            <label>
-                <span class="label-text">Ваше имя:</span>
-                <input class="message-input" type="text" name="username" required><br>
-            </label>
-
-            <label>
-                <span class="label-text">Электронная почта:</span>
-                <input class="message-input" type="email" name="useremail" required><br>
-            </label>
-
-            <label>
-                <span class="label-text">Комментарий:</span>
-                <textarea class="message-input" name="comment" cols="30" rows="10"></textarea><br>
-            </label>
-
-                <button type="submit">Отправить отзыв</button>
+      <legend>Обратная связь</legend>
 
 
-        </fieldset>
-    </form>
+      <label>
+        <span class="label-text">Ваше имя:</span>
+        <input class="message-input" type="text" name="username" required>
+      </label>
+
+      <label>
+        <span class="label-text">Электронная почта:</span>
+        <input class="message-input" type="email" name="useremail" required>
+      </label>
+
+      <label>
+        <span class="label-text">Комментарий:</span>
+        <textarea class="message-input" name="comment" cols="30" rows="10"></textarea><br>
+      </label>
+
+      <button type="submit">Отправить отзыв</button>
+
+
+    </fieldset>
+
+  </form>
 
 </body>
 
