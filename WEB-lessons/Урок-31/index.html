@@ -49,14 +49,14 @@
       </fieldset>
     </p>
     <p>
-      <label for="n1">Сколько вам лет?</label>
+      <label for="age">Сколько вам лет?</label>
 
-      <input type="number" min="12" max="120" step="1" id="n1" name="age"
+      <input type="number" min="12" max="120" step="1" id="age" name="age"
              pattern="\d+">
     </p>
     <p>
-      <label for="t1">Из какой вы страны?<abbr title="Обязательно для заполнения" aria-label="required">*</abbr></label>
-      <input type="text" id="t1" name="fruit" list="l1" required
+      <label for="country">Из какой вы страны?<abbr title="Обязательно для заполнения" aria-label="required">*</abbr></label>
+      <input type="text" id="country" name="fruit" list="l1" required
              pattern="[Rr]ussia|[Uu][Ss][Aa]|[Cc]anada|[Gg]ermany">
       <datalist id="l1">
         <option>Russia</option>
@@ -66,17 +66,21 @@
       </datalist>
     </p>
     <p>
-      <label for="t2">Введите адрес электронной почты</label>
-      <input type="email" id="t2" name="email">
+      <label for="email">Введите адрес электронной почты</label>
+      <input type="email" id="email" name="email">
     </p>
     <p>
-      <label for="t3">Оставьте комментарий</label>
-      <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+      <label for="comment">Оставьте комментарий</label>
+      <textarea id="comment" name="msg" maxlength="140" rows="5"></textarea>
     </p>
     <p>
-      <button>Отправить</button>
+      <button onclick="valid_form()">Отправить</button>
     </p>
   </form>
+
+  <div id="data"></div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
