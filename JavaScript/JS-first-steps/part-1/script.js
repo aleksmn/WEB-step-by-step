@@ -35,7 +35,6 @@ console.log(typeof firstName);
 console.log(typeof human);
 
 
-
 ////// Область видимости ///////
 
 {
@@ -44,14 +43,72 @@ console.log(typeof human);
 }
 
 console.log(b);
-let a = "новое значение";
+// let a = "новое значение";  // SyntaxError: Identifier 'a' has already been declared
+
 
 let x = 7;
 let x = 'hi';   //// SyntaxError: Identifier 'x' has already been declared
 
 var y = 8;
-var y = "hello";
+var y = "hello"; //// no error
 
 console.log(y);
 
+
+
+
+////// const и let ////////
+
+let age = 35;
+age = 30;
+
+const birthYear = 1991;
+// birthYear = 1990;  // TypeError: Assignment to constant variable.
+
+// const job;  //  SyntaxError: Missing initializer in const declaration
+
+
+const a = ['a', 'b', 'c'];
+a[3] = 'hello!';
+console.log(a);
+
+
+
+
+////// Основные операторы /////////
+
+
+
+const ageJohn = 2022 - 1995;
+const ageJane = 2022 - 1998;
+
+console.log(ageJohn, ageJane);
+
+console.log(ageJohn * 2);
+
+console.log(2 ** 3);
+
+console.log('Михаил' + ' ' + 'Александров');
+
+let x = 10 + 5; // 15
+x += 10;        // 25
+x *= 4;         // 100
+x++;            // 101
+console.log(x);
+
+
+// Сравнение
+console.log(ageJohn > ageJane); // true
+console.log(ageJane >= 18);     // true
+
+const isFullAge = ageJane >= 18;
+
+console.log(isFullAge);
+
 */
+
+//// Приоритет операторов:
+//// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+
+
