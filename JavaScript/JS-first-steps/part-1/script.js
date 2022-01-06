@@ -180,10 +180,10 @@ console.log(bmiMark, bmiJohn, markHigherBMI);
 
 /////// Решение с использованием функции
 /*
-const mark_mass = 78;
-const mark_height = 1.69;
-const john_mass = 95;
-const john_height = 1.88;
+const weightMark = 78;
+const heightMark = 1.69;
+const weightJohn = 95;
+const heightJohn = 1.88;
  
 function calculateBMI(mass, height) {
   let bmi = 0;
@@ -192,14 +192,14 @@ function calculateBMI(mass, height) {
   return bmi.toFixed(2);
 }
  
-markBMI = calculateBMI(mark_mass, mark_height);
+markBMI = calculateBMI(weightMark, heightMark);
  
-johnBMI = calculateBMI(john_mass, john_height);
+johnBMI = calculateBMI(weightJohn, heightJohn);
  
 console.log(
-  `Вес Марка ${mark_mass} кг, его рост ${mark_height} м, его BMI: ${markBMI}`
+  `Вес Марка ${weightMark} кг, его рост ${heightMark} м, его BMI: ${markBMI}`
 );
 console.log(
-  `Вес Джона ${john_mass} кг, его рост ${john_height} м, его BMI: ${johnBMI}`
+  `Вес Джона ${weightJohn} кг, его рост ${heightJohn} м, его BMI: ${johnBMI}`
 );
 */
