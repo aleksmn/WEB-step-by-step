@@ -173,7 +173,7 @@ const markHigherBMI = bmiMark > bmiJohn;
 console.log(bmiMark, bmiJohn, markHigherBMI);
 
 ///// С округлением:
-// console.log(bmiMark.toPrecision(4), bmiJohn.toPrecision(4), markHigherBMI);
+// console.log(bmiMark.toFixed(2), bmiJohn.toFixed(2), markHigherBMI);
 
 */
 
