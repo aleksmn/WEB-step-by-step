@@ -180,4 +180,16 @@ main h2 {
     background: #3cfc69;
     background-image: linear-gradient(to bottom, #3cfc69, #34d93f);
     text-decoration: none;
-  }
+}
+
+  /* Техподдержка */
+
+.helper {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.helper:hover {
+    cursor: pointer;
+}
