@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #mobs {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        #mobs td,
+        #mobs th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #mobs tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #mobs tr:hover {
+            background-color: #ddd;
+        }
+
+        #mobs th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgb(10, 182, 119);
+            color: white;
+        }
+
+        #mobs td.total {
+            text-align: right;
+        }
+
+        #mobs caption {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: left; 
+            font-weight: bold;
+            color: rgb(10, 182, 119);
+        }
+    </style>
+
+</head>
+
+<body>
+    <table id="mobs">
+        <caption>Таблица мобов</caption>
+        <tr>
+            <th>№</th>
+            <th>Имя моба</th>
+            <th>Сила</th>
+            <th>Количество</th>
+            <th>Сложность моба</th>
+            <th>Вероятность встретить</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Зомби</td>
+            <td>5</td>
+            <td>15 шт</td>
+            <td>10</td>
+            <td>50%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Паук</td>
+            <td>10</td>
+            <td>17 шт</td>
+            <td>15</td>
+            <td>50%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Крипер</td>
+            <td>25</td>
+            <td>20 шт</td>
+            <td>20</td>
+            <td>50%</td>
+        </tr>
+        <tr>
+            <!-- Задаем количество ячеек по горизонтали -->
+            <td colspan="3" class="total">Итого мобов:</td>
+            <td>52 шт.</td>
+            <td class="total">Средняя вероятность:</td>
+            <td>50%</td>
+        </tr>
+    </table>
+</body>
+
+</html>
