@@ -203,3 +203,64 @@ console.log(
   `Вес Джона ${weightJohn} кг, его рост ${heightJohn} м, его BMI: ${johnBMI}`
 );
 */
+
+
+/*
+//// Строки
+
+const firstName = 'Владимир';
+const job = 'программист';
+const birthYear = 1995;
+const year = 2022;
+
+let vlad = "Меня зовут " + firstName + ", я " + job;
+vlad += ", мне " + (year - birthYear) + " лет."
+
+console.log(vlad);
+
+//// Использование шаблона строки: 
+
+let vladNew = `Меня зовут ${firstName}, мне ${year - birthYear} лет, я ${job}!`;
+console.log(vladNew);
+
+console.log(`Переход 
+на 
+другую
+строку!`);
+
+
+
+
+//// Принятие решений (если / иначе)
+
+const age = 13;
+
+if (age >= 18) {
+  console.log("Можно получить водительские права :)");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Получать права рано, осталось ждать лет: ${yearsLeft}.`)
+}
+*/
+//// с учетом русского языка:
+/*
+if (age >= 18) {
+  console.log("Можно получить водительские права :)");
+} else {
+  const yearsLeft = 18 - age;
+  // console.log(`Получать права рано, осталось ждать лет: ${yearsLeft}.`)
+  if (yearsLeft==1) {
+    console.log(`Осталось ждать всего один год. Учи теорию пока)`);
+  } else if (yearsLeft<5) {
+    console.log(`Получать права рано, осталось ждать ${yearsLeft} года.`);
+  } else {
+    console.log(`Получать права рано, осталось ждать ${yearsLeft} лет.`);
+  }
+  
+}
+
+*/
+
+
+
+
