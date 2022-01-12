@@ -264,3 +264,91 @@ if (age >= 18) {
 
 
 
+///// Задание 2 /////
+
+/*
+
+Для Задания 1 добавь вывод в консоль:
+
+"BMI Марка больше, чем у Джона" или наоборот,
+в зависимости от результата.
+
+
+
+//// Преобразование типов и приведение типов (Type Conversion and Coercion)
+
+
+// преобразование типов (conversion)
+const year = '2022';
+
+console.log(year + 18); // 202218
+
+console.log(Number(year) + 18); // 2040
+
+console.log(Number('Привет!'));
+
+console.log(String(23));
+
+// приведение типов (coercion)
+
+console.log("Марку " + 15 + " лет.");
+console.log('23' - 10);
+console.log('23' + 10);
+
+
+// Угадай результат:
+// 1.
+let n = '1' + 1;
+n = n - 1;
+console.log(n)
+// 2.
+console.log(2+3+4+'5');
+// 3.
+console.log('10'-'4'-'3'-2+'5');
+
+
+
+///// Falsy and Truthy values
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+// truthy values: все остальные
+console.log(Boolean(12));
+console.log(Boolean('привет'));
+
+
+const money = '';
+if (money) {
+  console.log("You have money!!!")
+} else {
+  console.log("No money...")
+}
+
+*/
+
+
+//// Операторы сравнения
+
+const age = '18';
+if (age === 18) console.log('Возраст 18 лет.');
+
+
+const favNum = Number(prompt("Какое твое любимое число?"));
+console.log(favNum);
+console.log(typeof favNum);
+
+if (favNum === 15) {
+  console.log("15 это отличное число!");
+} else if (favNum === 11) {
+  console.log("11 - барабанные палочки!");
+} else {
+  console.log("Тоже хорошее число!");
+}
+
+if (favNum !== 15) console.log("Почему бы не 15?");
