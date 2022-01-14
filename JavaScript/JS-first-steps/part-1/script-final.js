@@ -330,7 +330,7 @@ if (money) {
   console.log("No money...")
 }
 
-*/
+
 
 
 //// Операторы сравнения
@@ -352,3 +352,44 @@ if (favNum === 15) {
 }
 
 if (favNum !== 15) console.log("Почему бы не 15?");
+
+
+*/
+
+//// Булева логика  (boolean logic) ////
+
+/* Пример: 
+A) У Марка есть водительские права  (ИСТИНА/ЛОЖЬ)
+B) У Марка есть автомобиль   (ИСТИНА/ЛОЖЬ)
+
+    1) A И B = ИСТИНА если и А = ИСТИНА, и B = ИСТИНА
+
+    2) A ИЛИ B = ИСТИНА если хотя бы одно из утверждений ИСТИНА
+
+    3) НЕ А, НЕ B переворачивает ИСТИНА/ЛОЖЬ
+
+*/
+
+const hasDriversLicense = true; // A
+const hasCar = true; // B
+
+console.log(hasDriversLicense && hasCar); // A И B
+console.log(hasDriversLicense || hasCar); // A ИЛИ B
+console.log(!hasCar); // НЕ B
+
+
+if (hasDriversLicense && hasCar) {
+  console.log("Mark can drive!");
+} else {
+  console.log("Mark can not drive.");
+}
+
+// Добавим еще одну переменную.
+
+const isTired = true; // C
+
+if (hasCar && hasDriversLicense && !isTired) {
+  console.log("Mark can drive!");
+} else {
+  console.log("Mark can not drive.");
+}
