@@ -368,7 +368,7 @@ B) У Марка есть автомобиль   (ИСТИНА/ЛОЖЬ)
 
     3) НЕ А, НЕ B переворачивает ИСТИНА/ЛОЖЬ
 
-*/
+
 
 const hasDriversLicense = true; // A
 const hasCar = true; // B
@@ -393,3 +393,121 @@ if (hasCar && hasDriversLicense && !isTired) {
 } else {
   console.log("Mark can not drive.");
 }
+
+*/
+
+
+///// Задание 3 /////
+
+
+/*
+
+    В соревновании по гимнастике участвовали 2 команды,
+    Медведи и Панды. Они соревновались 3 раза, 
+    победитель - команда с самым большим средним баллом - получает кубок.
+    
+    1. Посчитайте средний балл для каждой команды.
+    2. Определите победителя и выведите результат в консоль.
+    3. Бонусное задание 1. Реализуйте требование, чтобы для победы в кубке
+       необходимо набрать не менее 100 очков и больше чем у соперника.
+    4. Бонусное задание 2. Если у обеих команд одинаковый средний балл - ничья.
+       Если при ничьей средний балл у каждой из команды
+       больше или равен 100, то обе команды получают кубок,
+       если средний балл меньше 100 - кубок не получет никто.
+
+
+    ТЕСТ: Баллы Медведей: 96, 108, 89.
+            Баллы Панд: 88, 91, 110.
+    
+    ТЕСТ БОНУС 1: Баллы Медведей: 97, 88, 100.
+            Баллы Панд: 109, 89, 99.
+
+    ТЕСТ БОНУС 2: Баллы Медведей: 97, 112, 101.
+            Баллы Панд: 109, 95, 106.
+
+*/
+
+
+// const scoreBears = (96 + 108 + 89) / 3;
+// const scorePandas = (88 + 91 + 110) / 3;
+
+// console.log(scoreBears, scorePandas);
+
+// if (scoreBears > scorePandas) {
+//   console.log("Медведи победили!");
+// } else if (scorePandas > scoreBears) {
+//  console.log("Панды победили!");
+// } else {
+//   console.log("Ничья!");
+// }
+
+
+// Бонус 1, 2
+
+// const scoreBears = (97 + 88 + 99) / 3;
+// const scorePandas = (109 + 89 + 100) / 3;
+
+// // const scoreBears = (97 + 112 + 101) / 3;
+// // const scorePandas = (109 + 95 + 106) / 3;
+
+
+// console.log(scoreBears, scorePandas);
+
+// if (scoreBears > scorePandas && scoreBears >= 100) {
+//   console.log("Медведи победили!");
+// } else if (scorePandas > scoreBears && scorePandas >= 100) {
+//  console.log("Панды победили!");
+// } else if (scorePandas === scoreBears && scoreBears >=100 && scorePandas >= 100) {
+//   console.log("Обе команды получают кубок! :)");
+// } 
+// else {
+//   console.log("Трофей не разыгран! :(");
+// }
+
+
+
+////// Инструкция switch /////
+
+/*
+
+const day = 'monday';
+
+switch(day) {
+  case 'monday':
+    console.log('Разработка структуры урока');
+    console.log('Подготовка заданий');
+    break;
+  case 'tuesday':
+    console.log('Подготовка теории к уроку');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Подготовка практических заданий');
+    break;
+  case 'friday':
+    console.log('Проведение урока');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Выходной!');
+    break;
+  default:
+    console.log('День указан неправильно.');
+}
+
+
+///// Тернарный оператор /////
+
+const age = 18;
+
+age >= 18 ? console.log('Можно получить водительские права.') : 
+  console.log('Получать права рано.');
+
+const drink = age >= 18 ? 'шампанское' : 'газировка';
+
+console.log(drink);
+
+console.log(`Напиток на Новый год: ${age >= 18 ? 'шампанское' : 'газировка'}.`);
+
+
+*/
