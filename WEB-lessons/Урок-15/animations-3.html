@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Анимация в CSS</title>
+  <style>
+
+    div {
+      width: 100px;
+      height: 100px;
+
+
+      animation-name: example;
+      background-image: url(menu_1.png);
+    
+
+      animation-duration: 8s;
+      background-size: cover;
+      animation-fill-mode: both;
+      animation-delay: 1s;
+
+    }
+
+    @keyframes example {
+      0% {
+
+        background-image: url(menu_2.png);
+      }
+      
+
+      100% {
+
+        background-image: url(menu_3.png);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Анимация в CSS: смена картинки -->
+
+  <h1>Анимация в CSS: смена картинки </h1>
+
+  <div></div>
+
+</body>
+
+</html>
