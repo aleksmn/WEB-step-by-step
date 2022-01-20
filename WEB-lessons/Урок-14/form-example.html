@@ -16,9 +16,15 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+        font-size: 16px;
+    }
+    label {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 16px;
     }
 
-    input[type=submit] {
+    button {
         width: 100%;
         background-color: #5957ca;
         color: white;
@@ -27,9 +33,10 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        font-size: 16px;
     }
 
-    input[type=submit]:hover {
+    button:hover {
         background-color: #414092;
     }
 
@@ -55,13 +62,13 @@
 
                 <label for="country">Страна</label>
                 <select id="country" name="country">
-                    <option value="russia">Russia</option>
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
+                    <option value="russia">Россия</option>
+                    <option value="australia">Австралия</option>
+                    <option value="canada">Канада</option>
+                    <option value="usa">США</option>
                 </select>
 
-                <input type="submit" value="Submit">
+                <button type="submit">Отправить</button>
             </form>
         </div>
     </div>
