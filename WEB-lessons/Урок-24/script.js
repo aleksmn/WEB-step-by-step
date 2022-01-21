@@ -3,10 +3,10 @@ console.log("Привет!");
 // Калькулятор
 
 function calc() {
-    var a = parseFloat(prompt("Введите a"));
-    var b = parseFloat(prompt("Введите b"));
+    let a = parseFloat(prompt("Введите a"));
+    let b = parseFloat(prompt("Введите b"));
 
-    var sum = a + b;
+    let sum = a + b;
 
     alert("a + b = " + sum)
 }
@@ -15,7 +15,7 @@ function calc() {
 
 function textCalc(){
 
-    var text = prompt('Введите текст: ');
+    let text = prompt('Введите текст: ');
 
     console.log("Длина текста: " + text.length);
     console.log("Первая буква: " + text[0])
@@ -27,4 +27,4 @@ function textCalc(){
 
 // calc()
 
-textCalc()
+// textCalc()
