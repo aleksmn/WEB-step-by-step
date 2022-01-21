@@ -1,8 +1,8 @@
 // console.log("Привет, Мир!")
 
 /*
-let js = 'fun';
-if (js === 'fun') alert('Javascript is FUN!');
+let now = 'day';
+if (now === 'day') alert('Добрый день!');
 
 console.log(40 + 8 + 5 + 12);
 
