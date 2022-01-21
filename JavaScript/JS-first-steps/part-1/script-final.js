@@ -37,10 +37,14 @@ console.log(typeof human);
 
 ////// Область видимости ///////
 
-{
-    let a = "hello";
-    var b = "привет!";
+if (true){
+    var a = "aaa";
+    let b = "bbb";
+
+    console.log(a, b);
 }
+console.log(a);
+console.log(b);
 
 console.log(b);
 // let a = "новое значение";  // SyntaxError: Identifier 'a' has already been declared
