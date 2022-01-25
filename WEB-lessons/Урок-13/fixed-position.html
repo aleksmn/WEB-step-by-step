@@ -2,28 +2,44 @@
 <html>
 
 <head>
-  <style>
-    .fixed {
-      background-color: blue;
-      padding: 10px 0;
-      color: white;
-      text-align: center;
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 100px;
-      border: 3px solid #6697e6;
-      border-radius: 10px;
-    }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Position</title>
+  <!-- Подключаем иконки
+     https://fonts.google.com/icons?selected=Material+Icons+Sharp:language 
+  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    .fixed a {
-      color: white;
+  <style>
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       max-width: 600px;
       margin: 0 auto;
+      
     }
+
+    .fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgb(240, 60, 29);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      width: fit-content;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .fixed a {
+      color: white;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
@@ -34,7 +50,11 @@
   <p>Дальше очень длинный текст...</p>
 
   <div class="fixed">
+
     <a href="#top">Наверх</a>
+    
+    <!-- Стрелочка "наверх": -->
+    <!-- <a href="#top" class="material-icons md-24">arrow_upward</a> -->
   </div>
 
   <p>
