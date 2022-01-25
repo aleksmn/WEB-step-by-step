@@ -181,10 +181,23 @@ main h2 {
     font-size: 20px;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
-  }
-  
-  .order-form button:hover {
+}
+
+.order-form button:hover {
     background: #3cfc69;
     background-image: linear-gradient(to bottom, #3cfc69, #34d93f);
     text-decoration: none;
-  }
+}
+
+
+/* Техподдержка */
+
+.helper {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.helper:hover {
+    cursor: pointer;
+}

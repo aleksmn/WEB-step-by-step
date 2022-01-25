@@ -57,7 +57,7 @@
                 <img id="ts-image-1" src="images/photo.png" height="300" width="270" alt=""><br>
                 <span>Футболка</span><br>
                 <span>499 руб.</span><br>
-                <button onclick="print_contact()">Добавить в заказ</button>
+                <button onclick="alert('Товар добавлен в заказ')">Добавить в заказ</button>
             </div>
             <div class="main-item">
                 <img id="ts-image-2" src="images/photo_1.png" height="300" width="270" alt=""><br>
@@ -110,14 +110,14 @@
             <input type="text" id="fname" name="fame" placeholder="Имя" required><br>
 
             <label for="lname">Фамилия</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Фамилия"  required><br>
+            <input type="text" id="lname" name="lname" placeholder="Фамилия" required><br>
 
             <label for="email">Электронная почта</label><br>
             <input type="email" id="email" name="email" placeholder="Email" required><br>
 
             <label for="phone">Телефон</label><br>
             <input type="text" id="phone" name="phone" placeholder="Номер телефона" required><br>
-        
+
             <div class="payment-text">Оплата онлайн</div>
             <hr>
             <button>Перейти к оплате</button>
@@ -125,7 +125,10 @@
 
     </section>
 
-<br><br>
+    <br><br>
+
+    <!-- Техподдержка -->
+    <img class="helper" onclick="print_contact()" src="images/tp.png" width="80" alt="">
 </body>
 
 </html>
