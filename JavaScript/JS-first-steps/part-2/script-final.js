@@ -53,13 +53,16 @@ console.log(dayDiff);
 
 */
 
+
+//// Калькулятор разницы дат ////
+
 function getDateDiff(date1, date2) {
     // Даты в формате "год-месяц-число"
 
     let dateOne = new Date(date1);
     let dateTwo = new Date(date2);
 
-    // Разница во времени в милисекундах:
+    // Разница во времени в миллисекундах:
     let timeDiff = dateTwo.getTime() - dateOne.getTime()
 
     // Разница во времени в дня
