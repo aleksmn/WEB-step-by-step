@@ -1,20 +1,21 @@
 function changeStyle(){
 
     let button = document.getElementById('btn-1');
-
     
     // проверка цвета фона
     
-    if (window.getComputedStyle(button).backgroundColor == "rgb(207, 17, 17)")
+    if (window.getComputedStyle(button).backgroundColor === "rgb(207, 17, 17)")
     {
         button.style.backgroundColor = "green";
-        console.log("change to green")
+        console.log("change to green");
     }
-    else 
+    else {
         button.style.backgroundColor = "rgb(207, 17, 17)";
-        console.log("change to red")
+        console.log("change to red");
+    }
 
 }
+
 
 
 function toggleClass(){
@@ -22,5 +23,4 @@ function toggleClass(){
 
     button.classList.toggle("bg-green");
 
-    console.log("toggle class")
 }
