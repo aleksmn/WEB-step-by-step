@@ -399,6 +399,51 @@ if (hasCar && hasDriversLicense && !isTired) {
 }
 
 */
+/*
+
+///// Массивы (Arrays) ///////
+
+
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+console.log(users);
+console.log(typeof users);
+
+console.log(users[0]);
+console.log(users[2]);
+console.log(users[users.length - 1]);
+
+users[2] = "Ксения";
+console.log(users);
+
+
+////// Методы массива ///////
+
+
+// Добавление элементов
+users.push('Алексей');
+users.unshift('Михаил');
+
+console.log(users);
+
+// Удаление элементов
+console.log(users.pop());
+console.log(users.shift());
+
+console.log(users);
+
+console.log(users.indexOf("Дмитрий"));
+console.log(users.indexOf("Юлия"));
+
+console.log(users.includes("Дмитрий"));
+console.log(users.includes("Юлия"));
+
+if (users.includes("Артем")) {
+    console.log("Есть пользователь с именем Артем");
+}
+
+
+*/
+
 
 
 ///// Задание 3 /////
