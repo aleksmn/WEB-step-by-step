@@ -101,7 +101,6 @@ main h2 {
     https://www.w3schools.com/css/css3_object-fit.asp */
 
 .kupon-image img {
-    padding: 0px;
     display: block;
     object-fit: cover;
     object-position: center;
