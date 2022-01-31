@@ -11,6 +11,14 @@ function calc() {
       + "\na * b =" + (a*b));
 
     console.log(typeof a, typeof b);
+
+    // Вывод результата на страницу:
+
+    // const result = "a + b = " + (a+b) 
+    //             + "\na - b= " + (a-b) 
+    //             + "\na * b =" + (a*b);
+
+    // document.getElementById("text").innerText = result;
 }
 
 // Работа с текстом
