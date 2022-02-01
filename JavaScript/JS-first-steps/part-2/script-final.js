@@ -273,5 +273,21 @@ console.log(bills, tips, totals);
 */
 
 
+///// Введение в объекты (Objects)
+
+const dima = {
+    firstName: 'Дмитрий',
+    lastName: 'Иванов',
+    age: 2022 - 1992,
+    job: 'программист',
+    friends: ['Константин', 'Кирилл', 'Мария']
+    //ключ: значение (key: value)
+};
+
+console.log(dima);
+console.log(typeof dima);
+
+console.log(dima.firstName, dima.lastName, dima.age);
+
 
 
