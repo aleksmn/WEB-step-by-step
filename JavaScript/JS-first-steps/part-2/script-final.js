@@ -362,3 +362,45 @@ while(friends[i]) {
 //     console.log(dice);
 //     dice = Math.floor(Math.random() * 6) + 1;
 // }
+
+
+
+
+///// Калькулятор чаевых (версия 2)
+/*
+
+function calcTip(bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * 0.15;
+    } else if (bill > 300) {
+        return bill * 0.2;
+    }
+
+    return 0;
+}
+
+const bills = [125, 455, 44, 345, 111];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+
+
+console.log(bills, tips, totals);
+
+
+*/
+
+/*
+Задание. 
+Самостоятельно найдите, как посчитать сумму
+всех элементов массива.
+
+Создайте функцию calcAvg() для вычисления среднего
+значения для массива.
+
+*/
