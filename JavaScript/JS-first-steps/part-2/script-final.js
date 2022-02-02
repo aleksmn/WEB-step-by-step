@@ -270,7 +270,7 @@ for (let i = 0; i < bills.length; i++) {
 console.log(bills, tips, totals);
 
 
-*/
+
 
 
 ///// Введение в объекты (Objects)
@@ -287,7 +287,47 @@ const dima = {
 console.log(dima);
 console.log(typeof dima);
 
-console.log(dima.firstName, dima.lastName, dima.age);
+// console.log(dima.firstName, dima.lastName, dima.age);
+// console.log(dima["firstName"], dima["lastName"], dima["age"]);
+
+const nameKey = "Name";
+console.log(dima["first" + nameKey], dima["last" + nameKey]);
+
+// console.log('Кол-во друзей: ' + dima.friends.length);
+
+// const query = prompt("Что вы хотите узнать о пользователе? Выберите: \
+//                         firstName, lastName, age, job, friends");
+
+// alert(dima[query]);
 
 
+dima.location = 'Россия';
+console.log(dima);
 
+*/
+
+
+///// Методы объекта
+
+const dima = {
+    firstName: 'Дмитрий',
+    lastName: 'Иванов',
+    birthYear: 1992,
+    job: 'программист',
+    friends: ['Константин', 'Кирилл', 'Мария'],
+
+    // calcAge: function(birthYear) {
+    //     let now = new Date().getFullYear();
+    //     return now - 1992;
+    // }
+    
+
+    calcAge: function() {
+        // console.log(this);
+        let now = new Date().getFullYear();
+        return now - this.birthYear;
+    }
+};
+
+
+console.log(dima.calcAge()); 
