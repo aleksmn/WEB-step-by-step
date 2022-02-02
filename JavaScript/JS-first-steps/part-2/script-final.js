@@ -258,9 +258,10 @@ const bills = [125, 455, 44];
 // console.log(bills, tips);
 
 
-///// Используем цикл for.
+///// Используем цикл for (for loop).
 const tips = [];
 const totals = [];
+
 for (let i = 0; i < bills.length; i++) {
     // console.log(i);
     tips.push(calcTip(bills[i]));
@@ -304,7 +305,7 @@ console.log(dima["first" + nameKey], dima["last" + nameKey]);
 dima.location = 'Россия';
 console.log(dima);
 
-*/
+
 
 
 ///// Методы объекта
@@ -331,3 +332,33 @@ const dima = {
 
 
 console.log(dima.calcAge()); 
+
+
+
+
+//// Цикл For и цикл While
+
+
+const friends =['Константин', 'Кирилл', 'Мария', 'Александр'];
+
+
+for (let i = 0; i < friends.length; i++) {
+    console.log(`Цикл for ${i}.  Привет ${friends[i]}`);
+} 
+
+
+let i = 0;
+while(friends[i]) {
+    console.log(`Цикл while ${i}.  Привет ${friends[i]}`);
+    i++;
+}
+*/
+
+/// Dice game
+
+// let dice = Math.floor(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//     console.log(dice);
+//     dice = Math.floor(Math.random() * 6) + 1;
+// }
