@@ -8,9 +8,14 @@
 
 <script>
 const cars = ["BMW", "Volvo", "Saab", "Ford"];
-let i, len, text;
-for (i = 0, len = cars.length, text = ""; i < len; i++) {
+
+let text = '';
+
+for (let i = 0; i < cars.length; i++) {
+
   text += cars[i] + "<br>";
+
+
 }
 document.getElementById("demo").innerHTML = text;
 </script>
