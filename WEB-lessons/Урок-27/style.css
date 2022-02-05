@@ -9,7 +9,7 @@ body {
     /* Остается на одном месте */
     position: fixed;
     /* Находится сверху */
-    z-index: 1;
+    z-index: 999;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -22,7 +22,7 @@ body {
 
 /* Содержимое модального окна */
 .modal-content {
-    background-color: #fefefe;
+    background-color: rgb(255, 255, 255);
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -31,7 +31,7 @@ body {
 
 /* Кнопка закрытия (x) */
 .close {
-    color: #aaaaaa;
+    color: rgb(170, 170, 170);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -40,6 +40,5 @@ body {
 .close:hover,
 .close:focus {
     color: #000;
-    text-decoration: none;
     cursor: pointer;
 }
