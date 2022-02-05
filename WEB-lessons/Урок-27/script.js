@@ -1,8 +1,8 @@
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
-var btn = document.getElementById("myBtn");
+const btn = document.getElementById("myBtn");
 
-var span = document.getElementsByClassName("close")[0];
+const closeBtn = document.getElementsByClassName("close")[0];
 
 // Открыть модальное окно
 btn.onclick = function () {
@@ -10,7 +10,7 @@ btn.onclick = function () {
 }
 
 // По клику на <span> (x), закрыть модальное окно
-span.onclick = function () {
+closeBtn.onclick = function () {
     modal.style.display = "none";
 }
 
