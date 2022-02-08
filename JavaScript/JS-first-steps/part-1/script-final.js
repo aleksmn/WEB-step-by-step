@@ -4,6 +4,17 @@
 let now = 'day';
 if (now === 'day') alert('Добрый день!');
 
+
+let username = prompt("Ваше имя: ");
+
+if (username === "Админ") {
+    alert("Добро пожаловать, Админ!");
+} 
+else {
+    alert("Привет " + username);
+}
+
+
 console.log(40 + 8 + 5 + 12);
 
 let firstName = "Михаил";
