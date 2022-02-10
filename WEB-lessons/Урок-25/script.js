@@ -1,16 +1,19 @@
 function changeStyle(){
-
+    //Выбираем нужный элемент на страничке:
     let myButton = document.getElementById('btn-1');
+    // текущий цвет:
+    let currColor = window.getComputedStyle(myButton).backgroundColor;
+    const firstColor = "green";
+    const secondColor = "rgb(207, 17, 17)";
     
-    // проверка цвета фона
-    
-    if (window.getComputedStyle(myButton).backgroundColor === "rgb(207, 17, 17)")
+    // проверка цвета фона кнопки
+    if (currColor === secondColor)
     {
-        myButton.style.backgroundColor = "green";
+        myButton.style.backgroundColor = firstColor;
         console.log("change to green");
     }
     else {
-        myButton.style.backgroundColor = "rgb(207, 17, 17)";
+        myButton.style.backgroundColor = secondColor;
         console.log("change to red");
     }
 
