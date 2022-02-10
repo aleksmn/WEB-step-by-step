@@ -1,3 +1,7 @@
+// Сделать генератор чисел Фибоначчи
+
+
+
 function fibonacciGenerator (n) {
     var output;
     
