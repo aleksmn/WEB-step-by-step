@@ -1,2 +1,2 @@
-var name = prompt("Как тебя зовут?");
-console.log("Привет " + name + "!");
+let username = prompt("Как тебя зовут?");
+console.log(`Привет ${username}!`);
