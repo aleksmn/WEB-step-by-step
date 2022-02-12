@@ -1,24 +1,18 @@
-// console.log("Привет!");
-
 // Калькулятор
 
 function calc() {
-    let a = parseFloat(prompt("Введите a"));
-    let b = parseFloat(prompt("Введите b"));
+  let input1 = document.getElementById("num1");
+  let input2 = document.getElementById("num2");
 
-    alert("a + b = " + (a+b) 
-      + "\na - b= " + (a-b) 
-      + "\na * b =" + (a*b));
+  let a = parseFloat(input1.value);
+  let b = parseFloat(input2.value);
 
-    console.log(typeof a, typeof b);
+  let result = document.getElementById("result");
+  let resultText = `${a} + ${b} = ${a + b}\n${a} - ${b} = ${a - b}` + 
+                 `\n${a} * ${b} = ${a * b}\n${a} / ${b} = ${a / b}\n`;
 
-    // Вывод результата на страницу:
+  result.innerText = resultText;
 
-    // const result = "a + b = " + (a+b) 
-    //             + "\na - b= " + (a-b) 
-    //             + "\na * b =" + (a*b);
-
-    // document.getElementById("text").innerText = result;
 }
 
 // Работа с текстом
