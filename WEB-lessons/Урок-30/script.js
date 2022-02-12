@@ -27,10 +27,9 @@ window.onclick = function (event) {
     }
 }
 
-// Спрятать подарок
-
-function hideGift() {
-    document.getElementById("gift-btn").style.opacity = 1;
+// Показать подарок
+function showGift() {
+    giftBtn.style.opacity = 1;
 }
 
-setTimeout(hideGift, 5000);
+setTimeout(showGift, 2000);
