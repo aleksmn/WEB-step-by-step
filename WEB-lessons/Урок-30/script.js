@@ -4,12 +4,14 @@ var btn = document.getElementById("myBtn");
 
 var span = document.getElementsByClassName("close")[0];
 
+var giftBtn = document.getElementById("gift-btn");
+
 // Открыть модальное окно
 // btn.onclick = function () {
 //     modal.style.display = "block";
 // }
 
-function showModal(){
+giftBtn.onclick = function (){
     modal.style.display = "block";
 }
 
