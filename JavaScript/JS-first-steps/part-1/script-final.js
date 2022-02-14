@@ -571,3 +571,28 @@ console.log(`Напиток на Новый год: ${age >= 18 ? 'шампан�
 
 
 */
+
+
+/*
+
+// Функция удаления элемента
+
+const users = [ "Артем", "Дмитрий","Кирилл", "Иван"];
+
+
+function delItem(myArr, item) {
+    const itemToDel = item;
+    const indexToDel = myArr.indexOf(itemToDel);
+
+    if (indexToDel > 0) {
+        myArr.splice(indexToDel, 1);
+    } else {
+        console.log("Элемент не найден!");
+    }
+}
+
+delItem(users, "Дмитрий");
+
+console.log(users);
+
+*/
