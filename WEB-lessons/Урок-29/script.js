@@ -24,17 +24,17 @@ function star(k) {
         }
     }
 
-    // // если звезда заполена
-    // else {
+    // если звезда заполена
+    else {
 
-    //     for (let i = 0; i < ids.length; i++) {
-    //         if (i > k) {
-    //             id = ids[i];
-    //             document.getElementById(id).src = "star_2.png";
+        for (let i = 0; i < ids.length; i++) {
+            if (i > k) {
+                id = ids[i];
+                document.getElementById(id).src = "star_2.png";
 
-    //         }
-    //     }
-    // }
+            }
+        }
+    }
 }
 
 function resetRating() {
