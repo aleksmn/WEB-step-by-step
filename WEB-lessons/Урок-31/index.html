@@ -2,83 +2,116 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Full built-in validation example</title>
-    <style>
-      form {
-        font: 1em sans-serif;
-        max-width: 320px;
-      }
+  <meta charset="utf-8">
+  <title>Full built-in validation example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0 20px;
+      font-family: sans-serif;
+    }
 
-      p > label {
-        display: block;
-      }
+    form {
+      font: 1em sans-serif;
+      max-width: 320px;
 
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      textarea,
-      fieldset {
-        width : 100%;
-        border: 1px solid #333;
-        box-sizing: border-box;
-      }
+    }
 
-      input:invalid {
-        /* box-shadow: 0 0 5px 1px red; */
-        border-color: red;
-      }
+    p>label {
+      display: block;
+    }
 
-      input:focus:invalid {
-        box-shadow: none;
-      }
-    </style>
+    .form-input {
+      width: 100%;
+      border: 1px solid #333;
+      box-sizing: border-box;
+      padding: 8px;
+    }
+
+    input:invalid {
+      /* box-shadow: 0 0 5px 1px red; */
+      border-color: red;
+    }
+
+    input:focus:invalid {
+      box-shadow: none;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .form-button {
+      background-color: rgb(52, 109, 216);
+      color: white;
+      width: 100%;
+      padding: 8px;
+      border: none;
+      font-size: 18px;
+      border-radius: 4px;
+    }
+
+    .form-button:hover {
+      background-color: rgb(44, 91, 180);
+      cursor: pointer;
+    }
+
+  </style>
 </head>
 
 <body>
 
   <!-- Урок 31. Валидация форм -->
-  
-  <form>
-    <p>
-      <fieldset>
-        <legend>У вас есть водительские права?<abbr title="Обязательно для заполнения" aria-label="required">*</abbr></legend>
 
-        <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Да</label>
-        <input type="radio" required name="driver" id="r2" value="no"><label for="r2">Нет</label>
-      </fieldset>
+  <h3>Заполните форму, чтобы продолжить</h3>
+
+  <form id="form">
+    <p>
+    <fieldset class="form-input">
+      <legend>У вас есть загранпаспорт? <abbr title="Обязательно для заполнения" aria-label="required">*</abbr>
+      </legend>
+
+      <input type="radio" required name="passport" id="r1" value="да"><label for="r1">Да</label>
+      <input type="radio" required name="passport" id="r2" value="нет"><label for="r2">Нет</label>
+    </fieldset>
     </p>
     <p>
       <label for="age">Сколько вам лет?</label>
 
-      <input type="number" min="12" max="120" step="1" id="age" name="age"
-             pattern="\d+">
+      <input class="form-input" type="number" min="18" max="99" step="1" id="age" name="age" pattern="\d+">
     </p>
     <p>
-      <label for="country">Из какой вы страны?<abbr title="Обязательно для заполнения" aria-label="required">*</abbr></label>
-      <input type="text" id="country" name="fruit" list="l1" required
-             pattern="[Rr]ussia|[Uu][Ss][Aa]|[Cc]anada|[Gg]ermany">
+      <label for="country">Из какой вы страны? <abbr title="Обязательно для заполнения"
+          aria-label="required">*</abbr></label>
+      <input class="form-input" type="text" id="country" name="country" list="l1" required
+        pattern="[Рр]оссия|[Бб]еларусь|[Кк]азахстан">
       <datalist id="l1">
-        <option>Russia</option>
-        <option>USA</option>
-        <option>Canada</option>
-        <option>Germany</option>
+        <option>Россия</option>
+        <option>Беларусь</option>
+        <option>Казахстан</option>
       </datalist>
     </p>
     <p>
       <label for="email">Введите адрес электронной почты</label>
-      <input type="email" id="email" name="email">
+      <input class="form-input" type="email" id="email" name="email" placeholder="email@example.com">
+    </p>
+    <p>
+      <label for="tel">Введите номер телефона</label>
+      <input class="form-input" type="tel" id="tel" name="tel" pattern="\+?[0-9\s\-\(\)]+"
+        placeholder="+7 (123) 456-78-90">
     </p>
     <p>
       <label for="comment">Оставьте комментарий</label>
-      <textarea id="comment" name="msg" maxlength="140" rows="5"></textarea>
+      <textarea class="form-input" id="comment" name="msg" minlength="5" maxlength="140" rows="5"
+        placeholder="Нам интересно ваше мнение..."></textarea>
     </p>
     <p>
-      <button onclick="valid_form()">Отправить</button>
+      <button class="form-button" type="submit">Отправить</button>
     </p>
   </form>
 
-  <div id="data"></div>
+  <div id="data">
+  </div>
 
   <script src="script.js"></script>
 </body>
