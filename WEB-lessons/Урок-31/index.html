@@ -55,7 +55,6 @@
       background-color: rgb(44, 91, 180);
       cursor: pointer;
     }
-
   </style>
 </head>
 
@@ -68,21 +67,26 @@
   <form id="form">
     <p>
     <fieldset class="form-input">
-      <legend>У вас есть загранпаспорт? <abbr title="Обязательно для заполнения" aria-label="required">*</abbr>
+      <legend>
+        У вас есть загранпаспорт?
+        <abbr title="Обязательно для заполнения">*</abbr>
       </legend>
 
-      <input type="radio" required name="passport" id="r1" value="да"><label for="r1">Да</label>
-      <input type="radio" required name="passport" id="r2" value="нет"><label for="r2">Нет</label>
+      <input type="radio" required name="passport" id="r1" value="да">
+      <label for="r1">Да</label>
+      <input type="radio" required name="passport" id="r2" value="нет">
+      <label for="r2">Нет</label>
     </fieldset>
     </p>
     <p>
       <label for="age">Сколько вам лет?</label>
-
       <input class="form-input" type="number" min="18" max="99" step="1" id="age" name="age" pattern="\d+">
     </p>
     <p>
-      <label for="country">Из какой вы страны? <abbr title="Обязательно для заполнения"
-          aria-label="required">*</abbr></label>
+      <label for="country">
+        Из какой вы страны?
+        <abbr title="Обязательно для заполнения">*</abbr>
+      </label>
       <input class="form-input" type="text" id="country" name="country" list="l1" required
         pattern="[Рр]оссия|[Бб]еларусь|[Кк]азахстан">
       <datalist id="l1">
@@ -97,8 +101,9 @@
     </p>
     <p>
       <label for="tel">Введите номер телефона</label>
-      <input class="form-input" type="tel" id="tel" name="tel" pattern="\+?[0-9\s\-\(\)]+"
-        placeholder="+7 (123) 456-78-90">
+      <input class="form-input" type="tel" id="tel" name="tel" 
+        pattern="\+?[0-9\s\-\(\)]+" placeholder="+7 (123) 456-78-90">
+        <!--допустимы следующие символы:+(только в начале) 0123456789(пробел)-() -->
     </p>
     <p>
       <label for="comment">Оставьте комментарий</label>
