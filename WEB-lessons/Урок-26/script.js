@@ -14,16 +14,29 @@ document.getElementById("demo").innerHTML= text;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // document.getElementById("demo").innerHTML = text;
 
 
 // Массивы
 
 
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-console.log(users[0]);
-console.log(users.length);
+// console.log(users[0]);
+// console.log(users.length);
 
 // let text = '';
 
