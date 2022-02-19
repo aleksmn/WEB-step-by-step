@@ -1,10 +1,10 @@
 const modal = document.getElementById("myModal");
-const btn = document.getElementById("myBtn");
+const openBtn = document.getElementById("myBtn");
 const closeBtn = document.getElementById("close");
 
 
 // Открыть модальное окно
-btn.onclick = function () {
+openBtn.onclick = function () {
     modal.style.display = "block";
 }
 
@@ -16,7 +16,9 @@ closeBtn.onclick = function () {
 
 // По клику на свободное место, закрыть модальное окно
 window.onclick = function (event) {
+    // console.log(event);
     if (event.target === modal) {
         modal.style.display = "none";
+        // console.log(event);
     }
 }
