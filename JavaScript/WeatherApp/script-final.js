@@ -1,5 +1,7 @@
+const weather_api_key = config.WEATHER_API_KEY;
+
 let weather = {
-    apiKey: "66b5d8e6815556797faf3e3ca7778709",
+    apiKey: weather_api_key,
     fetchWeather: function (city) {
         fetch(
             "https://api.openweathermap.org/data/2.5/weather?q=" +
