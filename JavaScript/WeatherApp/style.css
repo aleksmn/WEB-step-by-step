@@ -57,4 +57,15 @@ input.search-bar {
 .temp {
     margin: 0;
     font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
