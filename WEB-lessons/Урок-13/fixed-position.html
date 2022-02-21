@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fixed Position</title>
   <!-- Подключаем иконки
-     https://fonts.google.com/icons?selected=Material+Icons+Sharp:language 
+    https://developers.google.com/fonts/docs/material_icons
   -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
 
   <style>
     html {
@@ -19,7 +20,7 @@
     body {
       max-width: 600px;
       margin: 0 auto;
-      
+
     }
 
     .fixed {
@@ -30,21 +31,19 @@
       padding: 16px;
       color: white;
       text-align: center;
-      width: fit-content;
-      /* width: 24px;
-      height: 24px; */
+      /* width: fit-content; */
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
-      
+
     }
 
     .fixed a {
       color: white;
       text-decoration: none;
       font-size: 24px;
-      font-weight: bold;  
+      font-weight: bold;
     }
-
-
   </style>
 </head>
 
@@ -56,10 +55,10 @@
 
   <div class="fixed">
 
-    <a href="#top">Наверх</a>
+    <!-- <a href="#top">Наверх</a> -->
 
     <!-- Стрелочка "наверх": -->
-    <!-- <a href="#top" class="material-icons">arrow_upward</a> -->
+    <a href="#top" class="material-icons">arrow_upward</a>
   </div>
 
   <p>
@@ -106,7 +105,7 @@
     задания по разработке систем массового участия.
     С другой стороны реализация намеченных плановых заданий в значительной степени обуславливает создание форм развития.
   </p>
-  <p>
+  <p id="one">
 
     Не следует, однако забывать, что консультация с широким активом требуют от нас анализа системы обучения кадров,
     соответствует насущным потребностям.
