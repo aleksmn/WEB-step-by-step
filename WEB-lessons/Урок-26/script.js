@@ -1,28 +1,16 @@
-let text = "";
+// let text = "";
 
-for (let i = 0; i < 5; i++) {
-
-
-    text += "<h3>Номер " + i + "</h3>";
-
-    // text = text + "<h3>Номер " + i + "</h3>";
+// for (let i = 0; i < 5; i++) {
 
 
-}
+//     text += "<h3>Номер " + i + "</h3>";
 
-document.getElementById("demo").innerHTML= text;
-
-
+//     // text = text + "<h3>Номер " + i + "</h3>";
 
 
+// }
 
-
-
-
-
-
-
-
+// document.getElementById("demo").innerHTML= text;
 
 
 
@@ -33,10 +21,12 @@ document.getElementById("demo").innerHTML= text;
 // Массивы
 
 
-// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // console.log(users[0]);
 // console.log(users.length);
+
+
 
 // let text = '';
 
@@ -55,38 +45,66 @@ document.getElementById("demo").innerHTML= text;
 ////// Методы массива ///////
 
 
-/*
+
 // Добавление элементов
-users.push('Алексей');
-users.unshift('Михаил');
-
-console.log(users);
-
-// Удаление элементов
-console.log(users.pop());
-console.log(users.shift());
-
-console.log(users);
-
-console.log(users.indexOf("Дмитрий"));
-console.log(users.indexOf("Юлия"));
-
-console.log(users.includes("Дмитрий"));
-console.log(users.includes("Юлия"));
-
-if (users.includes("Артем")) {
-    console.log("Есть пользователь с именем Артем");
-}
+// users.push('Алексей');
+// users.unshift('Михаил');
 
 
+// console.log(users);
+// // Удаление элементов
+// console.log(users.pop());
+// console.log(users);
+
+
+// console.log(users.shift());
+
+
+
+// console.log(users.indexOf("Дмитрий"));
+// console.log(users.indexOf("Юлия"));
+
+
+
+// console.log(users.includes("Дмитрий"));
+// console.log(users.includes("Юлия"));
+
+
+
+
+
+
+// function checkUser(username) {
+//     if (users.includes(username)) {
+//         return "Есть пользователь с именем " + username;
+//     } else {
+//         return "Пользователя " + username + " нет.";
+//     }
+// }
+
+
+// console.log(checkUser("Антон"));
+
+
+// const months = ['Jan', 'March', 'April', 'June'];
+// months.splice(1, 0, 'Feb');
+// inserts at index 1
+
+
+
+
+/*
 */
 
 
 /*
-
 // Функция удаления элемента
+// Как удалить Дмитрия?
 
 const users = [ "Артем", "Дмитрий","Кирилл", "Иван"];
+
+
+
 
 
 function delItem(myArr, item) {
