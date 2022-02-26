@@ -3,42 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relative Position</title>
 
   <style>
+    body {
+      margin: 0;
+    }
+
     .box {
       width: 100px;
       height: 100px;
-    }
-
-    .box-content {
-      color: rgb(28, 238, 185);
-      font-size: 3em;
-      font-weight: bold;
-      text-align: center;
-      line-height: 100px;
+      position: relative;
     }
 
     .red {
-      background-color: red;
-      position: relative;
-      top: 0px;
-      left: 200px;
+      background-color: rgb(192, 85, 85);
+      top: 200px;
     }
 
     .green {
-      background-color: green;
-      position: relative;
-      top: -100px;
-      left: 100px;
+      background-color: rgb(89, 136, 107);
+      left:100px;
+
     }
 
     .yellow {
-      background-color: yellow;
-      position: relative;
-      top: -200px;
-      left: 0px;
+      background-color: rgb(255, 200, 92);
+      bottom: 200px;
+      left: 200px;
     }
   </style>
 
@@ -46,17 +40,9 @@
 
 <body>
 
-  <div class='box red'>
-    <div class="box-content">3</div>
-  </div>
-
-  <div class='box green'>
-    <div class="box-content">2</div>
-  </div>
-
-  <div class='box yellow'>
-    <div class="box-content">1</div>
-  </div>
+  <div class='box red'></div>
+  <div class='box green'></div>
+  <div class='box yellow'></div>
 
 </body>
 
