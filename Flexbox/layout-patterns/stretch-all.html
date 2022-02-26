@@ -13,52 +13,71 @@
 
         .container {
             display: flex;
-            margin-bottom: 20px;
+            margin-bottom: 2%;
         }
 
         .item {
             background-color: lightpink;
             flex-grow: 1;
-            height: 100px;
+            height: 200px;
         }
 
         .item+.item {
             margin-left: 2%;
         }
 
-        .item-big {
+        /* .item-big {
             background-color: lightskyblue;
             flex-grow: 2;
-        }
+        } */
 
+        /* .item-side {
+            width: 200px;
+            flex-grow: 0;
+            background-color: orange;
+        } */
+
+        /* .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        } */
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-    </div>
-    <!-- 
-    <div class="container">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item item-big"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
 
-    <div class="container">
-        <div class="item  item-big"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item item-big"></div>
-    </div> -->
+        </div>
 
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item-big"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+        <div class="container">
+            <div class="item  item-big"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item-big"></div>
+        </div>
+
+        <!-- Stretch Middle -->
+        <!-- <div class="container">
+            <div class="item item-side"></div>
+            <div class="item item-center"></div>
+            <div class="item item-side"></div>
+        </div> -->
+    </div>
 </body>
 
 </html>
