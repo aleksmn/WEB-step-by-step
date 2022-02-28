@@ -7,26 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор на JS</title>
 
+    <style>
+
+        body {
+            font-family: sans-serif;
+        }
+
+
+
+        .calculator {
+            max-width: 500px;
+            border: 2px solid rgba(0, 0, 255, 0.5);
+            margin: 20px auto;
+            padding: 20px;
+
+        }
+
+        .calculator input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 6px;
+            background-color: aliceblue;
+            border: 1px solid rgba(0, 0, 255, 0.5);
+            margin-bottom: 16px;
+        
+        }
+
+
+         .calculator button {
+             width: 100%;
+             padding: 6px;
+             background-color: rgb(106, 106, 255);
+             color: white;
+             font-size: 18px;
+             box-sizing: border-box;
+             border: none;
+             transition: 0.2s ease-in-out;
+         }
+
+         .calculator button:hover {
+             background-color: rgb(77, 77, 197);
+             cursor: pointer;
+             /* transform: translateY(-2px); */
+             transform: scale(1.05);
+             
+         }
+
+         #result {
+             font-size: 16px;
+
+         }
+
+         .calculator h1 {
+             color: rgb(90, 90, 214);
+         }
+
+    </style>
+
 </head>
 
 <body>
 
-    <h1>Калькулятор на JavaScript</h1>
+    <div class="calculator">
 
-    <label for="num1">Введите а: </label><br>
-    <input id="num1" type="text" value="0"><br>
+        <h1>Калькулятор на JavaScript</h1>
 
-    <label for="num2">Введите b: </label><br>
-    <input id="num2" type="text" value="0"><br><br>
+        <label for="num1">Введите первое число: </label><br>
+        <input id="num1" type="text" value="0"><br>
 
-    <button onclick="calc()">Калькулятор</button>
+        <label for="num2">Введите второе число: </label><br>
+        <input id="num2" type="text" value="0"><br><br>
 
-    <p id="result"></p>
+        <button onclick="calc()">Калькулятор</button>
 
+        <p id="result"></p>
+
+    </div>
+
+    
 
     <!-- <button onclick="textCalc()">Калькулятор Текста</button> -->
 
-    
+
 
     <script src="script-final.js"></script>
 </body>
