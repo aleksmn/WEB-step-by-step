@@ -21,7 +21,7 @@
 // Массивы
 
 
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // console.log(users[0]);
 // console.log(users.length);
@@ -44,52 +44,52 @@ const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 ////// Методы массива ///////
 
-
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // Добавление элементов
-// users.push('Алексей');
-// users.unshift('Михаил');
+users.push('Алексей');
+users.unshift('Михаил');
 
 
-// console.log(users);
-// // Удаление элементов
-// console.log(users.pop());
-// console.log(users);
+console.log(users);
 
 
-// console.log(users.shift());
+// Удаление элементов
+console.log(users.pop());
+console.log(users.shift());
 
+console.log(users);
 
-
-// console.log(users.indexOf("Дмитрий"));
-// console.log(users.indexOf("Юлия"));
-
-
-
-// console.log(users.includes("Дмитрий"));
-// console.log(users.includes("Юлия"));
+console.log(users.indexOf("Дмитрий"));
+console.log(users.indexOf("Юлия"));
 
 
 
+console.log(users.includes("Дмитрий"));
+console.log(users.includes("Юлия"));
 
 
 
-// function checkUser(username) {
-//     if (users.includes(username)) {
-//         return "Есть пользователь с именем " + username;
-//     } else {
-//         return "Пользователя " + username + " нет.";
-//     }
-// }
+function checkUser(username) {
+    if (users.includes(username)) {
+        return "Есть пользователь с именем " + username;
+    } else {
+        return "Пользователя " + username + " нет.";
+    }
+}
 
 
-// console.log(checkUser("Антон"));
+console.log(checkUser("Антон"));
 
 
-// const months = ['Jan', 'March', 'April', 'June'];
-// months.splice(1, 0, 'Feb');
-// inserts at index 1
+// // Удаляем пользователя по индексу
+users.splice(2, 0, "Александр", "Елена");
 
+
+// users.splice(1, 0, "Новый пользователь");
+
+
+console.log(users);
 
 
 
@@ -102,6 +102,10 @@ const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 // Как удалить Дмитрия?
 
 const users = [ "Артем", "Дмитрий","Кирилл", "Иван"];
+
+
+
+
 
 
 
