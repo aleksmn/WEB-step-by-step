@@ -1,30 +1,81 @@
+
+/*
+
+for(let i = 0; i < 50; i+=10) {
+
+    console.log("Номер " + i);
+
+}
+
+console.log("Цикл закончился!");
+
+
+let number = 0;
+while (number <= 12) {
+    console.log(number);
+    number = number + 2;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let text = "";
 
-// for (let i = 0; i < 5; i++) {
+// for (let i = 1; i < 12; i++) {
 
+//     let color1 = "red"
+//     let color2 = "blue"
 
-//     text += "<h3>Номер " + i + "</h3>";
-
-//     // text = text + "<h3>Номер " + i + "</h3>";
-
+//     if (i % 2 == 0) {
+//         text += `<h3 style='color:${color1};'>Номер ${i}</h3>`;
+//     }
+//     else {
+//         text += `<h3 style='color:${color2};'>Номер ${i}</h3>`;
+//     }
+    
 
 // }
 
 // document.getElementById("demo").innerHTML= text;
 
-
-
-
 // document.getElementById("demo").innerHTML = text;
+
+
+
+
+
+
 
 
 // Массивы
 
 
-// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-// console.log(users[0]);
-// console.log(users.length);
+console.log(users);
+
+console.log(users[0]);
+
+console.log(users[1]);
+
+console.log(users.length);
 
 
 
@@ -39,7 +90,7 @@
 // document.getElementById("demo").innerHTML = text;
 
 
-
+/*
 
 
 ////// Методы массива ///////
@@ -93,7 +144,7 @@ console.log(users);
 
 
 
-/*
+
 */
 
 
