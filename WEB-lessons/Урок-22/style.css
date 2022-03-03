@@ -199,3 +199,21 @@ main h2 {
     /* transform: rotate(1turn); */
 
 }
+
+
+
+/* Подарок */
+
+.gift {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+}
+
+.gift:hover {
+    transform: translateY(-5px) scale(1.2) rotate(-0.02turn);
+
+}
