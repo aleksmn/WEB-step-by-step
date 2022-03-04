@@ -1,14 +1,4 @@
 /* Разрабатываем дизайн страницы для смартфона */
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.wrapper > * {
-  padding: 20px;
-  margin: 10px;
-  flex: 1 100%;
-}
 
 body {
   color: rgb(54, 54, 54);
@@ -16,11 +6,25 @@ body {
   font-size: 1.2rem;
 }
 
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wrapper>* {
+  padding: 20px;
+  margin: 14px;
+  flex: 1 100%;
+}
+
+.header, .main, .aside, .footer {
+  box-shadow: 10px 10px 10px rgba(129, 129, 129, 0.335);
+}
+
 .header {
-  background: rgb(255, 153, 215);
+  background: rgb(255, 197, 232);
   color: rgb(9, 84, 142);
-  font-size: 1.4rem;
-  padding: 40px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,15 +36,9 @@ body {
   filter: saturate(1.1) brightness(1.2);
 }
 
-.footer {
-  background: rgb(173, 191, 204);
-  padding: 20px;
-  text-align: center;
-}
-
 .main {
   text-align: left;
-  background: rgb(255, 193, 122);
+  background: rgb(255, 214, 167);
 }
 
 ul {
@@ -49,12 +47,19 @@ ul {
 }
 
 .aside-1 {
-  background: rgb(122, 255, 151);
+  background: rgb(165, 255, 184);
 }
 
 .aside-2 {
-  background: rgb(108, 191, 255);
+  background: rgb(152, 211, 255);
 }
+
+.footer {
+  background: rgb(198, 211, 221);
+  text-align: center;
+}
+
+
 
 /* Медиазапрос для экрана планшета */
 
@@ -66,6 +71,9 @@ ul {
   }
 }
 
+
+
+
 /* Медиазапрос для больших экранов */
 
 @media all and (min-width: 800px) {
@@ -73,26 +81,34 @@ ul {
     /* .main будет в 3 раза шире, чем .aside */
     flex: 3;
   }
+
   .aside-1 {
     order: 1;
   }
+
   .main {
     order: 2;
   }
+
   .aside-2 {
     order: 3;
   }
+
   .footer {
     order: 4;
   }
 }
 
 
+
+
+
+
+
 @media all and (min-width: 1200px) {
   .wrapper {
-    max-width: 1400px;
+    max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
   }
-} 
-
+}
