@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    color: rgb(53, 53, 53);
 }
 
 header {
@@ -129,15 +131,16 @@ main h2 {
 /* Форма для оформления заказа */
 
 .order-form {
-    max-width: 400px;
+    max-width: 460px;
     margin: 0 auto;
 }
 
 .order-form input {
     width: 100%;
+    box-sizing: border-box;
     padding: 15px;
     border: none;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(247, 247, 247);
     margin-bottom: 15px;
     margin-top: 5px;
     box-shadow: 2px 1px 5px 0.5px black;
@@ -148,7 +151,7 @@ main h2 {
 }
 
 .order-form hr {
-    width: 107%;
+    width: 100%;
     border: none;
     box-shadow: 2px 2px 5px 0.5px black;
     margin-bottom: 24px;
@@ -173,6 +176,9 @@ main h2 {
     font-size: 20px;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
+    margin: 30px auto;
+    display: block;
+    width: 100%;
 }
 
 .order-form button:hover {
