@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: sans-serif;
+}
+
+form {
+    font: 1em sans-serif;
+    max-width: 320px;
+
+}
+
+p>label {
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+input:invalid {
+    /* box-shadow: 0 0 5px 1px red; */
+    border-color: red;
+}
+
+input:focus:invalid {
+    box-shadow: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-button {
+    background-color: rgb(52, 109, 216);
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.form-button:hover {
+    background-color: rgb(44, 91, 180);
+    cursor: pointer;
+}

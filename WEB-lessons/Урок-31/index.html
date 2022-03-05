@@ -4,58 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Full built-in validation example</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0 20px;
-      font-family: sans-serif;
-    }
-
-    form {
-      font: 1em sans-serif;
-      max-width: 320px;
-
-    }
-
-    p>label {
-      display: block;
-    }
-
-    .form-input {
-      width: 100%;
-      border: 1px solid #333;
-      box-sizing: border-box;
-      padding: 8px;
-    }
-
-    input:invalid {
-      /* box-shadow: 0 0 5px 1px red; */
-      border-color: red;
-    }
-
-    input:focus:invalid {
-      box-shadow: none;
-    }
-
-    textarea {
-      resize: none;
-    }
-
-    .form-button {
-      background-color: rgb(52, 109, 216);
-      color: white;
-      width: 100%;
-      padding: 8px;
-      border: none;
-      font-size: 18px;
-      border-radius: 4px;
-    }
-
-    .form-button:hover {
-      background-color: rgb(44, 91, 180);
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -78,10 +27,12 @@
       <label for="r2">Нет</label>
     </fieldset>
     </p>
+
     <p>
       <label for="age">Сколько вам лет?</label>
-      <input class="form-input" type="number" min="18" max="99" step="1" id="age" name="age" pattern="\d+">
+      <input class="form-input" type="number" min="18" max="99" step="1" id="age" name="age">
     </p>
+
     <p>
       <label for="country">
         Из какой вы страны?
@@ -95,15 +46,16 @@
         <option>Казахстан</option>
       </datalist>
     </p>
+
     <p>
       <label for="email">Введите адрес электронной почты</label>
       <input class="form-input" type="email" id="email" name="email" placeholder="email@example.com">
     </p>
     <p>
       <label for="tel">Введите номер телефона</label>
-      <input class="form-input" type="tel" id="tel" name="tel" 
-        pattern="\+?[0-9\s\-\(\)]+" placeholder="+7 (123) 456-78-90">
-        <!--допустимы следующие символы:+(только в начале) 0123456789(пробел)-() -->
+      <input class="form-input" type="tel" id="tel" name="tel" pattern="\+?[0-9\s\-\(\)]+"
+        placeholder="+7 (123) 456-78-90">
+      <!--допустимы следующие символы:+(только в начале) 0123456789(пробел)-() -->
     </p>
     <p>
       <label for="comment">Оставьте комментарий</label>
