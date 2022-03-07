@@ -15,16 +15,12 @@ body {
   padding: 20px;
   margin: 14px;
   flex: 1 100%;
-}
-
-.header, .main, .aside, .footer {
   box-shadow: 10px 10px 10px rgba(129, 129, 129, 0.335);
 }
 
 .header {
   background: rgb(255, 197, 232);
   color: rgb(9, 84, 142);
-  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +65,7 @@ ul {
     между элеметами с классом aside */
     flex: 1;
   }
-}
+} 
 
 
 
