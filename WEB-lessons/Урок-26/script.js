@@ -49,7 +49,7 @@ while (number <= 12) {
 //     else {
 //         text += `<h3 style='color:${color2};'>Номер ${i}</h3>`;
 //     }
-    
+
 
 // }
 
@@ -67,15 +67,15 @@ while (number <= 12) {
 // Массивы
 
 
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-console.log(users);
+// console.log(users);
 
-console.log(users[0]);
+// console.log(users[0]);
 
-console.log(users[1]);
+// console.log(users[1]);
 
-console.log(users.length);
+// console.log(users.length);
 
 
 
@@ -90,28 +90,32 @@ console.log(users.length);
 // document.getElementById("demo").innerHTML = text;
 
 
-/*
+
 
 
 ////// Методы массива ///////
-
+/*
 const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // Добавление элементов
 users.push('Алексей');
 users.unshift('Михаил');
 
-
 console.log(users);
 
 
 // Удаление элементов
-console.log(users.pop());
-console.log(users.shift());
 
-console.log(users);
+let deletedLastUser = users.pop();
+console.log(deletedLastUser, users);
+
+
+let deletedFirstUser = users.shift();
+console.log(deletedFirstUser, users);
+
 
 console.log(users.indexOf("Дмитрий"));
+
 console.log(users.indexOf("Юлия"));
 
 
@@ -130,11 +134,13 @@ function checkUser(username) {
 }
 
 
+
 console.log(checkUser("Антон"));
 
 
 // // Удаляем пользователя по индексу
-users.splice(2, 0, "Александр", "Елена");
+
+users.splice(2, 1, "Александр", "Елена");
 
 
 // users.splice(1, 0, "Новый пользователь");
@@ -142,39 +148,30 @@ users.splice(2, 0, "Александр", "Елена");
 
 console.log(users);
 
-
-
-
 */
 
-
-/*
 // Функция удаления элемента
 // Как удалить Дмитрия?
-
+/*
 const users = [ "Артем", "Дмитрий","Кирилл", "Иван"];
 
+function delItem (myArr, item) {
 
-
-
-
-
-
-
-
-function delItem(myArr, item) {
-    const itemToDel = item;
-    const indexToDel = myArr.indexOf(itemToDel);
+    const indexToDel = myArr.indexOf(item);
 
     if (indexToDel > 0) {
+
         myArr.splice(indexToDel, 1);
+        return myArr;
+
     } else {
-        console.log("Элемент не найден!");
+
+        return "Элемент не найден!";
     }
 }
 
-delItem(users, "Дмитрий");
+console.log(delItem(users, "Дмитрий"));
 
-console.log(users);
+
 
 */
