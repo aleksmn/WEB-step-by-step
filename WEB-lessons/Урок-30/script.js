@@ -1,10 +1,10 @@
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
-var btn = document.getElementById("myBtn");
+const btn = document.getElementById("myBtn");
 
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
-var giftBtn = document.getElementById("gift-btn");
+
 
 // Открыть модальное окно
 // btn.onclick = function () {
@@ -26,6 +26,10 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+
+const giftBtn = document.getElementById("gift-btn");
 
 // Показать подарок
 function showGift() {
