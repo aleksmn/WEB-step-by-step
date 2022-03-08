@@ -145,8 +145,12 @@ main h2 {
     background-color: rgb(247, 247, 247);
     margin-bottom: 15px;
     margin-top: 5px;
-    box-shadow: 2px 1px 5px black;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.51);
 
+}
+
+.order-form input:focus-visible {
+    outline: 1px solid rgb(50, 184, 43);
 }
 
 .order-form label {
