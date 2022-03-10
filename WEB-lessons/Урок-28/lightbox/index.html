@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lightbox</title>
     <link rel="stylesheet" href="css/lightbox.min.css">
+
+    <style>
+        #lightbox>div.lb-dataContainer>div>div.lb-details>span.lb-caption {
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+
+        #lightbox>div.lb-dataContainer>div>div.lb-details>span.lb-number {
+            font-size: 18px;
+            line-height: 24px;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 
 <body>
     <h1>LIGHTBOX</h1>
 
+    Ссылка на плагин: <a href="https://lokeshdhakar.com/projects/lightbox2/">lightbox2</a><br><br>
+
     <!--
     <a href="АДРЕС_БОЛЬШОЙ_КАРТИНКИ" data-lightbox="nature">
-        <img src="АДРЕС_МАЛЕНЬКОЙ_КАРТИНКИ" width="200" alt="">
-    </a>
+        <img src="АДРЕС_МАЛЕНЬКОЙ_КАРТИНКИ" width="200" alt=""></a>
      -->
 
-    <a href="https://picsum.photos/id/684/1000/800" data-lightbox="nature">
-        <img src="https://picsum.photos/id/684/400/" width="200" alt="">
-    </a>
+    <a href="https://picsum.photos/id/684/1000/800" data-lightbox="nature" data-title="Виды природы: горы">
+        <img src="https://picsum.photos/id/684/400/" width="200" alt=""></a>
 
-    <a href="https://picsum.photos/id/664/1000/800" data-lightbox="nature">
-        <img src="https://picsum.photos/id/664/400/" width="200" alt="">
-    </a>
+    <a href="https://picsum.photos/id/664/1000/800" data-lightbox="nature" data-title="Виды природы">
+        <img src="https://picsum.photos/id/664/400/" width="200" alt=""></a>
 
-    <a href="https://picsum.photos/id/654/1000/800" data-lightbox="nature">
-        <img src="https://picsum.photos/id/654/400/" width="200" alt="">
-    </a>
+    <a href="https://picsum.photos/id/1044/1000/800" data-lightbox="nature" data-title="Виды природы">
+        <img src="https://picsum.photos/id/1044/400/" width="200" alt=""></a>
+
+    <a href="https://picsum.photos/id/654/1000/800" data-lightbox="nature" data-title="Виды природы">
+        <img src="https://picsum.photos/id/654/400/" width="200" alt=""></a>
 
 
 
     <!-- Подключаем скрипты -->
     <script src="js/lightbox-plus-jquery.min.js"></script>
+
+
+    <script>
+        lightbox.option({
+            'resizeDuration': 500,
+            'wrapAround': true,
+            'albumLabel': "Изображение %1 из %2",  
+        })
+    </script>
 
 
 </body>
