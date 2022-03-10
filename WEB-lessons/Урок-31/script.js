@@ -1,8 +1,10 @@
 const form = document.getElementById("form");
 
 form.addEventListener("submit", function (event) {
+
+    // console.log(event);
     event.preventDefault();
-    console.log("Форма отправлена!");
+    // console.log("Форма отправлена!");
     validForm();
 });
 

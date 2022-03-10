@@ -4,8 +4,7 @@ const btn = document.getElementById("myBtn");
 
 const span = document.getElementsByClassName("close")[0];
 
-
-
+const giftBtn = document.getElementById("gift-btn");
 // Открыть модальное окно
 // btn.onclick = function () {
 //     modal.style.display = "block";
@@ -29,7 +28,6 @@ window.onclick = function (event) {
 
 
 
-const giftBtn = document.getElementById("gift-btn");
 
 // Показать подарок
 function showGift() {

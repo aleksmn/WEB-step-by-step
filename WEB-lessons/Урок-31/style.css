@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0 20px;
     font-family: sans-serif;
+    padding: 10px 30px;
 }
 
 form {
-    font: 1em sans-serif;
+    font-family: sans-serif;
     max-width: 320px;
-
 }
 
 p>label {
@@ -22,12 +22,12 @@ p>label {
 }
 
 input:invalid {
-    /* box-shadow: 0 0 5px 1px red; */
     border-color: red;
 }
 
-input:focus:invalid {
-    box-shadow: none;
+input:focus-visible {
+    outline: 2px solid rgb(52, 109, 216);
+    border: none;
 }
 
 textarea {
@@ -47,4 +47,8 @@ textarea {
 .form-button:hover {
     background-color: rgb(44, 91, 180);
     cursor: pointer;
+}
+
+::placeholder {
+    color:rgba(52, 109, 216, 0.698);
 }
