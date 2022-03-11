@@ -8,12 +8,9 @@
     <title>Калькулятор на JS</title>
 
     <style>
-
         body {
             font-family: sans-serif;
         }
-
-
 
         .calculator {
             max-width: 500px;
@@ -26,42 +23,46 @@
         .calculator input {
             width: 100%;
             box-sizing: border-box;
-            padding: 6px;
+            padding: 10px;
             background-color: aliceblue;
             border: 1px solid rgba(0, 0, 255, 0.5);
-            margin-bottom: 16px;
-        
+            margin-bottom: 20px;
+
+        }
+
+        .calculator input:focus-visible {
+            outline: none;
+            border: 1px solid orange;
         }
 
 
-         .calculator button {
-             width: 100%;
-             padding: 6px;
-             background-color: rgb(106, 106, 255);
-             color: white;
-             font-size: 18px;
-             box-sizing: border-box;
-             border: none;
-             transition: 0.2s ease-in-out;
-         }
+        .calculator button {
+            width: 100%;
+            padding: 6px;
+            background-color: rgb(106, 106, 255);
+            color: white;
+            font-size: 18px;
+            box-sizing: border-box;
+            border: none;
+            transition: 0.2s ease-in-out;
+            margin-bottom: 20px;
+        }
 
-         .calculator button:hover {
-             background-color: rgb(77, 77, 197);
-             cursor: pointer;
-             /* transform: translateY(-2px); */
-             transform: scale(1.05);
-             
-         }
+        .calculator button:hover {
+            background-color: rgb(77, 77, 197);
+            cursor: pointer;
+            /* transform: translateY(-2px); */
+            transform: scale(1.05);
+        }
 
-         #result {
-             font-size: 16px;
+        #result {
+            font-size: 16px;
 
-         }
+        }
 
-         .calculator h1 {
-             color: rgb(90, 90, 214);
-         }
-
+        .calculator h1 {
+            color: rgb(90, 90, 214);
+        }
     </style>
 
 </head>
@@ -73,10 +74,10 @@
         <h1>Калькулятор на JavaScript</h1>
 
         <label for="num1">Введите первое число: </label><br>
-        <input id="num1" type="text" ><br>
+        <input id="num1" type="text"><br>
 
         <label for="num2">Введите второе число: </label><br>
-        <input id="num2" type="text" ><br><br>
+        <input id="num2" type="text"><br><br>
 
         <button onclick="calc()">Калькулятор</button>
 
@@ -84,7 +85,7 @@
 
     </div>
 
-    
+
 
     <!-- <button onclick="textCalc()">Калькулятор Текста</button> -->
 
