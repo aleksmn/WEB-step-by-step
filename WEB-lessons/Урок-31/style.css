@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    padding: 0 20px;
     font-family: sans-serif;
     padding: 10px 30px;
 }
 
 form {
-    font-family: sans-serif;
     max-width: 320px;
+    border: 6px dashed rgba(52, 109, 216, 0.5);
+    padding: 20px;
 }
 
 p>label {
@@ -25,9 +25,10 @@ input:invalid {
     border-color: red;
 }
 
-input:focus-visible {
-    outline: 2px solid rgb(52, 109, 216);
-    border: none;
+input:focus-visible, textarea:focus-visible {
+
+    outline: none;
+    border: 1px solid rgb(52, 109, 216);
 }
 
 textarea {
@@ -50,5 +51,5 @@ textarea {
 }
 
 ::placeholder {
-    color:rgba(52, 109, 216, 0.698);
+    color: rgba(52, 109, 216, 0.698);
 }
