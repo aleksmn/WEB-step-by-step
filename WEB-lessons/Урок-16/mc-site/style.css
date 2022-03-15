@@ -26,7 +26,7 @@ header {
 
 	margin: 10px 0;
 	display: flex;
-	
+
 }
 
 .menu_item {
@@ -36,8 +36,8 @@ header {
 }
 
 
-.welcome { 
-	background-color:black;	
+.welcome {
+	background-color: black;
 	position: relative;
 }
 
@@ -83,13 +83,14 @@ button img {
 	margin-bottom: 30px;
 }
 
-.about-heading {
-	
+.section-heading{
+
 	font-size: 30px;
 	text-align: center;
 	color: white;
 	font-weight: bold;
 }
+
 
 .about-wrapper {
 	display: flex;
@@ -116,14 +117,6 @@ button img {
 }
 
 /* Slider Section */
-
-.slider-heading {
-	font-size: 30px;
-	font-family: Roboto, sans-serif;
-	text-align: center;
-	color: white;
-	font-weight: bold;
-}
 
 .slider-wrapper {
 	display: flex;
