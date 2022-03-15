@@ -41,12 +41,12 @@ FizzBuzz
 
 
 
-for (let n = 1; n <= 100; n++) {
-    let output = "";
-    if (n % 3 == 0) { output += "Fizz" };
-    if (n % 5 == 0) { output += "Buzz" };
-    console.log(output || n);
-}
+// for (let n = 1; n <= 100; n++) {
+//     let output = "";
+//     if (n % 3 == 0) output += "Fizz";
+//     if (n % 5 == 0) output += "Buzz";
+//     console.log(output || n);
+// }
 
 
 
@@ -103,3 +103,49 @@ for (let n = 1; n <= 100; n++) {
 // }
 
 // console.log(board);
+
+
+
+/// variant 2:
+
+// let board = "";
+// let size = 8;
+// for (let y = 0; y < size; y++) {
+//     for (let x = 0; x < size; x++) {
+//         //// если строка четная:
+//         if (y % 2 == 0) {
+//             if (x % 2 == 0) {
+//                 board += " ";
+//             }
+//             else board += "#";
+//         }
+//         //// иначе (строка нечетная):
+//         else {
+//             if (x % 2 == 0) {
+//                 board += "#";
+//             }
+//             else board += " ";
+//         }
+//     }
+
+//     board += "\n";
+// }
+
+// console.log(board)
+
+
+/// variant 3
+
+// let board = '';
+// let size = 8;
+
+// for (let y = 0; y < size; y++) {
+//     for (let x = 0; x < size / 2; x++) {
+//         if (y % 2 == 0) board += " #";
+//         else board += "# ";
+//     }
+
+//     board += "\n";
+// }
+
+// console.log(board)
