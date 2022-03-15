@@ -6,7 +6,7 @@ body {
 
 form {
     max-width: 320px;
-    border: 6px dashed rgba(52, 109, 216, 0.5);
+    box-shadow: 4px 4px 10px 4px rgba(133, 133, 133, 0.219);
     padding: 20px;
 }
 
@@ -26,9 +26,9 @@ input:invalid {
 }
 
 input:focus-visible, textarea:focus-visible {
-
     outline: none;
     border: 1px solid rgb(52, 109, 216);
+    box-shadow: 4px 4px 10px 4px rgba(133, 133, 133, 0.219);
 }
 
 textarea {
@@ -52,4 +52,8 @@ textarea {
 
 ::placeholder {
     color: rgba(52, 109, 216, 0.698);
+}
+
+#data {
+    margin-top: 30px;
 }
