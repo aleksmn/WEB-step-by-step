@@ -4,10 +4,10 @@ function print_contact() {
 
 
 
-function randomElement(arr) {
-    const rand = Math.floor(Math.random() * arr.length);
-    return arr[rand];
-}
+// function randomElement(arr) {
+//     const rand = Math.floor(Math.random() * arr.length);
+//     return arr[rand];
+// }
 
 // Проверяем работу функции:
 // console.log(randomElement(['apple', 'orange', 'tomato']))
@@ -18,11 +18,14 @@ function rand_tshirt() {
     // Массив картинок: 
     const arr = ["images/tshirt-1.jpg", "images/tshirt-2.jpg", "images/tshirt-3.jpg"];
 
-
+    // Подбираем первую картинку
     let rand = Math.floor(Math.random() * arr.length);
+    // Меняем 1 картинку
     document.getElementById("ts-image-1").src = arr.splice(rand, 1)[0]
 
+    // Подбираем вторую картинку
     rand = Math.floor(Math.random() * arr.length);
+    // Меняем 2 картинку
     document.getElementById("ts-image-2").src = arr.splice(rand, 1)[0]
 
 }
