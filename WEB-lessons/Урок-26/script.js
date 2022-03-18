@@ -1,3 +1,32 @@
+const myDiv = document.getElementById('demo');
+
+myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
+myDiv.style.color = "blue";
+
+
+
+
+
+// myDiv.innerHTML += "<p>новый текст</p>";
+
+// myDiv.innerHTML += "<p>еще новый текст</p>";
+
+// for (let i = 1; i <= 10; i = i + 1) {
+//     myDiv.innerHTML += `<p>Номер ${i * 10}</p>`;
+// }
+
+
+
+
+// let number = 0;
+
+// while (number <= 12) {
+
+//     console.log(number);
+
+//     number = number + 2;
+// }
+
 
 /*
 
@@ -19,53 +48,24 @@ while (number <= 12) {
 
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let text = "";
-
 // for (let i = 1; i < 12; i++) {
 
 //     let color1 = "red"
 //     let color2 = "blue"
 
 //     if (i % 2 == 0) {
-//         text += `<h3 style='color:${color1};'>Номер ${i}</h3>`;
+//         myDiv.innerHTML += `<h3 style='color:${color1};'>Номер ${i}</h3>`;
 //     }
 //     else {
-//         text += `<h3 style='color:${color2};'>Номер ${i}</h3>`;
+//         myDiv.innerHTML += `<h3 style='color:${color2};'>Номер ${i}</h3>`;
 //     }
 
-
 // }
-
-// document.getElementById("demo").innerHTML= text;
-
-// document.getElementById("demo").innerHTML = text;
-
-
-
-
 
 
 
 
 // Массивы
-
 
 // const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
@@ -77,17 +77,17 @@ while (number <= 12) {
 
 // console.log(users.length);
 
+// console.log(users[users.length - 1]);
 
-
-// let text = '';
 
 // for (let i = 0; i < users.length; i++) {
 
-//     text += users[i] + "<br>";
-
+//     myDiv.innerHTML += users[i] + "<br>";
 
 // }
-// document.getElementById("demo").innerHTML = text;
+
+
+
 
 
 
