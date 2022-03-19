@@ -20,7 +20,7 @@ a {
     height: 100vh;
     z-index: -1;
     animation: introLoad 2s forwards;
-    //overflow: hidden;
+    overflow: hidden;
 }
 
 .logo {
@@ -128,7 +128,7 @@ section.hero {
 
     body {
         margin: 1.5em 5em;
-        font-family: 'Poppins', sans-serif;
+
     }
 
 }
@@ -247,6 +247,8 @@ section.hero {
         gap: 0;
     }
 }
+
+// Анимации
 
 @keyframes introLoad {
     from {
