@@ -86,18 +86,24 @@ const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // }
 
-function printArray(array) {
+// function printArray(array, div) {
 
-    for (let i = 0; i < array.length; i++) {
+//     div.innerHTML = '';
 
-        myDiv.innerHTML += (i+1) + ". " + array[i] + "<br>";
+//     for (let i = 0; i < array.length; i++) {
 
-    }
+//         div.innerHTML += `<p>${(i + 1)}. ${array[i]}</p>`;
 
-}
+//     }
+// }
 
-printArray(users);
 
+// const usersDiv = document.createElement("div");
+// usersDiv.id = "users";
+
+// myDiv.appendChild(usersDiv);
+
+// printArray(users, usersDiv);
 
 
 
