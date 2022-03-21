@@ -1,5 +1,9 @@
+let siteRating = 0;
+
 function star(starNumber) {
     // starNumber - номер звезды на которую навел пользователь
+
+    siteRating = starNumber;
 
     starNumber = starNumber - 1;
 
@@ -11,7 +15,7 @@ function star(starNumber) {
 
     let star = document.getElementById(ids[starNumber]);
 
-    console.log(star);
+    // console.log(star);
 
     // // // // если звезда пустая
     if (star.src.includes("images/star_2.png")) {
@@ -39,6 +43,8 @@ function star(starNumber) {
 
 function resetRating() {
 
+    siteRating = 0;
+
     // сбросить рейтинг
     let ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
 
@@ -47,3 +53,32 @@ function resetRating() {
         document.getElementById(id).src = "images/star_2.png";
     }
 }
+
+const sendRatingBtn = document.getElementById("sendRating");
+
+sendRatingBtn.addEventListener("click", function () {
+    let text;
+
+    switch(siteRating) {
+        case 1:
+        case 2:
+        case 3:
+            text = "Спасибо за ваш отзыв!";
+            console.log("Вывести модальное окно для отзыва!");
+            break;
+        case 4:
+            text = "Спасибо за хороший балл!";
+            break;
+        case 5:
+            text = "Спасибо за высокую оценку :)";
+            break;
+
+        default:
+            text = "Пожалуйста, поставьте оценку от 1 до 5";
+            break;
+    }
+
+
+    document.getElementById("ratingText").innerText = text;
+
+});
