@@ -17,36 +17,36 @@ console.log(range(5, 2, -1));
 */
 
 
-const range = (start, end, step = 1) => {
-    let arr = [];
+// const range = (start, end, step = 1) => {
+//     let arr = [];
 
-    if (step > 0) {
-        for (let i = start; i <= end; i += step) arr.push(i);
-    }
-    else {
-        for (let i = start; i >= end; i += step) arr.push(i);
-    }
+//     if (step > 0) {
+//         for (let i = start; i <= end; i += step) arr.push(i);
+//     }
+//     else {
+//         for (let i = start; i >= end; i += step) arr.push(i);
+//     }
 
-    return arr;
-}
-
-
-const sum = (arr) => {
-    
-    let total = 0;
-    for (let i of arr) {
-        total += i;
-    }
-
-    return total;
-}
-
-// // reduce version:
-// const sum = (arr) => {
-//     return arr.reduce((a, b) => a + b);
+//     return arr;
 // }
 
-console.log(sum(range(1, 10)));
+
+// const sum = (arr) => {
+    
+//     let total = 0;
+//     for (let i of arr) {
+//         total += i;
+//     }
+
+//     return total;
+// }
+
+// // // reduce version 2:
+// // const sum = (arr) => {
+// //     return arr.reduce((a, b) => a + b);
+// // }
+
+// console.log(sum(range(1, 10)));
 
 // console.log(range(1, 10));
 
@@ -87,9 +87,52 @@ console.log(arrayValue);
 
 */
 
+// const reverseArray = (arr) => {
+//   const newArr = [];
+
+//   for (i of arr) {
+//     newArr.unshift(i);
+//   }
+//   return newArr;
+// }
+
+
+
+// const reverseArray2 = (arr) => {
+//   const newArr = [];
+
+//   for (i = arr.length-1; i >= 0; i--) {
+//     newArr.push(arr[i]);
+//   }
+//   return newArr;
+// }
+
+
+// console.log(reverseArray(["A", "B", "C"]));
+
+
+
+// const reverseArrayInPlace = (arr) => {
+
+//   for (let i = 0; i < Math.floor(arr.length/2); i++) {
+//     let swap = arr[i];
+//     arr[i] = arr[arr.length - 1 - i];
+//     arr[arr.length - 1 - i] = swap;
+//   }
+// }
+
+// const arrayValue = [1, 2, 3, 4, 5];
+// reverseArrayInPlace(arrayValue);
+// console.log(arrayValue);
+
+// // → [5, 4, 3, 2, 1]
+
+
+
 
 /*
 Список
+
 Объекты могут быть использованы для построения различных структур данных.
 Часто встречающаяся структура – список(не путайте с массивом).
 Список – связанный набор объектов, где первый объект содержит ссылку на второй, второй – на третий, и т.п.
@@ -128,6 +171,53 @@ console.log(nth(arrayToList([10, 20, 30]), 1));
 
 
 
+// const arrayToList = (array) => {
+//   let list = null;
+//   for (let i = array.length - 1; i >= 0; i--) {
+    
+//     list = { value: array[i], rest: list };
+//     // console.log(list);
+//   }
+//   return list;
+// }
+
+
+// console.log(arrayToList([10, 20, 30]));
+
+
+// function listToArray(list) {
+//   let array = [];
+//   for (let node = list; node; node = node.rest) {
+//     array.push(node.value);
+//   }
+//   return array;
+// }
+
+
+// function prepend(value, list) {
+//   return { value, rest: list };
+// }
+
+
+// function nth(list, n) {
+//   if (!list) return undefined;
+//   else if (n == 0) return list.value;
+//   else return nth(list.rest, n - 1);
+// }
+
+
+
+// console.log(arrayToList([10, 20]));
+// // → {value: 10, rest: {value: 20, rest: null}}
+// console.log(listToArray(arrayToList([10, 20, 30])));
+// // → [10, 20, 30]
+// console.log(prepend(10, prepend(20, null)));
+// // → {value: 10, rest: {value: 20, rest: null}}
+// console.log(nth(arrayToList([10, 20, 30]), 1));
+// // → 20
+
+
+
 /*
 
 Глубокое сравнение
@@ -153,3 +243,29 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 
 
 
+// function deepEqual(a, b) {
+//   if (a === b) return true;
+
+//   if (a == null || typeof a != "object" ||
+//     b == null || typeof b != "object") return false;
+
+//   let keysA = Object.keys(a), keysB = Object.keys(b);
+
+//   // console.log(keysA, keysB)
+
+//   if (keysA.length != keysB.length) return false;
+
+//   for (let key of keysA) {
+//     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+//   }
+
+//   return true;
+// }
+
+// let obj = { here: { is: "an" }, object: 2 };
+// console.log(deepEqual(obj, obj));
+// // → true
+// console.log(deepEqual(obj, { here: 1, object: 2 }));
+// // → false
+// console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
+// // → true
