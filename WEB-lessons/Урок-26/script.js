@@ -67,7 +67,7 @@ while (number <= 12) {
 
 // Массивы
 
-// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // console.log(users);
 
@@ -86,27 +86,40 @@ while (number <= 12) {
 
 // }
 
+function printArray(array) {
 
+    for (let i = 0; i < array.length; i++) {
 
+        myDiv.innerHTML += (i+1) + ". " + array[i] + "<br>";
 
+    }
+
+}
+
+printArray(users);
 
 
 
 
 ////// Методы массива ///////
-/*
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+
+console.log(users);
 
 // Добавление элементов
 users.push('Алексей');
+
 users.unshift('Михаил');
 
 console.log(users);
 
 
+
 // Удаление элементов
 
 let deletedLastUser = users.pop();
+
 console.log(deletedLastUser, users);
 
 
@@ -121,9 +134,12 @@ console.log(users.indexOf("Юлия"));
 
 
 console.log(users.includes("Дмитрий"));
+
 console.log(users.includes("Юлия"));
 
 
+
+/*
 
 function checkUser(username) {
     if (users.includes(username)) {
@@ -133,6 +149,11 @@ function checkUser(username) {
     }
 }
 
+for (let i = 0; i < users.length; i++) {
+
+    myDiv.innerHTML += users[i] + "<br>";
+
+}
 
 
 console.log(checkUser("Антон"));
