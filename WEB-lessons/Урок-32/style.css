@@ -58,6 +58,11 @@ main h2 {
     align-items: center;
 }
 
+.main-items .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 .main-item {
     margin: 30px 20px;
 }
