@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Подключаем CSS: -->
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем JavaScript -->
-    <script src="script.js"></script>
+
 
     <title>Магазин футболок</title>
 </head>
 
 <body>
+
+    <!-- Подарок -->
+    <img class="gift" id="giftBtn" src="images/podarok.png" width="100" alt="">
 
 
     <!-- Шапка страницы -->
@@ -128,7 +130,41 @@
     <br><br>
 
     <!-- Техподдержка -->
-    <img class="helper" onclick="print_contact()" src="images/tp.png" width="80" alt="">
+    <img class="helper" id="tpBtn" src="images/tp.png" width="80" alt="">
+
+
+
+
+    <!-- Модальное окно для подарка -->
+    <div id="giftModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close" id="giftClose">&times;</span>
+            <p>"Вы получили подарок! Скидка 25%!"</p>
+        </div>
+
+    </div>
+
+    <!-- Модальное окно для техподдержки -->
+    <div id="tpModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close" id="tpClose">&times;</span>
+            <p>Контакты техподдержки:</p>
+
+            <p>skype: helper <br> telegram: @helper <br> tel: 8995345235</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>

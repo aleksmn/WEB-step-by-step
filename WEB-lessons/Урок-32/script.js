@@ -29,3 +29,50 @@ function rand_tshirt() {
     document.getElementById("ts-image-2").src = arr.splice(rand, 1)[0]
 
 }
+
+
+// Модальные окна
+
+const modalGift = document.getElementById("giftModal");
+const openBtnGift = document.getElementById("giftBtn");
+const closeBtnGift = document.getElementById("giftClose");
+
+// console.log(modal, openBtn, closeBtn)
+
+
+openBtnGift.onclick = function () {
+    modalGift.style.display = "block";
+}
+
+closeBtnGift.onclick = function () {
+    modalGift.style.display = "none";
+}
+
+
+
+const modalTp = document.getElementById("tpModal");
+const openBtnTp = document.getElementById("tpBtn");
+const closeBtnTp = document.getElementById("tpClose");
+
+
+openBtnTp.onclick = function () {
+    modalTp.style.display = "block";
+}
+
+closeBtnTp.onclick = function () {
+    modalTp.style.display = "none";
+}
+
+
+window.onclick = function (event) {
+
+    if (event.target === modalTp) {
+        modalTp.style.display = "none";
+
+    }
+    if (event.target === modalGift) {
+        modalGift.style.display = "none";
+
+    }
+
+}
