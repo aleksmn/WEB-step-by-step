@@ -1,3 +1,7 @@
+html {
+  font-size: 10px;
+}
+
 .container {
   width: 70%;
   margin: auto;
@@ -7,6 +11,7 @@
 .dice {
   text-align: center;
   display: inline-block;
+  width: 48%;
 
 }
 
@@ -15,21 +20,22 @@ body {
 }
 
 h1 {
-  margin: 40px 10px;
+  margin: 40px 4px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #4ECCA3;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
 }
 
 img {
   width: 80%;
+  max-width: 12rem;
 }
 
 footer {
@@ -47,18 +53,21 @@ footer {
   border: 1px solid #2dc995;
   border-radius: 5px;
   color: white;
-  padding: 18px 52px;
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin-top: 5rem;
+  max-width: 12rem;
+  width: 60%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
   transition-duration: 0.1s;
-  margin-top: 90px;
-  width: 40%;
+
 }
 
 
@@ -69,4 +78,30 @@ footer {
 
 .btn:active {
   background-color: #389173;
+}
+
+
+
+@media screen and (min-width: 420px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+}
+
+
+@media screen and (min-width: 620px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .btn {
+    max-width: 400px;
+  }
+
+
 }
