@@ -11,7 +11,14 @@ let arrays = [[1, 2, 3], [4, 5], [6]];
 
 */
 
+// let arrays = [[1, 2, 3], [4, 5], [6]];
 
+// let arr = arrays.reduce(function (a, b) {
+//     return a.concat(b);
+// });
+
+
+// console.log(arr);
 
 
 
@@ -74,23 +81,133 @@ const ANCESTRY_FILE = JSON.stringify([
 
 
 const ancestry = JSON.parse(ANCESTRY_FILE);
-// console.log(ancestry.length)
-// console.log(ancestry[0]);
+// // console.log(ancestry.length)
+// // console.log(ancestry[0]);
 
-// for (a of ancestry) {
-//     console.log(a.name, a.born);
+// // for (a of ancestry) {
+// //     console.log(a.name, a.born);
+// // }
+
+
+// function average(array) {
+//     function plus(a, b) { return a + b; }
+//     return array.reduce(plus) / array.length;
+// }
+
+// let byName = {};
+// ancestry.forEach(function (person) {
+//     byName[person.name] = person;
+// });
+
+// // console.log(byName);
+
+
+
+// let diff = ancestry.filter(function (person) {
+//     return byName[person.mother] != null;
+// });
+
+// console.log(diff[0]);
+
+
+// diff = diff.map(function (person) {
+//     return person.born - byName[person.mother].born;
+// });
+
+// console.log(diff);
+
+// console.log(average(diff));
+
+
+/*
+
+Историческая ожидаемая продолжительность жизни
+Мы считали, что только последнее поколение людей дожило до 90 лет.Давайте рассмотрим этот феномен поподробнее.Подсчитайте средний возраст людей для каждого из столетий.Назначаем столетию людей, беря их год смерти, деля его на 100 и округляя: Math.ceil(person.died / 100).
+
+
+*/
+
+
+
+// function average(array) {
+//     function plus(a, b) { return a + b; }
+//     return array.reduce(plus) / array.length;
+// }
+
+// function groupBy(array, groupOf) {
+//     var groups = {};
+//     array.forEach(function (element) {
+//         var groupName = groupOf(element);
+//         if (groupName in groups)
+//             groups[groupName].push(element);
+//         else
+//             groups[groupName] = [element];
+//     });
+//     return groups;
+// }
+
+// var byCentury = groupBy(ancestry, function (person) {
+//     return Math.ceil(person.died / 100);
+// });
+
+// for (var century in byCentury) {
+//     var ages = byCentury[century].map(function (person) {
+//         return person.died - person.born;
+//     });
+//     console.log(century + ": " + average(ages));
 // }
 
 
-function average(array) {
-    function plus(a, b) { return a + b; }
-    return array.reduce(plus) / array.length;
-}
 
-let byName = {};
-ancestry.forEach(function (person) {
-    byName[person.name] = person;
-});
 
-console.log(byName);
 
+/*
+
+Every и some
+
+
+У массивов есть ещё стандартные методы every и some. Они принимают как аргумент некую функцию, которая, будучи вызванной с элементом массива в качестве аргумента, возвращает true или false. Так же, как && возвращает true, только если выражения с обеих сторон оператора возвращают true, метод every возвращает true, когда функция возвращает true для всех элементов массива. Соответственно, some возвращает true, когда заданная функция возвращает true при работе хотя бы с одним из элементов массива. Они не обрабатывают больше элементов, чем необходимо – например, если some получает true для первого элемента, он не обрабатывает оставшиеся.
+Напишите функции every и some, которые работают так же, как эти методы, только принимают массив в качестве аргумента.
+
+
+*/
+
+
+
+// function every(array, predicate) {
+//     for (var i = 0; i < array.length; i++) {
+//         if (!predicate(array[i]))
+//             return false;
+//     }
+//     return true;
+// }
+
+// function some(array, predicate) {
+//     for (var i = 0; i < array.length; i++) {
+//         if (predicate(array[i]))
+//             return true;
+//     }
+//     return false;
+// }
+
+// console.log(every([NaN, NaN, NaN], isNaN));
+// // → true
+// console.log(every([NaN, NaN, 4], isNaN));
+// // → false
+// console.log(some([NaN, 3, 4], isNaN));
+// // → true
+// console.log(some([2, 3, 4], isNaN));
+// // → false
+
+
+// function isEven(num) {
+//     return num % 2 == 0;
+// }
+
+// console.log(every([2, 3, 4], isEven));
+
+// console.log(every([2, 6, 4], isEven));
+
+// console.log(some([2, 3, 4], isEven));
+
+// console.log(some([3, 7, 11], isEven));
