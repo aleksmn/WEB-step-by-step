@@ -262,7 +262,9 @@ main h2 {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    border-radius: 10px;
+    /* width: 60%; */
+    max-width: 600px;
 }
 
 /* Кнопка закрытия (x) */
