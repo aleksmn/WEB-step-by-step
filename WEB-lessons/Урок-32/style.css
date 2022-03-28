@@ -249,8 +249,6 @@ main h2 {
     height: 100%;
     /* Полупрозрачный фон */
     background-color: rgba(0, 0, 0, 0.4);
-    animation-name: animate-modal;
-    animation-duration: 0.4s;
 }
 
 /* Содержимое модального окна */
@@ -265,6 +263,9 @@ main h2 {
     border-radius: 10px;
     /* width: 60%; */
     max-width: 600px;
+    position: relative;
+    animation-name: animate-modal;
+    animation-duration: 0.4s;
 }
 
 /* Кнопка закрытия (x) */
