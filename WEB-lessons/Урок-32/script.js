@@ -48,6 +48,13 @@ closeBtnGift.onclick = function () {
     modalGift.style.display = "none";
 }
 
+modalGift.onclick = function (event) {
+    if (event.target === modalGift) {
+        modalGift.style.display = "none";
+
+    }
+}
+
 
 
 const modalTp = document.getElementById("tpModal");
@@ -64,15 +71,9 @@ closeBtnTp.onclick = function () {
 }
 
 
-window.onclick = function (event) {
-
+modalTp.onclick = function (event) {
     if (event.target === modalTp) {
         modalTp.style.display = "none";
 
     }
-    if (event.target === modalGift) {
-        modalGift.style.display = "none";
-
-    }
-
 }
