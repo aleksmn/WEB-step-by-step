@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    padding: 0;
+    font-family: sans-serif;
+    color: rgb(53, 53, 53);
 }
 
 header {
@@ -142,19 +143,29 @@ main h2 {
 
 /* Форма для оформления заказа */
 
+/* Форма для оформления заказа */
+
 .order-form {
-    max-width: 400px;
+    max-width: 460px;
     margin: 0 auto;
+    font-size: 18px;
 }
 
 .order-form input {
+    font-size: 18px;
     width: 100%;
+    box-sizing: border-box;
     padding: 15px;
     border: none;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(247, 247, 247);
     margin-bottom: 15px;
     margin-top: 5px;
-    box-shadow: 2px 1px 5px 0.5px black;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.51);
+
+}
+
+.order-form input:focus-visible {
+    outline: 1px solid rgb(50, 184, 43);
 }
 
 .order-form label {
@@ -162,7 +173,7 @@ main h2 {
 }
 
 .order-form hr {
-    width: 107%;
+    width: 100%;
     border: none;
     box-shadow: 2px 2px 5px 0.5px black;
     margin-bottom: 24px;
@@ -178,19 +189,22 @@ main h2 {
 /* Кнопка заказа */
 
 .order-form button {
-    background: #34d94d;
+    background: hsl(129, 68%, 53%);
     background-image: linear-gradient(to bottom, #34d94d, #32b82b);
     border: 1px solid rgb(51, 189, 51);
     border-radius: 12px;
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 30px;
     text-decoration: none;
+    margin: 30px auto;
+    display: block;
+    width: 100%;
 }
 
 .order-form button:hover {
-    background: #3cfc69;
+    background: rgb(47, 240, 92);
     background-image: linear-gradient(to bottom, #3cfc69, #34d93f);
     text-decoration: none;
 }
