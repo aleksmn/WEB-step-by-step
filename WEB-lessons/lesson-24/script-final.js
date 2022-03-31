@@ -1,39 +1,24 @@
 // Калькулятор
 
-function calc() {
-  let input1 = document.getElementById("num1");
-  let input2 = document.getElementById("num2");
+const calcBtn = document.getElementById('calcBtn')
 
-  let a = parseFloat(input1.value);
-  let b = parseFloat(input2.value);
+calcBtn.onclick = function () {
+  const result = document.getElementById("result");
+  const input1 = document.getElementById("num1");
+  const input2 = document.getElementById("num2");
 
-  let result = document.getElementById("result");
+  const a = parseFloat(input1.value);
+  const b = parseFloat(input2.value);
+
+  if (isNaN(a) || isNaN(b)) {
+    result.innerText = "Введите числа";
+    return
+  }
+
+  
   let resultText = `${a} + ${b} = ${a + b}\n${a} - ${b} = ${a - b}` + 
                  `\n${a} * ${b} = ${a * b}\n${a} / ${b} = ${a / b}\n`;
 
   result.innerText = resultText;
-
 }
 
-// Работа с текстом
-
-function textCalc() {
-
-    let text = prompt('Введите текст: ');
-    console.log(text);
-
-    console.log("Длина текста: " + text.length);
-    console.log("Первая буква: " + text[0])
-    console.log("Последняя буква: " + (text[text.length - 1]))
-
-    document.getElementById("text").innerText = "Текст: " + text + "\nДлина текста: " + text.length 
-                                                + "\nПервая буква: " + text[0]
-                                                + "\nПоследняя буква: " + (text[text.length - 1]);
-
-}
-
-// Вызываем функции:
-
-// calc()
-
-// textCalc()
