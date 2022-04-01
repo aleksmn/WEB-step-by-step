@@ -15,3 +15,33 @@ for (let i = 0; i < stars.length; i++) {
 
     });
 };
+
+
+const sendRatingBtn = document.getElementById("sendRating");
+
+sendRatingBtn.addEventListener("click", function () {
+    let text;
+
+    switch (siteRating) {
+        case 1:
+        case 2:
+        case 3:
+            text = "Спасибо за ваш отзыв!";
+            console.log("Вывести модальное окно для отзыва!");
+            break;
+        case 4:
+            text = "Спасибо за хороший балл!";
+            break;
+        case 5:
+            text = "Спасибо за высокую оценку :)";
+            break;
+
+        default:
+            text = "Пожалуйста, поставьте оценку от 1 до 5";
+            break;
+    }
+
+
+    document.getElementById("ratingText").innerText = text;
+
+});
