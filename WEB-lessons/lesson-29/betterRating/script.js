@@ -17,6 +17,16 @@ for (let i = 0; i < stars.length; i++) {
 };
 
 
+const resetRating = document.getElementById("resetRating");
+
+resetRating.addEventListener("click", function () {
+    stars.forEach(star => {
+        star.src = "images/star_2.png";
+    });
+
+    siteRating = 0;
+});
+
 const sendRatingBtn = document.getElementById("sendRating");
 
 sendRatingBtn.addEventListener("click", function () {
