@@ -24,6 +24,16 @@ myDiv.style.color = "blue";
 
 
 
+// // Выводим строку каждые 2 секунды
+
+// for (let i = 0; i <= 10; i += 2) {
+//     setTimeout(function () {
+//         myDiv.innerHTML += `<p>Секунда ${i}</p>`;
+//     }, i*1000);
+// }
+
+
+
 // let number = 0;
 
 // while (number <= 12) {
