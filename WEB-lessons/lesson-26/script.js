@@ -4,14 +4,20 @@ myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
 myDiv.style.color = "blue";
 
 
+// setTimeout(function () {
+//     myDiv.innerHTML += "<p>Этот текст появится через 5 секунд</p>";
+// }, 5000);
+
+
+// myDiv.innerHTML += '<p>новый текст</p>';
+
+// myDiv.innerHTML += '<p>еще новый текст</p>';
 
 
 
-// myDiv.innerHTML += "<p>новый текст</p>";
 
-// myDiv.innerHTML += "<p>еще новый текст</p>";
 
-// for (let i = 1; i <= 10; i = i + 1) {
+// for (let i = 0; i <= 10; i += 2) {
 //     myDiv.innerHTML += `<p>Номер ${i * 10}</p>`;
 // }
 
@@ -26,6 +32,8 @@ myDiv.style.color = "blue";
 
 //     number = number + 2;
 // }
+
+
 
 
 /*
@@ -67,12 +75,11 @@ while (number <= 12) {
 
 // Массивы
 
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // console.log(users);
 
 // console.log(users[0]);
-
 // console.log(users[1]);
 
 // console.log(users.length);
@@ -85,6 +92,18 @@ const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 //     myDiv.innerHTML += users[i] + "<br>";
 
 // }
+
+
+// For of
+
+// for (let u of users) {
+
+//     myDiv.innerHTML += u + "<br>";
+
+// }
+
+
+
 
 // function printArray(array, div) {
 
@@ -111,37 +130,37 @@ const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
 // const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-console.log(users);
+// console.log(users);
 
-// Добавление элементов
-users.push('Алексей');
+// // Добавление элементов
+// users.push('Алексей');
 
-users.unshift('Михаил');
+// users.unshift('Михаил');
 
-console.log(users);
-
-
-
-// Удаление элементов
-
-let deletedLastUser = users.pop();
-
-console.log(deletedLastUser, users);
-
-
-let deletedFirstUser = users.shift();
-console.log(deletedFirstUser, users);
-
-
-console.log(users.indexOf("Дмитрий"));
-
-console.log(users.indexOf("Юлия"));
+// console.log(users);
 
 
 
-console.log(users.includes("Дмитрий"));
+// // Удаление элементов
 
-console.log(users.includes("Юлия"));
+// let deletedLastUser = users.pop();
+
+// console.log(deletedLastUser, users);
+
+
+// let deletedFirstUser = users.shift();
+// console.log(deletedFirstUser, users);
+
+
+// console.log(users.indexOf("Дмитрий"));
+
+// console.log(users.indexOf("Юлия"));
+
+
+
+// console.log(users.includes("Дмитрий"));
+
+// console.log(users.includes("Юлия"));
 
 
 
@@ -181,6 +200,12 @@ console.log(users);
 // Как удалить Дмитрия?
 /*
 const users = [ "Артем", "Дмитрий","Кирилл", "Иван"];
+
+
+
+
+
+
 
 function delItem (myArr, item) {
 
