@@ -51,16 +51,20 @@ main {
 }
 
 main h2 {
+    margin-top: 30px;
     margin-bottom: 4px;
 }
 
 .main-items {
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 .main-item {
     margin: 30px 20px;
+    padding: 20px;
+    box-shadow: 6px 6px 12px 4px rgba(107, 107, 107, 0.164);
 }
 
 .main-item button {
