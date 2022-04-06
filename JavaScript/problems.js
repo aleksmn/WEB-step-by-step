@@ -87,3 +87,24 @@
 
 // console.log(numsFiltered);
 // console.log(numsFiltered.length);
+
+
+
+// Как заменить в стоке числа на слова, например
+// 1 кот, 2 кота, 3 кота' => один кот, два кота, три кота
+
+
+// let nums = {
+//     '1': 'один',
+//     '2': 'два',
+//     '3': 'три'
+// }
+
+// let myString = '1 кот, 2 кота, 3 кота';
+
+// for (n in nums) {
+//     myString = myString.replace(n, nums[n]);
+// }
+
+
+// console.log(myString);
