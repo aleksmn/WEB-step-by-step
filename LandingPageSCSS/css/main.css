@@ -1,11 +1,16 @@
 body {
   margin: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
 }
 
 .hero-img {
@@ -21,12 +26,6 @@ a {
   z-index: -1;
   -webkit-animation: introLoad 2s forwards;
           animation: introLoad 2s forwards;
-  overflow: hidden;
-}
-
-.logo {
-  color: white;
-  font-weight: bold;
 }
 
 nav {
@@ -40,10 +39,10 @@ nav {
   text-transform: uppercase;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 nav ul {
@@ -54,7 +53,7 @@ nav ul {
 
 nav ul a {
   color: black;
-  padding: .75em 2em;
+  padding: 0.75em 2em;
   display: block;
 }
 
@@ -79,18 +78,8 @@ header {
 
 header svg {
   width: 2.3em;
-  margin-top: 0.6em;
+  margin-top: 0.4em;
   cursor: pointer;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-top: 2em;
-  line-height: 3.3rem;
-}
-
-.subhead {
-  font-size: 1.4rem;
 }
 
 section.hero {
@@ -98,7 +87,16 @@ section.hero {
   height: 90vh;
   -webkit-animation: moveDown 1s ease-in-out forwards;
           animation: moveDown 1s ease-in-out forwards;
-  opacity: 0;
+}
+
+section.hero h1 {
+  font-size: 3rem;
+  margin-top: 2em;
+  line-height: 3.3rem;
+}
+
+section.hero .subhead {
+  font-size: 1.4rem;
 }
 
 section.hero .down-arrow {
@@ -164,8 +162,8 @@ section.hero .down-arrow path {
   }
   nav ul a {
     color: white;
-    padding: .5em 1.5em;
-    font-size: .9rem;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
   }
   nav ul a:hover {
     background: none;
