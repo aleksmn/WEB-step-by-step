@@ -80,5 +80,5 @@ input.search-bar {
     visibility: visible;
     content: "Loading...";
     position: absolute;
-    top: 20px
+    top: 20px;
 }
