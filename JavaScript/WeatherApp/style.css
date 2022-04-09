@@ -69,3 +69,16 @@ input.search-bar {
     display: flex;
     align-items: center;
 }
+
+
+.weather.loading {
+    visibility: hidden;
+    position: relative;
+}
+
+.weather.loading::after {
+    visibility: visible;
+    content: "Loading...";
+    position: absolute;
+    top: 20px
+}
