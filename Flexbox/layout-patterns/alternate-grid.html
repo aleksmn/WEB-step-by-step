@@ -8,8 +8,15 @@
     <title>Alternate Grid Flexbox Pattern</title>
     <style>
         body {
-            margin: 20px;
+            margin: 2%;
+            background-color: rgb(52, 52, 52);
         }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: auto;
+        }
+
 
         .container {
             display: flex;
@@ -18,33 +25,34 @@
         }
 
         .item {
-            background-color: lightblue;
+            background-color: rgb(68, 239, 255);
             width: 48%;
-            height: 100px;
-            margin-bottom: 2%;
+            height: 300px;
+            margin-bottom: 4%;
         }
 
         .item:nth-child(3n) {
-            background-color: lightcoral;
+            background-color: rgb(252, 89, 89);
             width: 100%;
         }
-
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="wrapper">
+        <div class="container">
 
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
 
+        </div>
     </div>
 </body>
 

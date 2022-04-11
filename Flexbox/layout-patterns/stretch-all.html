@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stretch All Flexbox Pattern</title>
     <style>
+        /* .wrapper {
+            max-width: 800px;
+            margin: auto;
+        } */
         body {
-            margin: 20px;
+            margin: 60px;
+            background-color: rgb(33, 33, 33);
         }
 
         .container {
@@ -17,7 +22,7 @@
         }
 
         .item {
-            background-color: lightpink;
+            background-color: rgb(255, 182, 193);
             flex-grow: 1;
             height: 200px;
         }
@@ -26,10 +31,13 @@
             margin-left: 2%;
         }
 
-        /* .item-big {
+        .item-big {
             background-color: lightskyblue;
             flex-grow: 2;
-        } */
+            /* background-image: url(https://picsum.photos/id/1015/200/300); */
+            /* background-size: cover;
+            background-position: center; */
+        }
 
         /* .item-side {
             width: 200px;
@@ -37,19 +45,13 @@
             background-color: orange;
         } */
 
-        /* .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        } */
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item item-big"></div>
             <div class="item"></div>
             <div class="item"></div>
 
@@ -60,11 +62,10 @@
             <div class="item"></div>
             <div class="item item-big"></div>
             <div class="item"></div>
-            <div class="item"></div>
         </div>
 
         <div class="container">
-            <div class="item  item-big"></div>
+            <div class="item item-big"></div>
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
@@ -72,11 +73,11 @@
         </div>
 
         <!-- Stretch Middle -->
-        <!-- <div class="container">
+        <div class="container">
             <div class="item item-side"></div>
             <div class="item item-center"></div>
             <div class="item item-side"></div>
-        </div> -->
+        </div>
     </div>
 </body>
 
