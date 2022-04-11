@@ -94,7 +94,8 @@ main h2 {
     display: flex;
     justify-content: space-between;
     background-color: rgb(228, 36, 36);
-    box-shadow: 10px 10px 20px rgb(65, 65, 65);
+    box-shadow: 10px 10px 20px rgba(65, 65, 65, 0.373);
+    margin-top: 40px;
 }
 
 .kupon-text {
