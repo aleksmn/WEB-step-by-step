@@ -5,7 +5,7 @@ showSlides(slideIndex);
 function showSlides(n) {
     // console.log("n = " + n);
 
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.querySelectorAll(".mySlides");
     // если номер слайда превышает количество слайдов - перейти к первому
     if (n > slides.length) { slideIndex = 1 }
     // если номер слайда меньше единицы - показываем последний
