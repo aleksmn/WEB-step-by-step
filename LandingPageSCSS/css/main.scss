@@ -27,7 +27,7 @@ a {
     background-position-x: 20%;
     background-position-y: 20%;
     z-index: -1;
-    // animation: introLoad 2s forwards;
+    animation: introLoad 2s forwards;
 }
 
 nav {
@@ -267,6 +267,7 @@ section.hero {
 @keyframes moveDown {
     from {
         transform: translateY(-100px);
+        opacity: 0;
     }
 
     to {

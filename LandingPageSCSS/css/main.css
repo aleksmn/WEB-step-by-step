@@ -24,6 +24,8 @@ a {
   background-position-x: 20%;
   background-position-y: 20%;
   z-index: -1;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
 }
 
 nav {
@@ -205,6 +207,8 @@ section.hero .down-arrow path {
   }
   .feature img {
     width: 25em;
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   }
   .feature .content {
     text-align: right;
@@ -284,6 +288,7 @@ section.hero .down-arrow path {
   from {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
+    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0);
@@ -296,6 +301,7 @@ section.hero .down-arrow path {
   from {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
+    opacity: 0;
   }
   to {
     -webkit-transform: translateY(0);
