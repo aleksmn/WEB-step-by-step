@@ -3,6 +3,13 @@
     margin: 0 auto;
 }
 
+h1 {
+    color: rgb(60, 160, 210);
+    font-family: sans-serif;
+    font-size: 24px;
+    margin: 30px 0;
+}
+
 button {
     background-color: rgb(207, 23, 23);
     color: white;

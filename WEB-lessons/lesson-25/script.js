@@ -1,13 +1,13 @@
-function changeStyle() {
+const button1 = document.getElementById('btn-1');
+const button2 = document.getElementById('btn-2');
 
-    //Выбираем нужный элемент на страничке:
-    let myButton = document.getElementById('btn-1');
 
-    console.log(myButton);
+button1.onclick = function () {
 
+    console.log(button1);
 
     // текущий цвет:
-    let currColor = window.getComputedStyle(myButton).backgroundColor;
+    let currColor = window.getComputedStyle(button1).backgroundColor;
 
     console.log(currColor);
     // первый (зеленый) цвет:
@@ -18,22 +18,21 @@ function changeStyle() {
     // проверка цвета фона кнопки
     if (currColor === secondColor) {
 
-        myButton.style.backgroundColor = firstColor;
-        // console.log("change to green");
+        button1.style.backgroundColor = firstColor;
+        console.log("change to green");
     }
 
     else {
-        myButton.style.backgroundColor = secondColor;
-        // console.log("change to red");
+        button1.style.backgroundColor = secondColor;
+        console.log("change to red");
     }
 
 }
 
 
 
-function toggleClass() {
-    let myButton = document.getElementById('btn-2');
+button2.onclick = function () {
 
-    myButton.classList.toggle("bg-green");
+    button2.classList.toggle("bg-green");
 
 }
