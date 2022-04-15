@@ -4,6 +4,8 @@ body {
   color: rgb(58, 58, 58);
   font-family: sans-serif;
   font-size: 1.2rem;
+  /* 16px = 1rem */
+  line-height: 1.6rem;
 }
 
 .wrapper {
@@ -16,6 +18,7 @@ body {
   margin: 14px;
   flex: 1 100%;
   box-shadow: 10px 10px 10px rgba(129, 129, 129, 0.335);
+  border-radius: 5px;
 }
 
 header {
@@ -26,14 +29,13 @@ header {
   align-items: center;
 }
 
-.profile-pic {
+header img {
   border-radius: 50%;
   margin: 20px;
   filter: saturate(1.1) brightness(1.2);
 }
 
 .main {
-  text-align: left;
   background: rgb(255, 214, 167);
 }
 
@@ -54,7 +56,6 @@ footer {
   background: rgb(198, 211, 221);
   text-align: center;
 }
-
 
 
 /* Медиазапрос для экрана планшета */
