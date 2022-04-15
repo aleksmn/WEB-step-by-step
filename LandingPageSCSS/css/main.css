@@ -207,8 +207,6 @@ section.hero .down-arrow path {
   }
   .feature img {
     width: 25em;
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   }
   .feature .content {
     text-align: right;
