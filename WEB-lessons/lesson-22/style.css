@@ -120,15 +120,15 @@ main h2 {
     margin-left: 45px;
 }
 
-.order .yellow {
+.order .cart {
     background-color: yellow;
 }
 
-.order .yellow h3 {
+.order .cart h3 {
     padding: 20px 0 20px 20px;
 }
 
-.order .grey {
+.order .cart-text {
     color: rgb(70, 70, 70);
 }
 
