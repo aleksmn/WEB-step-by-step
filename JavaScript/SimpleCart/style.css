@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: serif;
     color: rgb(54, 54, 54);
 }
 
@@ -25,11 +25,16 @@ nav li {
 }
 
 nav a {
-    display: inline-block;
-    padding: .5em;
     color: rgb(58, 52, 52);
     text-decoration: none;
+    font-family: sans-serif;
 }
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(0, 68, 128);
+}
+
 
 nav li {
     padding: 0 5%;
@@ -46,6 +51,7 @@ header h1 {
 header {
     background-color: rgb(162, 255, 68);
     margin-bottom: 40px;
+    padding: 20px 0;
 }
 
 section {
@@ -82,17 +88,21 @@ section h2 {
 
 .shop-item-image {
     height: 250px;
+    width: 250px;
 }
 
 .shop-item-details {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0;
 }
 
 .shop-item-price {
     flex-grow: 1;
-    color: #333;
+    font-size: 18px;
+    color: rgb(47, 123, 47);
+    font-family: sans-serif;
 }
 
 
