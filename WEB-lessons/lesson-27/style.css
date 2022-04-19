@@ -26,6 +26,9 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    /* position: relative;
+    animation-name: animate-modal;
+    animation-duration: 0.4s; */
 }
 
 /* Кнопка закрытия (x) */
@@ -40,3 +43,18 @@ body {
     color: #000;
     cursor: pointer;
 }
+
+
+/* Анимация модального окна */
+/* 
+@keyframes animate-modal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+} */
