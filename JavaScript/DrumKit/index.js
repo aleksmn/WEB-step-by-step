@@ -29,9 +29,11 @@ for (btn of drumButtons) {
         //     return
         // }
         
-        this.style.color = 'white';
+        // console.log(this.classList[0]);
+        // console.log(this.innerText);
 
-        switch (this.classList[0]) {
+
+        switch (this.innerText) {
             case 'w':
                 new Audio('sounds/tom-1.mp3').play();
                 break;
@@ -47,8 +49,21 @@ for (btn of drumButtons) {
             case 'd':
                 new Audio('sounds/tom-4.mp3').play();
                 break;
+
+            case 'j':
+                new Audio('sounds/snare.mp3').play();
+                break;
+
+            case 'k':
+                new Audio('sounds/crash.mp3').play();
+                break;
+
+            case 'l':
+                new Audio('sounds/kick-bass.mp3').play();
+                break;
         
             default:
+                console.log(this.innerText)
                 break;
         }
 
