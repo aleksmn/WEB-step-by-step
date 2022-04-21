@@ -1,12 +1,22 @@
 const myDiv = document.getElementById('demo');
 
-myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
-myDiv.style.color = "blue";
+console.log(myDiv);
 
+// myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
+
+
+// myDiv.style.color = "blue";
+// myDiv.style.backgroundColor = "rgb(188, 190, 255)";
+// myDiv.style.padding = "30px";
+
+
+// myDiv.classList.add('main');
 
 // setTimeout(function () {
 //     myDiv.innerHTML += "<p>Этот текст появится через 5 секунд</p>";
 // }, 5000);
+
+
 
 
 // myDiv.innerHTML += '<p>новый текст</p>';
