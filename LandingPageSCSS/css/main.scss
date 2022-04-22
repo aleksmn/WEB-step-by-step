@@ -86,7 +86,7 @@ section.hero {
 
     h1 {
         font-size: 3rem;
-        margin-top: 2em;
+        margin-top: 8rem;
         line-height: 3.3rem;
     }
 
@@ -102,7 +102,7 @@ section.hero {
         animation: moveArrow 1s alternate-reverse infinite;
 
         path {
-            fill: rgb(255, 255, 255);
+            fill: white;
         }
     }
 }
@@ -196,6 +196,7 @@ section.hero {
         svg.down-arrow {
             stroke: black;
             position: unset;
+            margin-top: 2rem;
 
             path {
                 fill: black;
