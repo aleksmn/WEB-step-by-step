@@ -25,7 +25,7 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imageSrc) {
     console.log("Добавляем товар:", title, price, imageSrc);
-    updateCartTotal();
+    
 
     const cartItems = document.querySelector('.cart-items');
     const cartRow = document.createElement('div');
@@ -50,18 +50,46 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.querySelector('.btn-danger').addEventListener('click', removeCartItem)
     cartRow.querySelector('.cart-quantity-input').addEventListener('change', quantityChanged)
 
+    updateCartTotal();
+}
+
+function removeCartItem(event) {
+    console.log("Удаляем элемент.");
+    // console.log(event.target.parentElement.parentElement)
+    event.target.parentElement.parentElement.remove();
+    updateCartTotal();
+}
 
 
+function quantityChanged(event) {
+    console.log("Меняем количество товаров.");
+ 
+    let input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal();
 }
 
 function updateCartTotal() {
-    // console.log("Обновляем итоговую сумму.");
-}
+    console.log("Обновляем итоговую сумму.");
 
-function removeCartItem() {
-    console.log("Удаляем элемент.");
-}
+    // const cartRows = document.querySelectorAll(".cart-items .cart-row");
+    
+    // let total = 0;
 
-function quantityChanged() {
-    console.log("Меняем количество товаров.");
+    // for(row of cartRows) {
+    //     console.log(row);
+    //     let priceElement = row.querySelector('.cart-price');
+    //     let quantityElement = row.querySelector('.cart-quantity-input');
+    //     // console.log(priceElement, quantityElement);
+    //     let price = parseFloat(priceElement.innerText.replace('руб.', ''));
+    //     let quantity = parseInt(quantityElement.value);
+    //     total = total + (price * quantity);
+    //     // console.log(total);
+    // }
+
+    // total = Math.round(total * 100) / 100
+    // document.querySelector('.cart-total-price').innerText = total + ' руб.'
+    
 }
