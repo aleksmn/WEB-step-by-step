@@ -1,12 +1,14 @@
 let stars = document.querySelectorAll(".rating img");
+
 let siteRating = 0;
 
 for (let i = 0; i < stars.length; i++) {
     stars[i].addEventListener("mouseover", () => {
-        stars.forEach(star => {
-            star.src = "images/star_2.png";
+        // Очищаем зведочки
+        stars.forEach(s => {
+            s.src = "images/star_2.png";
         });
-
+        // Закрашиваем звездочки
         for (let k = 0; k <= i; k++) {
             stars[k].src = "images/star_1.png";
             siteRating = k + 1;
@@ -20,8 +22,8 @@ for (let i = 0; i < stars.length; i++) {
 const resetRating = document.getElementById("resetRating");
 
 resetRating.addEventListener("click", function () {
-    stars.forEach(star => {
-        star.src = "images/star_2.png";
+    stars.forEach(s => {
+        s.src = "images/star_2.png";
     });
 
     siteRating = 0;
@@ -30,7 +32,7 @@ resetRating.addEventListener("click", function () {
 const sendRatingBtn = document.getElementById("sendRating");
 
 sendRatingBtn.addEventListener("click", function () {
-    let text;
+    let text = "";
 
     switch (siteRating) {
         case 1:
