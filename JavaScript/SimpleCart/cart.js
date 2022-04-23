@@ -19,8 +19,8 @@ function ready() {
 
     // Изменение количества
     let quantityInputs = document.getElementsByClassName('cart-quantity-input')
-    for (let i = 0; i < quantityInputs.length; i++) {
-        let input = quantityInputs[0]
+
+    for (let input of quantityInputs) {
         input.addEventListener('change', quantityChanged)
     }
 
