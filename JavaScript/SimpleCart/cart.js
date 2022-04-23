@@ -11,23 +11,24 @@ if (document.readyState == 'loading') {
 function ready() {
 
     // Кнопка "Удалить"
-    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    console.log(removeCartItemButtons)
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
-        var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
+    let removeCartItemButtons = document.getElementsByClassName('btn-danger')
+
+    for (b of removeCartItemButtons) {
+        b.addEventListener('click', removeCartItem);
     }
+
     // Изменение количества
-    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
-    for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[0]
+    let quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (let i = 0; i < quantityInputs.length; i++) {
+        let input = quantityInputs[0]
         input.addEventListener('change', quantityChanged)
     }
+
     // Кнопка "Добавить в корзину"
-    var addToCartButtons = document.getElementsByClassName('shop-item-button')
-    for (var i = 0; i < addToCartButtons.length; i++) {
-        var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked)
+    let addToCartButtons = document.getElementsByClassName('shop-item-button');
+
+    for (let b of addToCartButtons) {
+        b.addEventListener('click', addToCartClicked);
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
@@ -45,13 +46,13 @@ function purchaseClicked() {
 
 function removeCartItem(event) {
     // Удалить родителя родителя по клику на кнопку
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
-    updateCartTotal()
+    let buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateCartTotal();
 }
 
 function quantityChanged(event) {
-    var input = event.target
+    let input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
     }
@@ -59,29 +60,30 @@ function quantityChanged(event) {
 }
 
 function addToCartClicked(event) {
-    var button = event.target
-    var shopItem = button.parentElement.parentElement
-    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    let button = event.target
+    let shopItem = button.parentElement.parentElement
+    let title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    let price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    let imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
 
 // Добавление в корзину
 function addItemToCart(title, price, imageSrc) {
-    var cartRow = document.createElement('div')
+    let cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
+
     // Проверяем, есть ли в корзине уже такой товар
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (var i = 0; i < cartItemNames.length; i++) {
+    let cartItems = document.getElementsByClassName('cart-items')[0]
+    let cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (let i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             alert('Этот товар уже в корзине!')
             return
         }
     }
-    var cartRowContents = `
+    let cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
