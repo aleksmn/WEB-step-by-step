@@ -37,7 +37,7 @@ function ready() {
 // Нажатие на кнопку "Купить"
 function purchaseClicked() {
     alert('Спасибо за покупку!')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
+    let cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
@@ -104,17 +104,17 @@ function addItemToCart(title, price, imageSrc) {
 // Обновить "Итого"
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-    var total = 0
+    let cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    let cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    let total = 0
 
-    for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+    for (let i = 0; i < cartRows.length; i++) {
+        let cartRow = cartRows[i]
+        let priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        let quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         console.log(priceElement, quantityElement)
-        var price = parseFloat(priceElement.innerText.replace('руб.', ''))
-        var quantity = parseInt(quantityElement.value)
+        let price = parseFloat(priceElement.innerText.replace('руб.', ''))
+        let quantity = parseInt(quantityElement.value)
         total = total + (price * quantity)
         console.log(total)
     }
