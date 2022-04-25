@@ -1,22 +1,22 @@
 html {
-  font-size: 10px;
-}
-
-.container {
-  width: 86%;
-  margin: auto;
-  text-align: center;
-}
-
-.dice {
-  text-align: center;
-  display: inline-block;
-  width: 48%;
-
+  font-size: 18px;
 }
 
 body {
   background-color: #393E46;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+  max-width: 600px;
+  width: 80%;
+}
+
+.dice {
+  display: inline-block;
+  width: 48%;
+
 }
 
 h1 {
@@ -55,7 +55,7 @@ footer {
   border: 1px solid #2dc995;
   border-radius: 5px;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 1rem;
   margin-top: 5rem;
   max-width: 16rem;
@@ -73,7 +73,6 @@ footer {
 }
 
 
-
 .btn:hover {
   background-color: #4ECCA3;
 }
@@ -84,19 +83,6 @@ footer {
 
 
 
-@media screen and (min-width: 420px) {
-  html {
-    font-size: 18px;
-  }
-
-  .container {
-    max-width: 600px;
-    width: 80%;
-  }
-
-}
-
-
 @media screen and (min-width: 620px) {
   h1 {
     font-size: 3rem;
@@ -104,7 +90,7 @@ footer {
 
   .btn {
     max-width: 400px;
+    font-size: 1.4rem;
   }
-
 
 }
