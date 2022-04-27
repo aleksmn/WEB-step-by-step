@@ -3,7 +3,7 @@ const drumButtons = document.querySelectorAll(".drum")
 // console.log(drumButtons);
 
 // for (let i = 0; i < drumButtons.length; i++) {
-    
+
 //     drumButtons[i].addEventListener("click", function () {
 //         alert("Clicked!!")
 //     });
@@ -28,7 +28,7 @@ for (btn of drumButtons) {
         //     new Audio('sounds/tom-2.mp3').play()
         //     return
         // }
-        
+
         // console.log(this.classList[0]);
         // console.log(this.innerText);
 
@@ -61,17 +61,25 @@ for (btn of drumButtons) {
             case 'l':
                 new Audio('sounds/kick-bass.mp3').play();
                 break;
-        
+
             default:
                 console.log(this.innerText)
                 break;
         }
 
-        // let tom1 = new Audio('sounds/tom-1.mp3');
-        // tom1.play()
-
     });
 }
+
+
+// document.addEventListener("keydown", function(event) {
+//     console.log(event);
+
+
+// });
+
+
+
+
 
 
 
