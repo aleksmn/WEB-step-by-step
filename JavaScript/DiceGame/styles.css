@@ -42,7 +42,7 @@ img {
 
 footer {
   margin-top: 5%;
-  color: #EEEEEE;
+  color: rgb(238, 238, 238);
   text-align: center;
   font-family: 'Indie Flower', cursive;
 
@@ -66,9 +66,6 @@ footer {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.1s;
 
 }
 
