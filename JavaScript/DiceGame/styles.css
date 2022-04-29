@@ -35,7 +35,7 @@ p {
   font-family: 'Indie Flower', cursive;
 }
 
-img {
+.dice img {
   width: 80%;
   max-width: 12rem;
 }
