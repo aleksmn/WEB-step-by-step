@@ -1,6 +1,4 @@
-/**
-* ! changing default styles of brower
-**/
+/* changing default styles of browser */
 
 * {
     margin: 0;
@@ -13,17 +11,16 @@ body {
 }
 
 
-/**
-* ! style rules for form section
-**/
+/* form section */
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 400px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
     padding: 50px;
+    margin: 30px auto;
 }
 
 .title {
@@ -60,9 +57,7 @@ input:focus {
 }
 
 
-/**
-* ! style rules for form icons
-**/
+/* form icons */
 
 form div i {
     position: absolute;
@@ -90,7 +85,7 @@ form div i {
   opacity: 0;
 }
 
-/* Style rules for submit btn */
+/* submit btn */
 
 button {
     margin-top: 15px;
