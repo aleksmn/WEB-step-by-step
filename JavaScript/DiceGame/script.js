@@ -7,11 +7,11 @@ playBtn.addEventListener('click', function () {
     let randomNumber2 = Math.floor(Math.random() * 6 + 1);
 
     // Подбираем картинку под полученные числа
-    let src1 = "images/dice" + randomNumber1 + ".png";
-    let src2 = "images/dice" + randomNumber2 + ".png";
+    let src1 = `images/dice${randomNumber1}.png`;
+    let src2 = `images/dice${randomNumber2}.png`;
 
-    let img1 = document.querySelector(".img1").setAttribute("src", src1);
-    let img2 = document.querySelector(".img2").setAttribute("src", src2);
+    document.querySelector(".img1").setAttribute("src", src1);
+    document.querySelector(".img2").setAttribute("src", src2);
 
 
 
