@@ -3,9 +3,11 @@ showSlides(slideIndex);
 
 
 function showSlides(n) {
-    // console.log("n = " + n);
-
+    console.log("n = " + n);
     let slides = document.querySelectorAll(".mySlides");
+
+    console.log(slides)
+
     // если номер слайда превышает количество слайдов - перейти к первому
     if (n > slides.length) { slideIndex = 1 }
     // если номер слайда меньше единицы - показываем последний
@@ -15,6 +17,7 @@ function showSlides(n) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     // показываем выбранный слайд
     slides[slideIndex - 1].style.display = "block";
 

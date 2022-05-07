@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 body {
@@ -8,16 +8,15 @@ body {
     padding: 30px;
     background-color: rgb(61, 59, 59);
 }
-
+/* 
 .mySlides {
-    display: none
-}
+    display: none;
+} */
 
 .mySlides img {
     vertical-align: middle;
     width:100%;
     
-
 }
 
 /* Контейнер слайдшоу */
@@ -73,7 +72,8 @@ body {
     padding: 8px 12px;
     position: absolute;
     top: 0;
-}
+} 
+
 
 
 /* Анимация появления*/
