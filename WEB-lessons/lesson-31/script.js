@@ -19,7 +19,7 @@ function validForm() {
 
 
   const text = `
-        <h2>Отправлены следующие данные:</h2>
+        Отправлены следующие данные:
 
         Ваш возраст: ${age};
         Страна проживания: ${country};
@@ -27,5 +27,5 @@ function validForm() {
         Загранпаспорт: ${passport}.
         `;
 
-  document.getElementById("data").innerHTML = text;
+  document.getElementById("data").innerText = text;
 }
