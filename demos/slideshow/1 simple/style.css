@@ -13,8 +13,11 @@ body {
     display: none
 }
 
-img {
+.mySlides img {
     vertical-align: middle;
+    width:100%;
+    
+
 }
 
 /* Контейнер слайдшоу */
