@@ -4,8 +4,14 @@
 
 const superheroes = require("superheroes");
 
+const supervillains = require("supervillains");
 
 let mySuperhero = superheroes.random();
 
-console.log(mySuperhero);
+let mySupervillain = supervillains.random();
 
+// console.log(mySuperhero);
+
+// console.log(mySupervillain);
+
+console.log(`The new movie is "${mySuperhero} vs. ${mySupervillain}"!`);
