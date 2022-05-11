@@ -19,7 +19,15 @@ body {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.397);
     resize: none;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 18px;
+    color: rgb(34, 79, 77);
+
+}
+
+.note:focus-visible {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.42);
+
 
 }
 
