@@ -69,14 +69,14 @@ input.search-bar {
     align-items: center;
 }
 
-.weather.loading {
+/* .weather.loading {
     visibility: hidden;
     position: relative;
-}
+} */
 
-.weather.loading::after {
+/* .weather.loading::after {
     visibility: visible;
     content: "Loading...";
     position: absolute;
     top: 20px;
-}
+} */
