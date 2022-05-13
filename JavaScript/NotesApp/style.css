@@ -14,20 +14,21 @@ body {
     height: 200px;
     box-sizing: border-box;
     padding: 16px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.397);
+    border: 2px solid black;
+    box-shadow: 8px 8px black;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 7px rgba(0, 0, 0, 0.397); */
     resize: none;
     font-family: sans-serif;
     font-size: 18px;
-    color: rgb(34, 79, 77);
+    color: rgb(1, 14, 13);
 
 }
 
 .note:focus-visible {
-    outline: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.42);
+    outline: 2px solid rgb(204, 62, 19);
 
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.42); */
 
 }
 

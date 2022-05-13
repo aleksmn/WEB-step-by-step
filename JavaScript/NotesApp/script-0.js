@@ -9,6 +9,8 @@ function saveNotes(notes) {
   localStorage.setItem("mynotes", JSON.stringify(notes));
 }
 
+console.log(getNotes());
+
 function createNoteElement(id, content) {
   const element = document.createElement("textarea");
   element.classList.add("note");
@@ -30,14 +32,16 @@ function createNoteElement(id, content) {
   return element;
 }
 
-function addNote() {}
+function addNote() {
+  console.log("Добавляем заметку...");
+}
 
 function updateNote(id, newContent) {
   console.log("Изменяем заметку...");
   console.log(id, newContent);
 }
 
-function deleteNote(id, element) {
+function deleteNote(id) {
   console.log("Удаляем заметку...");
-  console.log(id, newContent);
+  console.log(id);
 }
