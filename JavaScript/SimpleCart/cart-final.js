@@ -18,16 +18,16 @@ function addToCartClicked(event) {
 }
 
 function addItemToCart(title, price, imageSrc) {
-  console.log("Добавляем товар:", title, price, imageSrc);
+  // console.log("Добавляем товар:", title, price, imageSrc);
 
   const cartItems = document.querySelector(".cart-items");
-  console.log(cartItems);
+  // console.log(cartItems);
 
 
   // Проверяем, есть ли такой товар в корзине
   const cartItemNames = cartItems.querySelectorAll(".cart-item-title");
 
-  console.log(cartItemNames)
+  // console.log(cartItemNames)
 
   for (let i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
@@ -65,14 +65,14 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 function removeCartItem(event) {
-  console.log("Удаляем элемент.");
+  // console.log("Удаляем элемент.");
   // console.log(event.target.parentElement.parentElement)
   event.target.parentElement.parentElement.remove();
   updateCartTotal();
 }
 
 function quantityChanged(event) {
-  console.log("Меняем количество товаров.");
+  // console.log("Меняем количество товаров.");
 
   let input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
@@ -82,14 +82,14 @@ function quantityChanged(event) {
 }
 
 function updateCartTotal() {
-  console.log("Обновляем итоговую сумму.");
+  // console.log("Обновляем итоговую сумму.");
 
   const cartRows = document.querySelectorAll(".cart-items .cart-row");
 
   let total = 0;
 
   for (row of cartRows) {
-    console.log(row);
+    // console.log(row);
     let priceElement = row.querySelector(".cart-price");
     let quantityElement = row.querySelector(".cart-quantity-input");
     // console.log(priceElement, quantityElement);
