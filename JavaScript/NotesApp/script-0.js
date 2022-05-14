@@ -41,7 +41,7 @@ function updateNote(id, newContent) {
   console.log(id, newContent);
 }
 
-function deleteNote(id) {
+function deleteNote(id, element) {
   console.log("Удаляем заметку...");
   console.log(id);
 }
