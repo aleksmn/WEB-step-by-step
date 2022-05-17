@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(37, 9, 64);
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+img {
+  margin: 0 10px;
+}
