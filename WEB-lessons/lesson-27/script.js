@@ -15,10 +15,9 @@ closeBtn.onclick = function () {
 }
 
 // По клику на свободное место, закрыть модальное окно
-window.onclick = function (event) {
-    // console.log(event);
-    if (event.target === modal) {
-        modal.style.display = "none";
-        // console.log(event);
-    }
+modal.onclick = function (event) {
+  // console.log(event);
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
 }
