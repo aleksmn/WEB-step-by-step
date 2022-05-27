@@ -24,7 +24,28 @@
 // let a = 'int - это целочисленный тип данных';
 
 // console.log(a.replaceAll(" -", ""));
-// console.log('Количество слов:', a.replace(" -", "").split(' ').length);
+// console.log('Количество слов:', a.replaceAll(" -", "").split(' ').length);
+
+
+
+// функция
+
+// function getWordCount(string) {
+//   try {
+//     return string.replaceAll(" -", "").split(" ").length;
+//   } catch (error) {
+//     // console.log(error)
+//     return -1;
+//   }
+// }
+
+// let a = "int - это целочисленный тип данных";
+
+// console.log(getWordCount(111));
+
+// console.log("Следующая команда...");
+
+
 
 // // Даны 3 строки a, b, c — фамилия, имя и отчество соответственно.
 // // Составь строку из инициалов данного ФИО.
