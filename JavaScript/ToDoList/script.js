@@ -1,7 +1,7 @@
 // Create a "close" button and append it to each list item
-let myNodelist = document.getElementsByTagName("LI");
+let myNodelist = document.getElementsByTagName("li");
 for (let i = 0; i < myNodelist.length; i++) {
-  let span = document.createElement("SPAN");
+  let span = document.createElement("span");
   let txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
@@ -23,7 +23,7 @@ let list = document.querySelector("ul");
 list.addEventListener(
   "click",
   function (ev) {
-    if (ev.target.tagName === "LI") {
+    if (ev.target.tagName === "li") {
       ev.target.classList.toggle("checked");
     }
   },
@@ -43,7 +43,7 @@ function newElement() {
   }
   document.getElementById("todo-input").value = "";
 
-  let span = document.createElement("SPAN");
+  let span = document.createElement("span");
   let txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
