@@ -19,11 +19,17 @@ app.get("/about", (req, res) => {
 
 app.post("/", (req, res) => {
   console.log(req.body);
+  
   let date1 = new Date(req.body.date1);
   let date2 = new Date(req.body.date2);
 
   let timeDiff = date2.getTime() - date1.getTime();
   let daysDiff = timeDiff / (1000 * 3600 * 24);
+
+  // if (isNaN(daysDiff)) {
+  //   res.send("Неверный ввод данных");
+  //   return
+  // } 
 
   res.send("Количество дней между датами: " + daysDiff);
 
