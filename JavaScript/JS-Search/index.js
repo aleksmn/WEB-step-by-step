@@ -3,9 +3,9 @@ let cards = document.querySelectorAll('.box')
 function liveSearch() {
     let search_query = document.getElementById("searchbox").value;
     
-    //Use innerText if all contents are visible
-    //Use textContent for including hidden elements
-    for (var i = 0; i < cards.length; i++) {
+    //innerText для поиска видимого контента
+    //textContent для поиска и среди скрытых элементов
+    for (let i = 0; i < cards.length; i++) {
         if(cards[i].textContent.toLowerCase()
                 .includes(search_query.toLowerCase())) {
             cards[i].classList.remove("is-hidden");
