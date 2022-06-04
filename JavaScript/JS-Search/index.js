@@ -15,7 +15,7 @@ function liveSearch() {
     }
 }
 
-//A little delay
+//Задаем задержку поиска
 let typingTimer;               
 let typeInterval = 500;  
 let searchInput = document.getElementById('searchbox');
