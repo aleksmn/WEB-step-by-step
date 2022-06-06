@@ -51,7 +51,8 @@ header {
 .about-text {
 	font-size: 22px;
 	line-height: 26px;
-	text-shadow: 2px 3px 4px #000000;
+	/* Тень для текста */
+	text-shadow: 2px 3px 4px black;
 	max-width: 500px;
 	position: absolute;
 	left: 50%;
@@ -59,12 +60,13 @@ header {
 	top: 25%;
 }
 
+/* Кнопки под текстом */
 .welcome-buttons {
 	margin: 20px 0;
 	display: flex;
 	justify-content: space-between;
 }
-
+/* Каждая отдельная кнопка */
 .welcome-buttons button {
 	width: 160px;
 	text-align: left;
