@@ -1,76 +1,65 @@
-const drumButtons = document.querySelectorAll(".drum")
-
+const drumButtons = document.querySelectorAll(".drum");
 
 for (btn of drumButtons) {
+  btn.addEventListener("click", function (event) {
+    // console.log(event.target.innerText);
 
-    btn.addEventListener("click", function () {
-
-        // console.log(this.innerText);
-
-        makeSound(this.innerText)
-    });
+    makeSound(event.target.innerText);
+  });
 }
-
 
 document.addEventListener("keydown", function (event) {
-    // console.log(event);
+  // console.log(event);
 
-    makeSound(event.key);
+  makeSound(event.key);
 });
 
-
 function makeSound(key) {
+  buttonAnimation(key);
 
-    buttonAnimation(key);
+  switch (key) {
+    case "w":
+      new Audio("sounds/tom-1.mp3").play();
+      break;
 
-    switch (key) {
-        case 'w':
-            new Audio('sounds/tom-1.mp3').play();
-            break;
+    case "a":
+      new Audio("sounds/tom-2.mp3").play();
+      break;
 
-        case 'a':
-            new Audio('sounds/tom-2.mp3').play();
-            break;
+    case "s":
+      new Audio("sounds/tom-3.mp3").play();
+      break;
 
-        case 's':
-            new Audio('sounds/tom-3.mp3').play();
-            break;
+    case "d":
+      new Audio("sounds/tom-4.mp3").play();
+      break;
 
-        case 'd':
-            new Audio('sounds/tom-4.mp3').play();
-            break;
+    case "j":
+      new Audio("sounds/snare.mp3").play();
+      break;
 
-        case 'j':
-            new Audio('sounds/snare.mp3').play();
-            break;
+    case "k":
+      new Audio("sounds/crash.mp3").play();
+      break;
 
-        case 'k':
-            new Audio('sounds/crash.mp3').play();
-            break;
+    case "l":
+      new Audio("sounds/kick-bass.mp3").play();
+      break;
 
-        case 'l':
-            new Audio('sounds/kick-bass.mp3').play();
-            break;
-
-        default:
-            console.log(this.innerText)
-            break;
-    }
-
+    default:
+    //   console.log(this.innerText);
+      break;
+  }
 }
-
 
 function buttonAnimation(key) {
+  try {
+
     document.querySelector("." + key).classList.add("pressed");
-
     setTimeout(function () {
-        document.querySelector("." + key).classList.remove("pressed");
+      document.querySelector("." + key).classList.remove("pressed");
     }, 100);
-
+  } catch (error) {
+    console.log("Нет такой кнопки");
+  }
 }
-
-
-
-
-
-
