@@ -3,11 +3,11 @@ const drumButtons = document.querySelectorAll(".drum")
 
 for (btn of drumButtons) {
 
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (event) {
 
         // console.log(this.innerText);
 
-        makeSound(this.innerText)
+        makeSound(event.target.innerText)
     });
 }
 
@@ -51,7 +51,7 @@ function makeSound(key) {
             break;
 
         default:
-            console.log(this.innerText)
+            // console.log(this.innerText)
             break;
     }
 
