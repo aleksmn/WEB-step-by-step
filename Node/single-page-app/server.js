@@ -5,8 +5,10 @@ const port = 5555;
 
 const app = express();
 
+app.use("/static", express.static(path.resolve(__dirname + "/frontend/static")));
+
 app.get("/*", (req, res) => {
-  res.sendFile(path.resolve("frontend", "index.html"));
+  res.sendFile(path.resolve(__dirname + "/frontend/index.html"));
 });
 
 
