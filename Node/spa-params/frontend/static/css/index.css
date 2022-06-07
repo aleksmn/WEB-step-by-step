@@ -3,9 +3,11 @@ body {
     margin: 0 0 0 var(--nav-width);
     font-family: 'Quicksand', sans-serif;
     font-size: 18px;
+    max-width: 1000px;
 }
 
 .nav {
+    padding-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
