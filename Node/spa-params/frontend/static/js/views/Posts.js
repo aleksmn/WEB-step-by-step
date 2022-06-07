@@ -13,9 +13,9 @@ export default class extends AbstractView {
       <p>You are viewing recent posts</p>
 
       <ul>
-        <li><a href="/posts/1">First Post</a></li>
-        <li><a href="/posts/2">Second Post</a></li>
-        <li><a href="/posts/2022-05-06">Third Post</a></li>
+        <li><a href="/posts/1" data-link>First Post</a></li>
+        <li><a href="/posts/2" data-link>Second Post</a></li>
+        <li><a href="/posts/2022-05-06" data-link>Third Post</a></li>
       </ul>
 
 

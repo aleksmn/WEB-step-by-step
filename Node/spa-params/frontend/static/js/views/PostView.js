@@ -15,7 +15,7 @@ export default class extends AbstractView {
   }
 
   async getHtml() {
-    // console.log(this.params.id);
+    console.log(this.params.id);
     // this.fetchText();
 
     let text = await this.fetchText() + "<p><a href='/posts' data-link>Back to posts</a></p>";;
