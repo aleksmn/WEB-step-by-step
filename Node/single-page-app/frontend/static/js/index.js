@@ -1,14 +1,22 @@
+import Dashboard from "./views/Dashboard.js";
+import Posts from "./views/Posts.js";
+import Settings from "./views/Settings.js";
+
 const navigateTo = url => {
   history.pushState(null, null, url);
   router();
 }
 
-
 const router = async () => {
   const routes = [
-    { path: "/", view: () => console.log("Viewing Dashboard") },
-    { path: "/posts", view: () => console.log("Viewing Posts") },
-    { path: "/settings", view: () => console.log("Viewing Settings") },
+    // Test:
+    // { path: "/", view: () => console.log("Viewing Dashboard") },
+    // { path: "/posts", view: () => console.log("Viewing Posts") },
+    // { path: "/settings", view: () => console.log("Viewing Settings") },
+
+    { path: "/", view: Dashboard },
+    { path: "/posts", view: Posts },
+    { path: "/settings", view: Settings },
   ];
 
 
@@ -28,11 +36,23 @@ const router = async () => {
     };
   }
 
+  
+
+
   // Проверка:
-  console.log(potentialMatches);
-  console.log(match);
-  match.route.view();
+  // console.log(potentialMatches);
+  // console.log(match);
+
+  const view = new match.route.view();
+
+  document.querySelector("#app").innerHTML = await view.getHtml();
+
+  new match.route.view();
+  
 };
+
+// Добавляем возможность переходить по страницам через историю
+window.addEventListener("popstate", router);
 
 
 document.addEventListener("DOMContentLoaded", () => {
