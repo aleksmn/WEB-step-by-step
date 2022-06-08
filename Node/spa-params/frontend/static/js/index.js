@@ -1,6 +1,6 @@
-import Dashboard from "./views/Dashboard.js";
+import Main from "./views/Main.js";
 import Posts from "./views/Posts.js";
-import Settings from "./views/Settings.js";
+import Contacts from "./views/Contacts.js";
 import PostView from "./views/PostView.js";
 
 const pathToRegex = (path) =>
@@ -31,10 +31,10 @@ const router = async () => {
   // console.log("/posts/7".match(/^\/posts\/(.+)$/));
 
   const routes = [
-    { path: "/", view: Dashboard },
+    { path: "/", view: Main },
     { path: "/posts", view: Posts },
     { path: "/posts/:id", view: PostView },
-    { path: "/settings", view: Settings },
+    { path: "/contacts", view: Contacts },
   ];
 
   const potentialMatches = routes.map((route) => {
@@ -62,6 +62,8 @@ const router = async () => {
   document.querySelector("#app").innerHTML = await view.getHtml();
 
   // new match.route.view();
+
+  await markNav(location.pathname);
 };
 
 // Добавляем возможность переходить по страницам через историю
@@ -77,3 +79,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   router();
 });
+
+
+
+const markNav = currPath => {
+  console.log(currPath)
+
+  for (let n of document.querySelectorAll(".nav__link")) {
+    n.classList.remove("active");
+  }
+
+  document.querySelector(`[href="${currPath}"]`).classList.add("active");
+
+  // switch (currPath) {
+  //   case "/":
+  //     document.querySelector(['href="/"']).classList.add('active')
+  //     break;
+  
+  //   default:
+  //     break;
+  // }
+   
+}
