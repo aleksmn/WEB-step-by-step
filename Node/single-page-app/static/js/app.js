@@ -1,11 +1,11 @@
-import Dashboard from "./views/Dashboard.js";
+import Main from "./views/Main.js";
 import Posts from "./views/Posts.js";
-import Settings from "./views/Settings.js";
+import Contacts from "./views/Contacts.js";
 
-const navigateTo = url => {
+const navigateTo = (url) => {
   history.pushState(null, null, url);
   router();
-}
+};
 
 const router = async () => {
   const routes = [
@@ -14,30 +14,26 @@ const router = async () => {
     // { path: "/posts", view: () => console.log("Viewing Posts") },
     // { path: "/settings", view: () => console.log("Viewing Settings") },
 
-    { path: "/", view: Dashboard },
+    { path: "/", view: Main },
     { path: "/posts", view: Posts },
-    { path: "/settings", view: Settings },
+    { path: "/contacts", view: Contacts },
   ];
 
-
-  const potentialMatches = routes.map(route => {
+  const potentialMatches = routes.map((route) => {
     return {
       route: route,
-      isMatch: location.pathname === route.path
+      isMatch: location.pathname === route.path,
     };
   });
 
-  let match = potentialMatches.find(match => match.isMatch);
+  let match = potentialMatches.find((match) => match.isMatch);
 
-  if(!match) {
+  if (!match) {
     match = {
       route: routes[0],
-      isMatch: true
+      isMatch: true,
     };
   }
-
-  
-
 
   // Проверка:
   // console.log(potentialMatches);
@@ -48,24 +44,18 @@ const router = async () => {
   document.querySelector("#app").innerHTML = await view.getHtml();
 
   new match.route.view();
-  
 };
 
 // Добавляем возможность переходить по страницам через историю
 window.addEventListener("popstate", router);
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  document.body.addEventListener("click", e => {
+  document.body.addEventListener("click", (e) => {
     if (e.target.matches("[data-link]")) {
       e.preventDefault();
       navigateTo(e.target.href);
     }
   });
 
-
   router();
 });
-
-
