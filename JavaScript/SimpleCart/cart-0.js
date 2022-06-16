@@ -52,7 +52,7 @@ function addItemToCart(title, price, imageSrc) {
 
   cartRow.innerHTML = cartRowContents;
 
-  // Добавить event listeners
+  // Добавить слушатели событий
   cartRow
     .querySelector(".btn-danger")
     .addEventListener("click", removeCartItem);

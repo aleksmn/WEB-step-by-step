@@ -23,7 +23,6 @@ function addItemToCart(title, price, imageSrc) {
   const cartItems = document.querySelector(".cart-items");
   // console.log(cartItems);
 
-
   // Проверяем, есть ли такой товар в корзине
   const cartItemNames = cartItems.querySelectorAll(".cart-item-title");
 
@@ -53,7 +52,7 @@ function addItemToCart(title, price, imageSrc) {
 
   cartRow.innerHTML = cartRowContents;
 
-  // Добавить event listeners
+  // Добавить слушатели событий
   cartRow
     .querySelector(".btn-danger")
     .addEventListener("click", removeCartItem);
