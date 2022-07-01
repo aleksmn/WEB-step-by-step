@@ -8,7 +8,7 @@ for (let i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-// Click on a close button to hide the current list item
+// Кнопка "Закрыть"
 let close = document.getElementsByClassName("close");
 let i;
 for (i = 0; i < close.length; i++) {
@@ -18,7 +18,7 @@ for (i = 0; i < close.length; i++) {
   };
 }
 
-// Add a "checked" symbol when clicking on a list item
+// Пометка "Выполнено"
 let list = document.querySelector("ul");
 list.addEventListener(
   "click",
@@ -30,7 +30,7 @@ list.addEventListener(
   false
 );
 
-// Create a new list item when clicking on the "Add" button
+// Кнопка добавления задачи
 function newElement() {
   let li = document.createElement("li");
   let inputValue = document.getElementById("todo-input").value;
