@@ -1,6 +1,7 @@
 // // Дано двузначное число a.Найди и выведи количество десятков в нем.
 
 // let a = 75;
+
 // console.log(a / 10);
 // console.log(parseInt(a / 10));
 // console.log(Math.floor(a / 10));
@@ -13,11 +14,12 @@
 // // Программа получает на вход дробное число a.
 // // Найди и выведи первую цифру после десятичной точки.
 
-// let a1, a2, result;
-// a1 = 35.97;
-// a2 = 7.45;
-// result = Number.parseInt(a2 * 10 % 10);
-// console.log(result);
+// function getNumAfterPoint(num) {
+//   return Math.floor((num * 10) % 10);
+// }
+
+// console.log(getNumAfterPoint(8.467))
+// -> 4
 
 // // Посчитай количество слов( «—» не является словом).
 
@@ -25,8 +27,6 @@
 
 // console.log(a.replaceAll(" -", ""));
 // console.log('Количество слов:', a.replaceAll(" -", "").split(' ').length);
-
-
 
 // функция
 
@@ -44,8 +44,6 @@
 // console.log(getWordCount(111));
 
 // console.log("Следующая команда...");
-
-
 
 // // Даны 3 строки a, b, c — фамилия, имя и отчество соответственно.
 // // Составь строку из инициалов данного ФИО.
