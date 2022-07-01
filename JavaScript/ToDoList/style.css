@@ -45,7 +45,7 @@ body {
 .addBtn {
   padding: 10px;
   width: 25%;
-  background: rgb(232, 139, 34);
+  background: rgb(173, 92, 160);
   color: white;
   float: left;
   text-align: center;
@@ -55,7 +55,7 @@ body {
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: rgb(98, 44, 89);
 }
 
 
