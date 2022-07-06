@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погода</title>
+
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Weather -->
+  <!-- Get Icon URL:  https://openweathermap.org/weather-conditions -->
+  <div class="weather">
+
+    <% if (sendData) { %>
+
+    <h2 class="city">
+      <%= sendData.city %>
+    </h2>
+    <div class="flex">
+      <img src="<%= sendData.iconUrl %>" alt="" class="icon">
+      <div class="temp"><%= sendData.temp %> &deg;C</div>
+    </div>
+    <div class="description"><%= sendData.description %></div>
+    <div class="humidity">влажность: <%= sendData.humidity %>%</div>
+    <div class="wind">скорость ветра: <%= sendData.speed %> м/с</div>
+
+    <br>
+
+    <% } %>
+
+    
+    <form action="/" method="post">
+      <input type="text" name="city" placeholder="Введите город...">
+      <button type="submit">Поиск</button>
+
+    </form>
+
+  </div>
+  <!-- END Weather -->
+
+</body>
+
+</html>

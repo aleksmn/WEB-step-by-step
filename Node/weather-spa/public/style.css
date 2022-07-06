@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+}
+
+.weather {
+  max-width: 400px;
+  margin: 20px;
+  border: 6px dotted lightskyblue;
+  padding: 20px;
+  line-height: 22px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* .loading {
+  visibility: hidden;
+} */
+
+
