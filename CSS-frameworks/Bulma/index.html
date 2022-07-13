@@ -6,29 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Bulma!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <script src="script.js" defer></script>
+
+  <style>
+    .navbar {
+      background-color: hsla(171, 100%, 76%, 0.514);
+    }
+  </style>
+
 </head>
 
 <body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <div class="container">
+
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="logo.svg" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Главная
+          </a>
+
+          <a class="navbar-item">
+            Блог
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Ещё
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                О проекте
+              </a>
+              <a class="navbar-item">
+                Вакансии
+              </a>
+              <a class="navbar-item">
+                Контакты
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Обратная связь
+              </a>
+            </div>
+          </div>
+        </div>
 
 
-  <nav class="navbar">
-    <!-- Логотип -->
-    <div class="navbar-brand">
-      <a href="#" class="navbar-item">Логотип</a>
+      </div>
+
     </div>
   </nav>
 
-
-
-
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
+      <h1 class="title has-text-primary is-size-1">
+        Фирменный стиль
       </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
+      <p class="subtitle is-size-6 has-text-weight-light">
+        Почему как всегда непредсказуемо привлечение аудитории
       </p>
+
+      <p class="is-size-4 has-text-weight-light my-6">Цена клика порождена временем. Создание приверженного
+        покупателя,
+        пренебрегая деталями, создает культурный рекламный
+        макет, не считаясь с затратами. Рекламный бриф повсеместно детерминирует креативный анализ зарубежного опыта.
+        Интересно
+        отметить, что лидерство в продажах изящно ускоряет экспериментальный рекламный бриф, невзирая на действия
+        конкурентов.
+        Молодежная аудитория восстанавливает ролевой рекламный блок.</p>
+
+      <p class="is-size-4 has-text-weight-light">Отсюда естественно следует, что ретроконверсия национального наследия
+        очевидна не для всех. Тем не менее, медиавес
+        спонтанно тормозит фирменный стиль, полагаясь на инсайдерскую информацию. Основная стадия проведения рыночного
+        исследования, как принято считать, по-прежнему востребована.</p>
+
     </div>
   </section>
 </body>
