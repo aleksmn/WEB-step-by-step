@@ -2,15 +2,19 @@ const myDiv = document.getElementById('demo');
 
 console.log(myDiv);
 
-// myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
+myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
 
 
-// myDiv.style.color = "blue";
-// myDiv.style.backgroundColor = "rgb(188, 190, 255)";
-// myDiv.style.padding = "30px";
+myDiv.style.color = "blue";
+myDiv.style.fontFamily = "sans";
+myDiv.style.fontSize = "1.5rem";
+myDiv.style.backgroundColor = "lightgrey";
+myDiv.style.padding = "30px";
 
 
-// myDiv.classList.add('main');
+myDiv.classList.add('main');
+
+
 
 // setTimeout(function () {
 //     myDiv.innerHTML += "<p>Этот текст появится через 5 секунд</p>";
@@ -19,12 +23,9 @@ console.log(myDiv);
 
 
 
-// myDiv.innerHTML += '<p>новый текст</p>';
+myDiv.innerHTML += '<p>новый текст</p>';
 
-// myDiv.innerHTML += '<p>еще новый текст</p>';
-
-
-
+myDiv.innerHTML += '<p>еще новый текст</p>';
 
 
 // for (let i = 0; i <= 10; i += 2) {
@@ -34,25 +35,31 @@ console.log(myDiv);
 
 
 
-// // Выводим строку каждые 2 секунды
 
-// for (let i = 0; i <= 10; i += 2) {
-//     setTimeout(function () {
+
+
+// Выводим строку каждые 2 секунды
+
+// for (let i = 0; i < 11; i += 2) {
+
+//     function myFunc () {
 //         myDiv.innerHTML += `<p>Секунда ${i}</p>`;
-//     }, i*1000);
+//     }
+
+//     setTimeout(myFunc, i * 1000);
+
 // }
 
 
 
 // let number = 0;
 
-// while (number <= 12) {
+// while (number <= 14) {
 
-//     console.log(number);
+//     myDiv.innerHTML += `<p>Номер ${number}</p>`;
 
 //     number = number + 2;
 // }
-
 
 
 
@@ -95,32 +102,39 @@ while (number <= 12) {
 
 // Массивы
 
-// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-// console.log(users);
+console.log(users);
 
-// console.log(users[0]);
-// console.log(users[1]);
+console.log(users[0]);
+console.log(users[1]);
 
-// console.log(users.length);
+console.log(users.length);
 
-// console.log(users[users.length - 1]);
+
+// Последний элемент массива:
+console.log(users[users.length - 1]);
+
 
 
 // for (let i = 0; i < users.length; i++) {
 
-//     myDiv.innerHTML += users[i] + "<br>";
+//     myDiv.innerHTML += "<p>" + users[i] + "</p>";
 
 // }
 
 
 // For of
 
-// for (let u of users) {
 
-//     myDiv.innerHTML += u + "<br>";
 
-// }
+// Перебор массива
+
+for (let u of users) {
+
+    myDiv.innerHTML += u + "<br>";
+
+}
 
 
 
@@ -150,14 +164,17 @@ while (number <= 12) {
 
 // const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-// console.log(users);
 
-// // Добавление элементов
-// users.push('Алексей');
 
-// users.unshift('Михаил');
+// Добавление элементов
+users.push('Алексей');
 
-// console.log(users);
+users.unshift('Михаил');
+
+
+console.log(users);
+
+
 
 
 
