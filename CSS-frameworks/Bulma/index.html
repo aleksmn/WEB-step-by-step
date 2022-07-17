@@ -9,7 +9,16 @@
 
   <script src="script.js" defer></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
   <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+
     .navbar {
       background-color: rgba(133, 255, 237, 0.5) !important;
     }
@@ -75,49 +84,19 @@
   </nav>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-primary is-size-1 is-size-3-mobile">
+      <h1 class="title has-text-primary is-size-1 is-size-2-mobile">
         Фирменный стиль
       </h1>
-      <p class="subtitle is-size-6 has-text-weight-light">
+      <p class="subtitle has-text-weight-light my-1">
         Почему как всегда непредсказуемо привлечение аудитории
       </p>
 
-      <p class="is-size-5 has-text-weight-light my-6">Цена клика порождена временем. Создание приверженного
-        покупателя,
-        пренебрегая деталями, создает культурный рекламный
+      <p class="is-size-5 is-size-6-mobile my-6 has-text-weight-light">Цена клика порождена временем. Создание
+        приверженного покупателя, пренебрегая деталями, создает культурный рекламный
         макет, не считаясь с затратами. Рекламный бриф повсеместно детерминирует креативный анализ зарубежного опыта.
-        Интересно
-        отметить, что лидерство в продажах изящно ускоряет экспериментальный рекламный бриф, невзирая на действия
-        конкурентов.
-        Молодежная аудитория восстанавливает ролевой рекламный блок.</p>
-
-      <p class="is-size-5 has-text-weight-light">Отсюда естественно следует, что ретроконверсия национального наследия
-        очевидна не для всех. Тем не менее, медиавес
-        спонтанно тормозит фирменный стиль, полагаясь на инсайдерскую информацию. Основная стадия проведения рыночного
-        исследования, как принято считать, по-прежнему востребована.</p>
+      </p>
 
     </div>
   </section>
@@ -126,23 +105,77 @@
   <!-- Колонки -->
   <section class="section">
     <div class="container">
-      <div class="columns is-+vcentered">
-        <div class="column is-3">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-3-desktop is-6-tablet">
           <h1 class="title">Заголовок</h1>
           <h2 class="subtitle">Подзаголовок</h2>
           <p>
             Нишевый проект стабилизирует баинг и селлинг.</p>
         </div>
-        <div class="column is-5">
+        <div class="column is-6-desktop is-6-tablet">
           <img src="images/coffee.webp" alt="" class="px-6">
         </div>
-        <div class="column is-4">
+        <div class="column is-3-desktop is-12-tablet">
           <p>Еще Траут показал, что сегментация рынка определяет потребительский рынок. Молодежная
             аудитория все еще интересна для многих.</p>
         </div>
       </div>
     </div>
 
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="columns is-8 is-variable">
+        <div class="column is-7-tablet">
+          <div class="tabs is-boxed">
+            <ul>
+              <li class="is-active" data-target="product-details">
+                <a>Детали</a>
+              </li>
+              <li data-target="product-delivery">
+                <a>Доставка</a>
+              </li>
+              <li data-target="product-price">
+                <a>Цена</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+
+            <div id="product-details">
+              <h3 class="is-size-5 title">Детали</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minus repudiandae, accusamus assumenda
+                ullam aliquam repellat illum modi exercitationem autem molestiae harum, veniam vero rerum temporibus,
+                hic rem alias! Tempore.</p>
+            </div>
+            <div id="product-delivery" class="is-hidden">
+              <h3 class="is-size-5 title">Доставка</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minus repudiandae, accusamus assumenda
+                ullam aliquam repellat illum modi exercitationem autem molestiae harum, veniam vero rerum temporibus,
+                hic rem alias! Tempore.</p>
+            </div>
+            <div id="product-price" class="is-hidden">
+              <h3 class="is-size-5 title">Цена</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo minus repudiandae, accusamus assumenda
+                ullam aliquam repellat illum modi exercitationem autem molestiae harum, veniam vero rerum temporibus,
+                hic rem alias! Tempore.</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="column is-5-tablet">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis consectetur repellendus recusandae
+          cumque, non incidunt quibusdam iure earum quasi repellat, libero ex at. Id et consequatur similique harum
+          reiciendis?
+        </div>
+      </div>
+
+
+    </div>
   </section>
 
 </body>
