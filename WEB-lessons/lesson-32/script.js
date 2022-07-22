@@ -1,6 +1,6 @@
-function print_contact() {
-    alert(' skype: helper \n telegram: @helper \n tel: 8995345235 ')
-}
+// function print_contact() {
+//     alert(' skype: helper \n telegram: @helper \n tel: 8995345235 ')
+// }
 
 
 
@@ -60,6 +60,7 @@ modalGift.onclick = function (event) {
 const modalTp = document.getElementById("tpModal");
 const openBtnTp = document.getElementById("tpBtn");
 const closeBtnTp = document.getElementById("tpClose");
+
 
 
 openBtnTp.onclick = function () {

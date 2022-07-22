@@ -134,8 +134,6 @@
     <img class="helper" id="tpBtn" src="images/tp.png" width="80" alt="">
 
 
-
-
     <!-- Модальное окно для подарка -->
     <div id="giftModal" class="modal">
 
@@ -159,11 +157,28 @@
     </div>
 
 
+    <div class="rating">
+        <h2>Оцени наш сайт!</h2>
 
+        <img src="images/star_2.png" width="75" height="68" id="star-1" onmouseenter="star(1)">
+        <img src="images/star_2.png" width="75" height="68" id="star-2" onmouseenter="star(2)">
+        <img src="images/star_2.png" width="75" height="68" id="star-3" onmouseenter="star(3)">
+        <img src="images/star_2.png" width="75" height="68" id="star-4" onmouseenter="star(4)">
+        <img src="images/star_2.png" width="75" height="68" id="star-5" onmouseenter="star(5)">
+
+
+        <p id="reset-rating" onclick="resetRating()">Сброс</p>
+
+        <button id="sendRating">Отправить</button>
+
+        <p id="ratingText"><br></p>
+
+    </div>
 
 
     <!-- Подключаем JavaScript -->
     <script src="script.js"></script>
+    <script src="site-rating.js"></script>
 
 
 </body>

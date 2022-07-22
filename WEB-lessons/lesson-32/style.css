@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #f4fc05;
+    background-color: #05f4fc;
     padding: 20px 0;
 
 }
@@ -308,4 +308,31 @@ main h2 {
         top: 0;
         opacity: 1;
     }
+}
+
+
+
+.rating{
+    text-align: center;
+    max-width: 600px;
+    margin: 60px auto;
+}
+
+.rating button {
+    background: rgb(54, 179, 217);
+    border: none;
+    border-radius: 12px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 20px;
+    text-decoration: none;
+    margin: 30px auto;
+    display: block;
+ 
+}
+
+.rating button:hover {
+    background: rgb(43, 140, 169);
+    text-decoration: none;
 }
