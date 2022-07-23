@@ -15,12 +15,16 @@
     rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Playfair Display', serif;
     }
 
     .navbar {
-      background-color: rgba(133, 255, 237, 0.5) !important;
+      background-color: rgba(133, 255, 237, 0.5);
     }
   </style>
 
@@ -118,7 +122,8 @@
         <div class="column is-3-desktop is-12-tablet">
           <p>Еще Траут показал, что сегментация рынка определяет потребительский рынок. Молодежная
             аудитория все еще интересна для многих.</p>
-          <button class="button my-4 is-primary is-rounded">Читать дальше &LongRightArrow;</button>
+          <a href="#more" class="button my-4 is-primary is-rounded has-text-weight-bold">Читать дальше
+            &LongRightArrow;</a>
         </div>
       </div>
     </div>
@@ -127,7 +132,7 @@
 
 
 
-  <section class="section">
+  <section class="section" id="more">
     <div class="container">
 
       <div class="columns is-8 is-variable">
@@ -179,7 +184,7 @@
               ex cum ipsa molestias veritatis similique quisquam obcaecati, quae illum, ullam libero sapiente commodi
               iste expedita.
               <div class="has-text-centered mt-3">
-                <button class="button is-fullwidth">Подписаться</button>
+                <button class="button is-fullwidth js-modal-trigger" data-target="modal-js-signup">Подписаться</button>
               </div>
 
             </div>
@@ -194,7 +199,7 @@
 
   <!-- Cards -->
 
-  <div class="section is-hidden-mobile">
+  <div class="section">
     <div class="container">
       <h3 class="title has-text-centered is-size-4">Другие статьи</h3>
       <div class="columns mt-5 is-8 is-variable is-centered">
@@ -216,14 +221,14 @@
             </div>
 
             <footer class="card-footer">
-              <a href="#" class="card-footer-item">Подробнее</a>
+              <a class="card-footer-item js-modal-trigger" data-target="modal-js-second">Подробнее</a>
             </footer>
 
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="column is-4-tablet is-3-desktop">
+        <div class="column is-4-tablet is-3-desktop is-hidden-mobile">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
@@ -239,14 +244,14 @@
             </div>
 
             <footer class="card-footer">
-              <a href="#" class="card-footer-item">Подробнее</a>
+              <a class="card-footer-item">Подробнее</a>
             </footer>
 
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="column is-4-tablet is-3-desktop">
+        <div class="column is-4-tablet is-3-desktop is-hidden-mobile">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
@@ -262,7 +267,7 @@
             </div>
 
             <footer class="card-footer">
-              <a href="#" class="card-footer-item">Подробнее</a>
+              <a class="card-footer-item">Подробнее</a>
             </footer>
 
           </div>
@@ -271,6 +276,51 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Modal 1 -->
+
+  <div id="modal-js-signup" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <h3 class="title">Присоединяйся!</h3>
+
+        <p>Подпишись на нашу email рассылку, чтобы узнать первым о наших предложениях!</p>
+
+      </div>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- END Modal 1 -->
+
+
+  <!-- Modal 2 -->
+
+  <div id="modal-js-second" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <h3 class="title">Модальное окно 2</h3>
+
+        <p>Пример текста</p>
+
+      </div>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- END Modal 2 -->
+
+
+
+
+
 
 </body>
 
