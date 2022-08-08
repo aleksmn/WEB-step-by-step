@@ -10,6 +10,7 @@ button1.onclick = function () {
     let currColor = window.getComputedStyle(button1).backgroundColor;
 
     console.log(currColor);
+    
     // первый (зеленый) цвет:
     const firstColor = "rgb(47, 129, 47)";
     //второй (красный) цвет:
@@ -19,16 +20,18 @@ button1.onclick = function () {
     if (currColor === secondColor) {
 
         button1.style.backgroundColor = firstColor;
-        console.log("change to green");
+        // document.getElementById("heading").style.color = "purple";
+        document.querySelector("img").style.display = "none";
     }
 
     else {
         button1.style.backgroundColor = secondColor;
-        console.log("change to red");
+        // document.getElementById("heading").style.color = "green";
+        document.querySelector("img").style.display = "block";
+    
+        // console.log("change to red");
     }
-
 }
-
 
 
 button2.onclick = function () {
