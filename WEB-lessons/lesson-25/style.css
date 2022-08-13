@@ -2,7 +2,7 @@
   max-width: 600px;
   margin: 0 auto;
   font-family: sans-serif;
-  color: rgb(48, 48, 48);
+  color: rgb(29, 29, 29);
 }
 
 h1 {
@@ -19,6 +19,9 @@ img {
   margin: 10px;
 }
 
+
+
+
 button {
   background-color: rgb(207, 23, 23);
   color: white;
@@ -28,6 +31,12 @@ button {
   padding: 10px 20px;
   margin-right: 20px;
 }
+
+
+
+
+
+
 
 .bg-green {
   background-color: rgb(47, 129, 47);
