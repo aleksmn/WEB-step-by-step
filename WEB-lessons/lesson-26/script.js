@@ -6,13 +6,16 @@ myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
 
 
 myDiv.style.color = "blue";
-myDiv.style.fontFamily = "sans";
 myDiv.style.fontSize = "1.5rem";
-myDiv.style.backgroundColor = "lightgrey";
-myDiv.style.padding = "30px";
 
 
-myDiv.classList.add('main');
+
+// myDiv.style.fontFamily = "sans";
+// myDiv.style.backgroundColor = "lightgrey";
+// myDiv.style.padding = "30px";
+
+
+// myDiv.classList.add('main');
 
 
 
@@ -28,9 +31,11 @@ myDiv.innerHTML += '<p>новый текст</p>';
 myDiv.innerHTML += '<p>еще новый текст</p>';
 
 
-// for (let i = 0; i <= 10; i += 2) {
-//     myDiv.innerHTML += `<p>Номер ${i * 10}</p>`;
-// }
+// Цикл
+
+for (let n = 0; n < 10; n = n + 1) {
+    myDiv.innerHTML += `<p>Номер ${n}</p>`;
+}
 
 
 
@@ -102,18 +107,18 @@ while (number <= 12) {
 
 // Массивы
 
-const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
 
-console.log(users);
+// console.log(users);
 
-console.log(users[0]);
-console.log(users[1]);
+// console.log(users[0]);
+// console.log(users[1]);
 
-console.log(users.length);
+// console.log(users.length);
 
 
-// Последний элемент массива:
-console.log(users[users.length - 1]);
+// // Последний элемент массива:
+// console.log(users[users.length - 1]);
 
 
 
@@ -128,13 +133,13 @@ console.log(users[users.length - 1]);
 
 
 
-// Перебор массива
+// // Перебор массива
 
-for (let u of users) {
+// for (let u of users) {
 
-    myDiv.innerHTML += u + "<br>";
+//     myDiv.innerHTML += u + "<br>";
 
-}
+// }
 
 
 
@@ -167,12 +172,12 @@ for (let u of users) {
 
 
 // Добавление элементов
-users.push('Алексей');
+// users.push('Алексей');
 
-users.unshift('Михаил');
+// users.unshift('Михаил');
 
 
-console.log(users);
+// console.log(users);
 
 
 
