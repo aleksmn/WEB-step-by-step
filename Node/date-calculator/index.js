@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static(__dirname + "/public"));
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   // res.send("Date Calculator");
@@ -36,5 +36,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Date calculator app listening on port ${port}`);
+  console.log(`Date calculator app listening on http://localhost:${port}`);
 });
