@@ -12,7 +12,7 @@ const router = async () => {
     // Test:
     // { path: "/", view: () => console.log("Viewing Dashboard") },
     // { path: "/posts", view: () => console.log("Viewing Posts") },
-    // { path: "/settings", view: () => console.log("Viewing Settings") },
+    // { path: "/contacts", view: () => console.log("Viewing contacts") },
 
     { path: "/", view: Main },
     { path: "/posts", view: Posts },
@@ -45,6 +45,9 @@ const router = async () => {
 
   new match.route.view();
 };
+
+
+
 
 // Добавляем возможность переходить по страницам через историю
 window.addEventListener("popstate", router);
