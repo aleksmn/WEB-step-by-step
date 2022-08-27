@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static(__dirname + "/public"));
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   // res.send("Date Calculator");
