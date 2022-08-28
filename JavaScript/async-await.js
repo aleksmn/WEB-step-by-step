@@ -54,3 +54,40 @@ add(10).then(v => {
 // })
 
 
+
+
+// Example 3: Try Catch
+
+
+// function resolveAfter2Seconds(x) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (x > 10) {
+//                 resolve(x);
+//             }
+//             else {
+//                 reject("Error, x is to small!")
+//             }
+            
+//         }, 2000);
+//     });
+// };
+
+// async function add(x) {
+//     console.log("Working.....")
+//     setTimeout(() => {
+//         console.log("Still working...")
+//     }, 2000)
+//     try {
+//         let a = await resolveAfter2Seconds(2);
+//         let b = await resolveAfter2Seconds(30);
+//         return x + a + b;
+//     } catch(err) {
+//         return err;
+//     }
+// };
+
+
+// add(10).then(v => {
+//     console.log(v) // prints 60 after 4 seconds.
+// })
