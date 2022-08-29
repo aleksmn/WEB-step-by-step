@@ -47,11 +47,11 @@ ul {
   list-style-type: circle;
 }
 
-.aside-1 {
+.sidebar-1 {
   background: rgb(165, 255, 184);
 }
 
-.aside-2 {
+.sidebar-2 {
   background: rgb(152, 211, 255);
 }
 
@@ -64,7 +64,7 @@ footer {
 /* Медиазапрос для экрана планшета */
 
 @media screen and (min-width: 600px) {
-  .aside-1, .aside-2 {
+  .sidebar-1, .sidebar-2 {
     /* Доступное пространство будет разделено поровну 
     между элеметами этими элементами */
     flex: 1;
@@ -77,16 +77,16 @@ footer {
 
 @media screen and (min-width: 960px) {
   .main {
-    /* .main будет в 3 раза шире, чем .aside */
+    /* .main будет в 3 раза шире, чем .sidebar */
     flex: 3;
     order: 2;
   }
 
-  .aside-1 {
+  .sidebar-1 {
     order: 1;
   }
 
-  .aside-2 {
+  .sidebar-2 {
     order: 3;
   }
 
