@@ -2,14 +2,11 @@ import Main from "./views/Main.js";
 import Posts from "./views/Posts.js";
 import Contacts from "./views/Contacts.js";
 
-const navigateTo = (url) => {
-  history.pushState(null, null, url);
-  router();
-};
+console.log("Static JS loaded")
 
 const router = async () => {
   const routes = [
-    // Test:
+    // Тестируем пути
     // { path: "/", view: () => console.log("Viewing Dashboard") },
     // { path: "/posts", view: () => console.log("Viewing Posts") },
     // { path: "/contacts", view: () => console.log("Viewing contacts") },
@@ -19,6 +16,10 @@ const router = async () => {
     { path: "/contacts", view: Contacts },
   ];
 
+
+  // Проверяем, какому из путей соответствует текущий адрес
+  // в адресной строке браузера. Для совпадающего пути 
+  // свойство isMatch будет равно true.
   const potentialMatches = routes.map((route) => {
     return {
       route: route,
@@ -26,8 +27,10 @@ const router = async () => {
     };
   });
 
+  // Записываем нужный путь в переменную
   let match = potentialMatches.find((match) => match.isMatch);
 
+  // Если путь из адресной строки не найден, отправляем на путь "/"
   if (!match) {
     match = {
       route: routes[0],
@@ -47,7 +50,10 @@ const router = async () => {
 };
 
 
-
+const navigateTo = (url) => {
+  history.pushState(null, null, url);
+  router();
+};
 
 // Добавляем возможность переходить по страницам через историю
 window.addEventListener("popstate", router);
