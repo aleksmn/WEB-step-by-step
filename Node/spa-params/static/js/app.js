@@ -7,7 +7,9 @@ const pathToRegex = (path) =>
   RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
 const getParams = (match) => {
+  // Получаем параметр из пути в адресной строке(posts/7 --> 7)
   const values = match.result.slice(1);
+  // Получаем ключ значения (posts/:id ---> id)
   const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map(
     (result) => result[1]
   );
