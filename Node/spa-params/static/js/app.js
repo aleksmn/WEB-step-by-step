@@ -65,7 +65,7 @@ const router = async () => {
 
   // new match.route.view();
 
-  await markNav(location.pathname);
+  markNav(location.pathname);
 };
 
 // Добавляем возможность переходить по страницам через историю
@@ -85,21 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const markNav = currPath => {
-  console.log(currPath)
-
+  // Выделяем текущий элемент навигации
+  // console.log(currPath)
   for (let n of document.querySelectorAll(".nav__link")) {
     n.classList.remove("active");
   }
 
-  document.querySelector(`[href="${currPath}"]`).classList.add("active");
+  try {
+    document.querySelector(`[href="${currPath}"]`).classList.add("active");
+  } catch (error) {
+    document.querySelector(`[href="/posts"]`).classList.add("active");
+  }
 
-  // switch (currPath) {
-  //   case "/":
-  //     document.querySelector(['href="/"']).classList.add('active')
-  //     break;
-  
-  //   default:
-  //     break;
-  // }
-   
 }
