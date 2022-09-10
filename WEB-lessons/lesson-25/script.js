@@ -7,7 +7,7 @@ button1.onclick = function () {
   // текущий цвет:
   let currColor = window.getComputedStyle(button1).backgroundColor;
 
-  console.log(currColor);
+  // console.log(currColor);
 
   // первый (зеленый) цвет:
   const firstColor = "rgb(47, 129, 47)";
@@ -17,18 +17,27 @@ button1.onclick = function () {
   // проверка цвета фона кнопки
   if (currColor == secondColor) {
     button1.style.backgroundColor = firstColor;
-    // document.querySelector("body").style.backgroundColor = "black";
-    // document.querySelector(".wrapper").style.color = "white";
+    document.querySelector("body").style.backgroundColor = "black";
+    document.querySelector("body").style.color = "white";
     // document.getElementById("heading").style.color = "purple";
     // document.querySelector("img").style.display = "none";
   } else {
     button1.style.backgroundColor = secondColor;
-    // document.querySelector("body").style.backgroundColor = "white";
-    // document.querySelector(".wrapper").style.color = "black";
+    document.querySelector("body").style.backgroundColor = "white";
+    document.querySelector("body").style.color = "black";
     // document.getElementById("heading").style.color = "green";
     // document.querySelector("img").style.display = "block";
   }
 };
+
+
+
+
+
+
+
+
+
 
 button2.onclick = function () {
   button2.classList.toggle("bg-green");
