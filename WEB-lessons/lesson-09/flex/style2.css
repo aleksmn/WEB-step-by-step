@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+.header {
+    background-color: bisque;
+}
+
+.main {
+    background-color: rgb(75, 255, 255);
+}
+
+.footer {
+    background-color: rgb(249, 86, 255);
+}
+
+.card {
+    width: 380px;
+    height: 60%;
+    background-color: rgb(113, 182, 250);
+    margin: 10px;
+}
+
+#card-1 {
+    background-color: lightgreen;
+
+    padding: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+
+    /* Добавляем картинку на фон */
+
+    background-image: url(kriper.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
