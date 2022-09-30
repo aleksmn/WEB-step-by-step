@@ -1,4 +1,4 @@
-let weather = {
+const weather = {
   fetchWeather: function () {
     fetch("/weather")
       .then((responce) => responce.json())
@@ -11,7 +11,7 @@ let weather = {
 
     console.log(name, iconUrl, description, temp, humidity, speed);
 
-    document.querySelector(".city").innerText = `${name}`;
+    document.querySelector(".city").innerText = name;
     document.querySelector(".icon").src = iconUrl;
     document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = `${Math.round(temp)}°C`;

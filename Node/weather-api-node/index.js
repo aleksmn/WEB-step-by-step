@@ -1,10 +1,11 @@
 const express = require("express");
 const https = require("https");
-const port = 5000;
+const port = 3000;
 const app = express();
 
 require("dotenv").config();
 
+let city = "санкт-петербург"
 
 app.use(express.static(__dirname + "/public"));
 
@@ -15,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.get("/weather", (req, res) => {
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?appid="+ process.env.WEATHER_API_KEY +"&q=moscow&units=metric&lang=ru";
+    "https://api.openweathermap.org/data/2.5/weather?appid="+ process.env.WEATHER_API_KEY +"&q=" + city + "&units=metric&lang=ru";
 
   https.get(url, function (response) {
     console.log(response.statusCode, response.statusMessage); /// -> 200 OK
