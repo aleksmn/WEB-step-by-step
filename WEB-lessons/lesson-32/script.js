@@ -37,8 +37,7 @@ const modalGift = document.getElementById("giftModal");
 const openBtnGift = document.getElementById("giftBtn");
 const closeBtnGift = document.getElementById("giftClose");
 
-// console.log(modal, openBtn, closeBtn)
-
+// console.log(modalGift, openBtnGift, closeBtnGift)
 
 openBtnGift.onclick = function () {
     modalGift.style.display = "block";
