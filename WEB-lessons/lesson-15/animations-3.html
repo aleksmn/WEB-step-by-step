@@ -9,25 +9,20 @@
       width: 100px;
       height: 100px;
       animation-name: example;
-      animation-duration: 20s;
+      animation-duration: 10s;
       background-size: cover;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
 
     @keyframes example {
       0% {
-
         background-image: url(images/menu_2.png);
-      }
-      
-      50% {
-        background-image: url(images/menu_3.png);
-      }
+      }    
 
       100% {
-
-        background-image: url(images/menu_2.png);
+        background-image: url(images/menu_3.png);
       }
     }
 
