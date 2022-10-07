@@ -8,27 +8,26 @@
     div {
       width: 100px;
       height: 100px;
-
-
       animation-name: example;
-      /* background-image: url(images/menu_1.png); */
-    
-
-      animation-duration: 4s;
+      animation-duration: 20s;
       background-size: cover;
       animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
     }
 
     @keyframes example {
-      from {
+      0% {
 
         background-image: url(images/menu_2.png);
       }
       
-
-      to {
-
+      50% {
         background-image: url(images/menu_3.png);
+      }
+
+      100% {
+
+        background-image: url(images/menu_2.png);
       }
     }
 
