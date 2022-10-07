@@ -3,11 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Random Title</title>
+    <title>EJS Site</title>
 
     <style>
         body {
             padding: 20px;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            font-family: sans-serif;
+            color: rgb(44, 44, 44);
+        }
+
+        .menu a {
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+
+        }
+
+        .menu a:hover {
+            background-color: rgb(23, 153, 253);
+            color: white;
         }
     </style>
 </head>
@@ -16,11 +32,15 @@
 
     <header>
         <div class="menu">
+
             <a class="item" href="/">
                 Главная страница
             </a>
+
+
             <a class="item" href="/about">
                 О сайте
             </a>
+
         </div>
     </header>
