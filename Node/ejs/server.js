@@ -1,5 +1,5 @@
-const express = require("express"),
-    app = express();
+const express = require("express");
+const app = express();
 
 app.set("view engine", "ejs");
 
@@ -31,8 +31,8 @@ app.get("/", function (req, res) {
     let subheading = "Список пользователей нашего сайта"
 
     res.render("index", {
-        users: users,
-        subheading: subheading
+        users,
+        subheading
     });
 
 });
