@@ -1,0 +1,15 @@
+
+* Установка: 
+
+npm init -y
+
+npm i express ejs
+
+npm i nodemon --save-dev
+
+
+* Создаем каталоги:
+
+mkdir views
+
+mkdir views/partials

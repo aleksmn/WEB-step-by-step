@@ -1,0 +1,24 @@
+<%- include('partials/header'); %>
+
+    <main class="section">
+        <div class="container">
+            <h1>Всем привет!</h1>
+            <p>Добро пожаловать на сайт, созданный с помощью EJS</p>
+
+            <h2><%= subheading %></h2>
+
+            <ul>
+                <% users.forEach(function(user) { %>
+                    <li>
+                        <strong>
+                            <%= user.name %>
+                        </strong>
+                        <%= user.designation %>.
+                    </li>
+                    <% }); %>
+            </ul>
+        </div>
+    </main>
+
+
+    <%- include('partials/footer'); %>
