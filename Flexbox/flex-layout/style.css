@@ -14,7 +14,7 @@ body {
   flex-flow: row wrap;
 }
 
-.wrapper>* {
+header, main, footer, .sidebar-1, .sidebar-2 {
   padding: 20px;
   margin: 14px;
   flex: 1 100%;
@@ -38,7 +38,7 @@ header img {
   filter: saturate(1.1) brightness(1.2);
 }
 
-.main {
+main {
   background: rgb(255, 214, 167);
 }
 
@@ -76,7 +76,7 @@ footer {
 /* Медиазапрос для больших экранов */
 
 @media screen and (min-width: 960px) {
-  .main {
+  main {
     /* .main будет в 3 раза шире, чем .sidebar */
     flex: 3;
     order: 2;
@@ -96,10 +96,10 @@ footer {
 }
 
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .wrapper {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
   }
-}
+} */
