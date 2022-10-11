@@ -1,0 +1,20 @@
+body {
+    padding: 20px;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-family: sans-serif;
+    color: rgb(44, 44, 44);
+}
+
+.menu a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.menu a:hover {
+    background-color: rgb(23, 153, 253);
+    color: white;
+
+}
