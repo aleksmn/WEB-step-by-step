@@ -13,8 +13,13 @@ header {
 }
 
 .enter-menu {
-	text-align: right;
 	margin: 4px 20px;
+	position: absolute;
+	top: 110px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.486);
+	width: 100%;
+	text-align: center;
 }
 
 .enter-menu a {
