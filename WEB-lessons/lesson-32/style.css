@@ -59,6 +59,11 @@ main h2 {
     align-items: center;
 }
 
+.main-items .arrow {
+    transition: 0.2s;
+    user-select: none;
+}
+
 .main-items .arrow:hover {
     cursor: pointer;
     transform: scale(1.1);
