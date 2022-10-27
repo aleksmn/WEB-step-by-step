@@ -1,0 +1,339 @@
+// сначала для смартфона
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 1.5rem;
+    // 1rem = 16px
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+}
+
+.hero-img {
+    background: url("../images/hero.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    z-index: -1;
+    animation: introLoad 2s forwards;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 8rem;
+
+        a {
+            color: black;
+            display: block;
+            padding: 0.75rem 2rem;
+
+            &:hover {
+                background: rgb(235, 235, 235);
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin: 2rem;
+        width: 2.5rem;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    .menu {
+        width: 2.3rem;
+        margin-top: 0.4rem;
+        cursor: pointer;
+    }
+}
+
+section.hero {
+    color: white;
+    height: 90vh;
+    animation: moveDown 1s ease-in-out forwards;
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 8rem;
+        line-height: 3.3rem;
+    }
+
+    .subhead {
+        font-size: 1.4rem;
+    }
+
+    .down-arrow {
+        stroke: white;
+        position: absolute;
+        bottom: 8rem;
+        width: 1rem;
+        animation: moveArrow 1s alternate-reverse infinite;
+
+        path {
+            fill: white;
+        }
+    }
+}
+
+.more-info {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11rem;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .desc {
+        line-height: 1.5rem;
+    }
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+
+
+
+/* Основная часть сайта */
+
+section.shop {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section.shop h2 {
+    text-align: center;
+}
+
+/* Товары */
+
+.shop-items {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item {
+    /* border: 2px solid blue; */
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(69, 69, 69);
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+    width: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.shop-item-price {
+    font-size: 18px;
+    color: rgb(47, 123, 47);
+    font-family: sans-serif;
+}
+
+
+
+@media only screen and (min-width: 680px) {
+    body {
+        margin: 1.5rem 5rem;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: auto;
+        background: none;
+
+        svg.close {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+
+            a {
+                color: white;
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .hero-img {
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 42rem;
+    }
+
+    .logo {
+        color: black;
+
+        span {
+            color: red;
+        }
+    }
+
+    section.hero {
+        color: black;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8rem;
+
+        .subhead {
+            margin-bottom: 3rem;
+        }
+
+        svg.down-arrow {
+            stroke: black;
+            position: unset;
+            margin-top: 2rem;
+
+            path {
+                fill: black;
+            }
+        }
+    }
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 3rem;
+        margin-bottom: 8rem;
+
+        img {
+            width: 25rem;
+        }
+
+        .content {
+            text-align: right;
+            width: 25rem;
+        }
+    }
+
+    .feature.left {
+        grid-template-areas: "left right";
+
+        img {
+            grid-area: left;
+        }
+
+        .content {
+            text-align: left;
+            width: 25rem;
+            justify-self: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        gap: 0;
+    }
+}
+
+// Анимации
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
