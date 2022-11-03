@@ -36,8 +36,12 @@ button1.onclick = function () {
 
 
 
+
+
 button2.onclick = function () {
+
   button2.classList.toggle("bg-green");
+
   document.querySelector("body").classList.toggle("dark")
 
 };

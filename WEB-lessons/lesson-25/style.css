@@ -30,12 +30,18 @@ button {
 
 
 
+
 .bg-green {
   background-color: rgb(47, 129, 47);
 }
 
+/* Темная тема */
 
 .dark {
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(47, 51, 60);
   color: rgb(235, 235, 235);
+}
+
+.dark h1 {
+  color: rgb(229, 67, 229);
 }
