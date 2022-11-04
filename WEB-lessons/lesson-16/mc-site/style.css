@@ -37,6 +37,7 @@ header {
 
 
 .welcome {
+	margin-top: 20px;
 	background-color: black;
 	position: relative;
 }
@@ -75,6 +76,11 @@ button img {
 	vertical-align: middle;
 }
 
+section {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
 /* About Section */
 
 .about {
@@ -84,7 +90,7 @@ button img {
 }
 
 .section-heading {
-
+	margin-bottom: 60px;
 	font-size: 30px;
 	text-align: center;
 	color: white;
@@ -117,6 +123,9 @@ button img {
 }
 
 /* Slider Section */
+
+
+
 
 .slider-wrapper {
 	display: flex;
