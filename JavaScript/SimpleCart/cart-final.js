@@ -63,12 +63,19 @@ function addItemToCart(title, price, imageSrc) {
   updateCartTotal();
 }
 
+
 function removeCartItem(event) {
-  // console.log("Удаляем элемент.");
-  // console.log(event.target.parentElement.parentElement)
-  event.target.parentElement.parentElement.remove();
-  updateCartTotal();
+
+  let del = confirm("Точно удалить?")
+
+  if (del) {
+    event.target.parentElement.parentElement.remove();
+    updateCartTotal();
+  }
+
 }
+
+
 
 function quantityChanged(event) {
   // console.log("Меняем количество товаров.");
@@ -80,6 +87,10 @@ function quantityChanged(event) {
   updateCartTotal();
 }
 
+
+
+
+
 function updateCartTotal() {
   // console.log("Обновляем итоговую сумму.");
 
@@ -89,18 +100,32 @@ function updateCartTotal() {
 
   for (row of cartRows) {
     // console.log(row);
+
     let priceElement = row.querySelector(".cart-price");
     let quantityElement = row.querySelector(".cart-quantity-input");
+
     // console.log(priceElement, quantityElement);
+
     let price = parseFloat(priceElement.innerText.replace("руб.", ""));
+
     let quantity = parseInt(quantityElement.value);
+
     total = total + price * quantity;
+
     // console.log(total);
   }
 
-  total = Math.round(total * 100) / 100;
+  // total = Math.round(total * 100) / 100;
+
+
   document.querySelector(".cart-total-price").innerText = total + " руб.";
+  
 }
+
+
+
+
+
 
 // Кнопка "Купить"
 
