@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: serif;
+  font-family: sans-serif;
   color: rgb(54, 54, 54);
 }
 
@@ -244,4 +244,14 @@ section h2 {
   margin: 40px auto 80px auto;
   font-size: 1.75em;
   padding: 12px 40px;
+}
+
+
+
+footer {
+  background-color: rgba(130, 130, 130, 0.41);
+  color: rgb(47, 47, 47);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 40px;
 }
