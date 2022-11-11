@@ -73,5 +73,10 @@ main h2 {
 }
 
 .main-item button:hover {
-    background-color: rgb(175, 26, 26);
+    background-color: rgb(191, 32, 32);
+    cursor: pointer;
+}
+
+.main-item button:active {
+    background-color: rgb(80, 8, 8);
 }
