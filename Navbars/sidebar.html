@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: #8104aa;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+            max-width: 800px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a class="active" href="#home">Главная</a>
+        <a href="/blog">Блог</a>
+        <a href="/contacts">Контакты</a>
+        <a href="/about">О сайте</a>
+    </div>
+
+    <div class="content">
+        <h2>Responsive Sidebar</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur explicabo odit magnam in deserunt sint,
+            repellendus nemo optio maiores quasi beatae reiciendis, rerum esse! Corporis, non beatae? Voluptates,
+            aspernatur reprehenderit?</p>
+        <p>Ipsum voluptatum unde repellendus adipisci vero est consectetur commodi, quam molestias. Veritatis iusto quos
+            odit ex animi cupiditate quibusdam sed nam optio reprehenderit, dolores vero adipisci. Labore distinctio
+            quos vero.</p>
+        <p>Repellat neque officiis ab rem, explicabo dolores, aperiam porro ad facilis ex quis repudiandae quas ipsam
+            nemo, aspernatur quibusdam non enim officia eaque. Dicta minima repudiandae ipsa nisi rerum ratione?</p>
+        <p>Unde sed reprehenderit iusto neque impedit minima labore nam, modi ipsum voluptate laboriosam, dolor in
+            corporis eos pariatur consectetur. Exercitationem porro dolore dignissimos ullam officia nesciunt tempora
+            asperiores aliquid ad!</p>
+        <p>Repellat nesciunt earum aliquid numquam, officiis, aperiam laudantium deserunt ut voluptate minus, dolores
+            nemo. Animi, doloribus corporis assumenda quam ipsa fugit tenetur perspiciatis, porro id odit obcaecati vero
+            eaque incidunt?</p>
+    </div>
+
+</body>
+
+</html>
