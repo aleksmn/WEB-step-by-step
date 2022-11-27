@@ -11,15 +11,24 @@
     width: 200px;
     height: 60%;
     background-color: rgb(113, 182, 250);
-    margin: 10px;   
+    margin: 10px;
 }
 
 #card-1 {
-    background-color: lightgreen;
+    background-color: rgb(255, 255, 255);
 
     /* Добавляем картинку на фон */
-    
-    /* background-image: url(kriper.jpg);
+
+    background-image: url(green-apple.png);
     background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+
+}
+
+#card-1:hover {
+    /* background-color: rgb(238, 144, 238); */
+    background-image: url(kriper.jpg);
+    /* background-position: center;
     background-size: cover; */
 }
