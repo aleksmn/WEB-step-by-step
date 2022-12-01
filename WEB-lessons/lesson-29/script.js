@@ -51,21 +51,14 @@ function resetRating() {
     // сбросить рейтинг
     let ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
 
-    for (let i = 0; i < ids.length; i++) {
-        let id = ids[i];
+    for (let id of ids) {
         document.getElementById(id).src = "images/star_2.png";
     }
+
 }
 
 
-
-
-
 const sendRatingBtn = document.getElementById("sendRating");
-
-
-
-
 
 
 sendRatingBtn.addEventListener("click", function () {
