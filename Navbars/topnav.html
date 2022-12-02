@@ -44,7 +44,7 @@
             color: white;
         }
 
-        .topnav .icon {
+        .topnav .hamburger {
             display: none;
         }
 
@@ -53,7 +53,7 @@
                 display: none;
             }
 
-            .topnav a.icon {
+            .topnav a.hamburger{
                 float: right;
                 display: block;
             }
@@ -62,7 +62,7 @@
                 position: relative;
             }
 
-            .topnav.responsive .icon {
+            .topnav.responsive .hamburger {
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -84,9 +84,11 @@
         <a href="#news"><i class="fa fa-fw fa-search"></i>Поиск</a>
         <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Контакты</a>
         <a href="#about"><i class="fa fa-fw fa-user"></i>Об авторе</a>
-        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+
+        <a href="javascript:void(0);" class="hamburger" onclick="openNav()">
             <i class="fa fa-bars"></i>
         </a>
+
     </div>
 
     <div class="main">
@@ -107,7 +109,10 @@
             Cupiditate, ab?</p>
     </div>
 
+    
+
     <script>
+
         function openNav() {
             const nav = document.getElementById("myTopnav");
             if (nav.className === "topnav") {
@@ -116,6 +121,7 @@
                 nav.className = "topnav";
             }
         }
+
     </script>
 
 </body>
