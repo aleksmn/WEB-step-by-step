@@ -1,6 +1,6 @@
 let siteRating = 0;
 
-
+let starids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
 
 function star(starNumber) {
     // starNumber - номер звезды на которую навел пользователь
@@ -11,11 +11,9 @@ function star(starNumber) {
 
     // console.log(starNumber);
 
-    let ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
-
     // console.log(ids[starNumber]);
 
-    let star = document.getElementById(ids[starNumber]);
+    let star = document.getElementById(starids[starNumber]);
 
     // console.log(star);
 
@@ -24,7 +22,7 @@ function star(starNumber) {
 
         // то меняем ее и все предыдущие на заполненные
         for (let i = 0; i <= starNumber; i++) {
-            let id = ids[i];
+            let id = starids[i];
             document.getElementById(id).src = "images/star_1.png";
         }
 
@@ -33,9 +31,9 @@ function star(starNumber) {
     // // // иначе - звезда заполена
     else {
 
-        for (let i = 0; i < ids.length; i++) {
+        for (let i = 0; i < starids.length; i++) {
             if (i > starNumber) {
-                id = ids[i];
+                id = starids[i];
                 document.getElementById(id).src = "images/star_2.png";
 
             }
@@ -43,19 +41,34 @@ function star(starNumber) {
     }
 }
 
+
+
 function resetRating() {
     console.log("Сбросить рейтинг")
 
     siteRating = 0;
 
     // сбросить рейтинг
-    let ids = ["star-1", "star-2", "star-3", "star-4", "star-5"];
 
-    for (let id of ids) {
+    for (let id of starids) {
         document.getElementById(id).src = "images/star_2.png";
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const sendRatingBtn = document.getElementById("sendRating");
