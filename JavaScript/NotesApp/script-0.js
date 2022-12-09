@@ -20,56 +20,54 @@ testNotes = [
 
 saveNotes(testNotes)
 
-// console.log(getNotes());
+console.log(getNotes());
+
+
+function createNoteElement(id, content) {
+  const element = document.createElement("textarea");
+  element.classList.add("note");
+  element.value = content;
+  element.placeholder = "Новая заметка!";
+
+  element.addEventListener("change", () => {
+    updateNote(id, element.value);
+  });
+
+  element.addEventListener("dblclick", () => {
+    const doDelete = confirm("Удалить заметку?");
+
+    if (doDelete) {
+      deleteNote(id, element);
+    }
+  });
+
+  return element;
+}
+
+
+function addNote() {
+  console.log("Добавляем заметку...");
+}
+
+function updateNote(id, newContent) {
+  console.log("Изменяем заметку...");
+  console.log(id, newContent);
+}
+
+function deleteNote(id, element) {
+  console.log("Удаляем заметку...");
+  console.log(id);
+}
 
 
 
+// Выводим заметки на страницу
+getNotes().forEach(note => {
+  const noteElement = createNoteElement(note.id, note.content);
+  notesContainer.insertBefore(noteElement, addNoteButton);
+});
+
+// Кнопка добавления заметки (+)
+addNoteButton.addEventListener("click", () => addNote());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function createNoteElement(id, content) {
-//   const element = document.createElement("textarea");
-//   element.classList.add("note");
-//   element.value = content;
-//   element.placeholder = "Новая заметка!";
-
-//   element.addEventListener("change", () => {
-//     updateNote(id, element.value);
-//   });
-
-//   element.addEventListener("dblclick", () => {
-//     const doDelete = confirm("Удалить заметку?");
-
-//     if (doDelete) {
-//       deleteNote(id, element);
-//     }
-//   });
-
-//   return element;
-// }
-
-// function addNote() {
-//   console.log("Добавляем заметку...");
-// }
-
-// function updateNote(id, newContent) {
-//   console.log("Изменяем заметку...");
-//   console.log(id, newContent);
-// }
-
-// function deleteNote(id, element) {
-//   console.log("Удаляем заметку...");
-//   console.log(id);
-// }

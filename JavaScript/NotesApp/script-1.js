@@ -1,14 +1,6 @@
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-note");
 
-// Выводим заметки на страницу
-getNotes().forEach(note => {
-    const noteElement = createNoteElement(note.id, note.content);
-    notesContainer.insertBefore(noteElement, addNoteButton);
-});
-
-// Кнопка добавления заметки (+)
-addNoteButton.addEventListener("click", () => addNote());
 
 
 function getNotes() {
@@ -74,7 +66,13 @@ function deleteNote(id, element) {
 
 
 
+// Выводим заметки на страницу
+getNotes().forEach(note => {
+  const noteElement = createNoteElement(note.id, note.content);
+  notesContainer.insertBefore(noteElement, addNoteButton);
+});
 
-
+// Кнопка добавления заметки (+)
+addNoteButton.addEventListener("click", () => addNote());
 
 
