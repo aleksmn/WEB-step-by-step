@@ -74,6 +74,10 @@ header .menu {
   cursor: pointer;
 }
 
+section {
+  margin-top: 4rem;
+}
+
 section.hero {
   color: white;
   height: 90vh;
@@ -121,7 +125,8 @@ section.hero .down-arrow path {
 section.shop {
   width: 80%;
   max-width: 900px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 section.shop h2 {
@@ -262,7 +267,12 @@ section.shop h2 {
     margin: 0 auto;
   }
   .feature {
+    border: 2px solid red;
+    justify-content: space-evenly;
     gap: 0;
+  }
+  .more-info {
+    margin-top: 200px;
   }
 }
 @-webkit-keyframes introLoad {
