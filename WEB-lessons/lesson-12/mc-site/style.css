@@ -13,7 +13,7 @@ header {
 }
 
 .enter-menu {
-	margin: 4px 20px;
+	margin: 4px 0;
 	position: absolute;
 	top: 110px;
 	z-index: 1;
