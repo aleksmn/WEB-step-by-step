@@ -1,0 +1,67 @@
+h1 {
+    color: white;
+    margin: 60px 30px;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 972px;
+    height: 190px;
+    margin: 0 auto;
+    background-image: url(images/bg.svg);
+    overflow: hidden;
+    position: relative;
+}
+
+.toys,
+.toys-2 {
+    height: 1265px;
+    /* Анимация:  */
+    animation-name: fallingToys;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* Короткая запись:  */
+    /* animation: fallingToys 100s linear infinite; */
+    transform: translateY(-1265px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.snow,
+.snow-2 {
+    height: 300px;
+    width: 596px;
+    /* Анимация:  */
+    animation-name: fallingSnow;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* Короткая запись:  */
+    /* animation: fallingSnow 20s linear infinite; */
+    transform: translateY(-300px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.toys-2 {
+    animation-delay: 50s;
+}
+
+.snow-2 {
+    animation-delay: 10s;
+}
+
+@keyframes fallingToys {
+    100% {
+        transform: translateY(1265px);
+    }
+}
+
+@keyframes fallingSnow {
+    100% {
+        transform: translateY(300px);
+    }
+}
