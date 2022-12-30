@@ -8,27 +8,27 @@
     <title>Проверка формы</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
-
+ 
     <!-- Урок 31. Проверка формы (form validation) -->
 
     <div class="container">
 
         <form id="form">
-            <div class="title">Get Started</div>
+            <div class="title">Войти</div>
 
-            <!-- User Name input -->
+            <!-- Ввод имени -->
 
             <div>
-                <label for="username">User Name</label>
+                <label for="username">Имя пользователя</label>
                 <i class="fas fa-user"></i>
 
-                <input type="text" name="username" id="username" placeholder="Firstname Lastname" />
+                <input type="text" name="username" id="username" placeholder="Имя Фамилия" />
 
-                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-circle-exclamation failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
 
                 <div class="error"></div>
@@ -43,7 +43,7 @@
 
                 <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
 
-                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-circle-exclamation failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
 
                 <div class="error"></div>
@@ -52,10 +52,10 @@
             <!--   Password input -->
 
             <div>
-                <label for="password">Password</label>
+                <label for="password">Пароль</label>
                 <i class="fas fa-lock"></i>
 
-                <input type="password" name="password" id="password" placeholder="Password here" />
+                <input type="password" name="password" id="password" placeholder="Пароль" />
 
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
@@ -64,7 +64,7 @@
 
             </div>
 
-            <button id="btn" type="submit">Submit</button>
+            <button id="btn" type="submit">Отправить</button>
 
         </form>
 
