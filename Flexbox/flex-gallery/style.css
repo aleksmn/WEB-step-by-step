@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.image {
+    margin: 20px;
+    
+}
+
+img {
+    transition: 0.5s;
+}
+
+img:hover {
+    opacity: 0.5;
+}
