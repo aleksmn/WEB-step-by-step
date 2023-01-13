@@ -3,13 +3,15 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Demo</title>
     <style>
+
         body {
             margin: 0;
             font-family: sans-serif;
             background-color: rgb(31, 33, 50);
-            color: rgb(240, 233, 233);
-            font-size: 1.5rem;
+            color: rgb(228, 247, 248);
+            font-size: 1.2rem;
         }
 
         .sidebar {
@@ -17,7 +19,7 @@
             padding: 0;
             width: 200px;
             background-color: rgb(11, 12, 19);
-            
+
             position: fixed;
             height: 100%;
             overflow: auto;
@@ -32,22 +34,26 @@
 
         .sidebar a.active {
             background-color: rgb(129, 4, 170);
-            color: white;
         }
 
         .sidebar a:hover:not(.active) {
             background-color: rgb(46, 50, 87);
-            color: white;
         }
 
-        div.content {
+        .content {
             margin-left: 300px;
-            padding: 1px 16px;
-            height: 1000px;
+            padding: 16px 20px;
             max-width: 800px;
         }
 
-        @media screen and (max-width: 700px) {
+        @media screen and (max-width:1100px) {
+            .content {
+                margin-left: 240px;
+            }
+        }
+
+
+        @media screen and (max-width: 800px) {
             .sidebar {
                 width: 100%;
                 height: auto;
@@ -58,7 +64,7 @@
                 float: left;
             }
 
-            div.content {
+            .content {
                 margin-left: 0;
             }
         }
@@ -74,30 +80,36 @@
 
 <body>
 
-    <div class="sidebar">
-        <a class="active" href="#home">Главная</a>
-        <a href="/blog">Блог</a>
-        <a href="/contacts">Контакты</a>
-        <a href="/about">О сайте</a>
-    </div>
 
-    <div class="content">
-        <h2>Responsive Sidebar</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur explicabo odit magnam in deserunt sint,
-            repellendus nemo optio maiores quasi beatae reiciendis, rerum esse! Corporis, non beatae? Voluptates,
-            aspernatur reprehenderit?</p>
-        <p>Ipsum voluptatum unde repellendus adipisci vero est consectetur commodi, quam molestias. Veritatis iusto quos
-            odit ex animi cupiditate quibusdam sed nam optio reprehenderit, dolores vero adipisci. Labore distinctio
-            quos vero.</p>
-        <p>Repellat neque officiis ab rem, explicabo dolores, aperiam porro ad facilis ex quis repudiandae quas ipsam
-            nemo, aspernatur quibusdam non enim officia eaque. Dicta minima repudiandae ipsa nisi rerum ratione?</p>
-        <p>Unde sed reprehenderit iusto neque impedit minima labore nam, modi ipsum voluptate laboriosam, dolor in
-            corporis eos pariatur consectetur. Exercitationem porro dolore dignissimos ullam officia nesciunt tempora
-            asperiores aliquid ad!</p>
-        <p>Repellat nesciunt earum aliquid numquam, officiis, aperiam laudantium deserunt ut voluptate minus, dolores
-            nemo. Animi, doloribus corporis assumenda quam ipsa fugit tenetur perspiciatis, porro id odit obcaecati vero
-            eaque incidunt?</p>
-    </div>
+    <nav class="sidebar">
+        <a class="active" href="#home">Главная</a>
+        <a href="hovernav.html">Блог</a>
+        <a href="topnav-dropdown.html">Контакты</a>
+        <a href="topnav.html">О сайте</a>
+    </nav>
+
+
+    <main class="content">
+
+        <h1>Responsive Sidebar</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eveniet temporibus numquam possimus soluta!
+            Laborum reiciendis dignissimos officia suscipit perferendis ad nostrum nihil cum cumque a, sit, voluptas aut
+            quae!</p>
+        <p>Sed, voluptatibus? Ullam enim facilis nam excepturi illum cupiditate nulla nihil dolorem rerum laborum
+            asperiores voluptatibus accusamus, cum dolor minus veritatis quasi corrupti temporibus. Quidem, delectus
+            quam. Incidunt, facere error!</p>
+        <p>Id, numquam error repellendus molestias iste voluptas ratione, voluptates cumque architecto corporis qui
+            voluptatum quaerat neque deleniti praesentium tempora assumenda? Vel nobis, quibusdam voluptatem accusantium
+            consequatur officia dignissimos voluptatum doloremque.</p>
+        <p>Facere, commodi labore incidunt sed explicabo maiores error, repudiandae repellendus sequi ad tenetur ullam.
+            Possimus neque facilis deserunt ipsa, laudantium commodi! Tenetur asperiores eum quisquam officiis nam
+            aliquam beatae labore.</p>
+        <p>Et, consequatur nisi? Illum vero dolores consequuntur? Consequuntur accusantium repellat suscipit, cupiditate
+            corporis molestiae iusto architecto earum beatae quae odit ipsa harum omnis sint ea possimus laudantium nemo
+            ut maxime.</p>
+
+    </main>
 
 </body>
 
