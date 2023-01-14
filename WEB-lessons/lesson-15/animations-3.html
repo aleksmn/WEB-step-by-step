@@ -3,18 +3,26 @@
 
 <head>
   <title>Анимация в CSS</title>
-  <style>
 
-    div {
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    .animated {
       width: 100px;
       height: 100px;
+      display: inline-block;
+      background-image: url(images/menu_2.png);
+      background-size: cover;
+      margin: 10px;
+
       animation-name: example;
       animation-duration: 10s;
-      background-size: cover;
-      animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
+
+    
 
     @keyframes example {
       from {
@@ -26,15 +34,23 @@
       }
     }
 
+
+
+
+
   </style>
 </head>
 
 <body>
   <!-- Анимация в CSS: смена картинки -->
 
-  <h1>Анимация в CSS: смена картинки </h1>
+  <!-- <h1>Анимация в CSS: смена картинки </h1> -->
 
-  <div></div>
+  <div class="animated"></div>
+
+  <div class="animated"></div>
+
+  <div class="animated"></div>
 
 </body>
 
