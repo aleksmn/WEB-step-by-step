@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -20,18 +20,16 @@
         }
 
         .topnav {
-            overflow: hidden;
+            display: flex;
             background-color: rgb(22, 22, 47);
         }
 
         .topnav a {
-            float: left;
-            display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 1rem;
         }
 
         .topnav a:hover {
@@ -52,14 +50,17 @@
             .topnav a:not(:first-child) {
                 display: none;
             }
-
-            .topnav a.hamburger{
-                float: right;
-                display: block;
+            .topnav {
+                justify-content: space-between;
             }
 
+            .topnav a.hamburger{
+                display: block;
+            }
+         
             .topnav.responsive {
-                position: relative;
+                display: block;
+
             }
 
             .topnav.responsive .hamburger {
@@ -80,10 +81,10 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-        <a href="#home" class="active"><i class="fa fa-fw fa-home"></i>Дом</a>
-        <a href="#news"><i class="fa fa-fw fa-search"></i>Поиск</a>
-        <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Контакты</a>
-        <a href="#about"><i class="fa fa-fw fa-user"></i>Об авторе</a>
+        <a href="#home" class="active"><i class="fa fa-home"></i> Дом</a>
+        <a href="#news"><i class="fa fa-search"></i> Поиск</a>
+        <a href="#contact"><i class="fa fa-envelope"></i> Контакты</a>
+        <a href="#about"><i class="fa fa-user"></i> Об авторе</a>
 
         <a href="javascript:void(0);" class="hamburger" onclick="openNav()">
             <i class="fa fa-bars"></i>
