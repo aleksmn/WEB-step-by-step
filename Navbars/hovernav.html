@@ -4,32 +4,35 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+
+
         body {
             font-family: sans-serif;
             background-color: rgb(31, 33, 50);
             color: rgb(240, 233, 233);
+            font-size: 1.2rem;
         }
 
         .main {
+            margin-top: 40px;
             margin-left: 160px;
+            margin-right: 40px;
             max-width: 1200px;
-            font-size: 1.6rem;
         }
 
 
-        #mySidenav a {
+        nav a {
             position: absolute;
             left: -100px;
             transition: 0.3s;
             padding: 15px;
             width: 105px;
             text-decoration: none;
-            font-size: 20px;
             color: white;
             border-radius: 0 5px 5px 0;
         }
 
-        #mySidenav a:hover {
+        nav a:hover {
             left: 0;
         }
 
@@ -65,15 +68,16 @@
 
 <body>
 
-    <div id="mySidenav" class="sidenav">
+    <nav>
         <a href="#" id="about">О нас</a>
         <a href="#" id="blog">Блог</a>
         <a href="#" id="projects">Проекты</a>
         <a href="#" id="contact">Контакты</a>
-    </div>
+    </nav>
 
     <div class='main'>
         <h2>Hoverable Sidenav</h2>
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae numquam iusto tempore sit ullam cumque
             eos beatae, laudantium, voluptas qui ipsum asperiores quas voluptates impedit magni ipsam amet quidem?
             Obcaecati!</p>
