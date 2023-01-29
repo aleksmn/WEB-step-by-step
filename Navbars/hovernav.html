@@ -4,32 +4,30 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-
-
         body {
             font-family: sans-serif;
             background-color: rgb(31, 33, 50);
             color: rgb(240, 233, 233);
             font-size: 1.2rem;
+            margin: 0;
         }
 
-        .main {
+        main {
             margin-top: 40px;
             margin-left: 160px;
             margin-right: 40px;
             max-width: 1200px;
         }
 
-
         nav a {
             position: absolute;
-            left: -100px;
-            transition: 0.3s;
             padding: 15px;
             width: 105px;
             text-decoration: none;
             color: white;
             border-radius: 0 5px 5px 0;
+            transition: 0.3s;
+            left: -100px;
         }
 
         nav a:hover {
@@ -56,9 +54,11 @@
             background-color: rgb(115, 108, 108)
         }
 
+
+
         @media screen and (max-width: 600px) {
 
-            .main {
+            main {
                 margin-left: 60px;
             }
 
@@ -75,13 +75,13 @@
         <a href="#" id="contact">Контакты</a>
     </nav>
 
-    <div class='main'>
+    <main>
         <h2>Hoverable Sidenav</h2>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae numquam iusto tempore sit ullam cumque
             eos beatae, laudantium, voluptas qui ipsum asperiores quas voluptates impedit magni ipsam amet quidem?
             Obcaecati!</p>
-    </div>
+    </main>
 
 </body>
 
