@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Gallery</title>
+
+    <!-- Подключаем библиотеку Magnific Popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Flexbox Image Gallery</h1>
+
+        <div class="gallery">
+
+            <!-- В тег a пишется ссылка на большую картинку -->
+            <a href="https://picsum.photos/id/50/500" class='image'>
+                <img src="https://picsum.photos/id/50/500" alt="">
+            </a>
+
+            <a href="https://picsum.photos/id/51/500" class='image'>
+                <img src="https://picsum.photos/id/51/500" alt="">
+            </a>
+            <a href="https://picsum.photos/id/52/500" class='image'>
+                <img src="https://picsum.photos/id/52/500" alt="">
+            </a>
+            <a href="https://picsum.photos/id/53/500" class='image'>
+                <img src="https://picsum.photos/id/53/500" alt="">
+            </a>
+            <a href="https://picsum.photos/id/53/500" class='image'>
+                <img src="https://picsum.photos/id/54/500" alt="">
+            </a>
+
+            <a href="https://picsum.photos/id/55/500" class='image'>
+                <img src="https://picsum.photos/id/55/500" alt="">
+
+            </a>
+        </div>
+
+
+    </main>
+
+    <script>
+        $(".gallery").magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    </script>
+
+</body>
+
+</html>
