@@ -23,24 +23,24 @@
         <div class="gallery">
 
             <!-- В тег a пишется ссылка на большую картинку -->
-            <a href="https://picsum.photos/id/50/500" class='image'>
+            <a href="https://picsum.photos/id/50/800" class='image'>
                 <img src="https://picsum.photos/id/50/500" alt="">
             </a>
 
-            <a href="https://picsum.photos/id/51/500" class='image'>
+            <a href="https://picsum.photos/id/51/800" class='image'>
                 <img src="https://picsum.photos/id/51/500" alt="">
             </a>
-            <a href="https://picsum.photos/id/52/500" class='image'>
+            <a href="" class='image'>
                 <img src="https://picsum.photos/id/52/500" alt="">
             </a>
-            <a href="https://picsum.photos/id/53/500" class='image'>
+            <a href="https://picsum.photos/id/53/800" class='image'>
                 <img src="https://picsum.photos/id/53/500" alt="">
             </a>
-            <a href="https://picsum.photos/id/53/500" class='image'>
+            <a href="https://picsum.photos/id/53/800" class='image'>
                 <img src="https://picsum.photos/id/54/500" alt="">
             </a>
 
-            <a href="https://picsum.photos/id/55/500" class='image'>
+            <a href="https://picsum.photos/id/55/800" class='image'>
                 <img src="https://picsum.photos/id/55/500" alt="">
 
             </a>
@@ -54,8 +54,12 @@
             delegate: 'a',
             type: 'image',
             gallery: {
-                enabled: true
-            }
+                enabled: true,
+                tCounter: '%curr% из %total%' // Markup for "1 of 7" counter
+            },
+            image: {
+                tError: '<a href="%url%">Картинка</a> не найдена.'
+            },
         });
     </script>
 
