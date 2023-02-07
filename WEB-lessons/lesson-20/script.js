@@ -1,18 +1,19 @@
-// Логические операции
 
-// let username = prompt("Введите имя: ");
+// Создаем функцию
 
+function sayHello() {
 
-// if (username == "Admin") {
-//     alert("Добро пожаловать, Админ!")
-//     console.log("На сайт зашел Админ")
-// }
+    // Объявляем переменную username
+    let username = prompt("Введите имя: ")
 
-// else {
-//     alert("Привет " + username)
-//     console.log("На сайт зашел пользователь с ником " + username)
-// }
+    // Если username равен 'Admin'
+    if (username == 'Admin') {
+        alert("Добро пожаловать, " + username + "!")
+    }
 
+    else {
+        alert("Привет " + username + "!")
+    }
 
-
+}
 
