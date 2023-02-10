@@ -3,10 +3,11 @@ showSlides(slideIndex);
 
 
 function showSlides(n) {
-    console.log("n = " + n);
+    // console.log("Номер слайда " + n);
+
     let slides = document.querySelectorAll(".mySlides");
 
-    console.log(slides)
+    // console.log(slides)
 
     // если номер слайда превышает количество слайдов - перейти к первому
     if (n > slides.length) { slideIndex = 1 }
@@ -14,18 +15,24 @@ function showSlides(n) {
     if (n < 1) { slideIndex = slides.length }
 
     // скрываем все слайды - очищаем экран
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (let slide of slides) {
+        slide.style.display = "none";
     }
 
     // показываем выбранный слайд
     slides[slideIndex - 1].style.display = "block";
 
+    // Записываем номер слайда
+
+    const slideNum = `${slideIndex} / ${slides.length}`;
+
+    document.querySelectorAll('.numbertext')[slideIndex - 1].innerText = slideNum;
+
 }
 
 
-function plusSlides(n) {
-    // n = 1 (вперед) или n = -1 (назад)
-    showSlides(slideIndex += n);
+function plusSlides(i) {
+    // i = 1 (вперед) или i = -1 (назад)
+    showSlides(slideIndex += i);
     // console.log("slideIndex = " + slideIndex);
 }
