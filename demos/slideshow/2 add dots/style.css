@@ -73,6 +73,11 @@ img {
 }
 
 /* Переключатели - точки */
+
+.slideshow-dotes {
+    text-align: center;
+}
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -88,6 +93,21 @@ img {
 .dot:hover {
     background-color: #717171;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Анимация появления*/
 .fade {
