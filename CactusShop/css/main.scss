@@ -1,4 +1,6 @@
-// сначала для смартфона
+// Используем препроцессор Sass (SCSS)
+// сначала для смартфона (mobile first)
+
 html {
     font-size: 16px;
 }
@@ -88,6 +90,7 @@ section.hero {
     color: white;
     height: 90vh;
     animation: moveDown 1s ease-in-out forwards;
+    font-family: Kurale;
 
     h1 {
         font-size: 3rem;

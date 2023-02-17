@@ -29,8 +29,7 @@ a {
   background-position-x: 20%;
   background-position-y: 20%;
   z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
 
 nav {
@@ -81,8 +80,8 @@ section {
 section.hero {
   color: white;
   height: 90vh;
-  -webkit-animation: moveDown 1s ease-in-out forwards;
-          animation: moveDown 1s ease-in-out forwards;
+  animation: moveDown 1s ease-in-out forwards;
+  font-family: Kurale;
 }
 section.hero h1 {
   font-size: 3rem;
@@ -406,16 +405,6 @@ footer {
     margin-top: 200px;
   }
 }
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
 @keyframes introLoad {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -426,30 +415,12 @@ footer {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-@-webkit-keyframes moveArrow {
-  from {
-    transform: translateY(-30px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 @keyframes moveArrow {
   from {
     transform: translateY(-30px);
   }
   to {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes moveDown {
