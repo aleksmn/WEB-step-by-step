@@ -62,15 +62,22 @@ nav .close {
   margin: 2rem;
   width: 2.5rem;
 }
+nav .close path {
+  fill: black;
+}
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .menu {
-  width: 2.3rem;
+  width: 2rem;
   margin-top: 0.4rem;
   cursor: pointer;
+}
+header .menu path {
+  fill: white;
 }
 
 section {
@@ -81,7 +88,7 @@ section.hero {
   color: white;
   height: 90vh;
   animation: moveDown 1s ease-in-out forwards;
-  font-family: Kurale;
+  font-family: Kurale, serif;
 }
 section.hero h1 {
   font-size: 3rem;
@@ -102,6 +109,11 @@ section.hero .down-arrow path {
   fill: white;
 }
 
+.open-nav {
+  transform: translateX(0%);
+}
+
+/* Основная часть сайта */
 .more-info img {
   width: 100%;
   -o-object-fit: cover;
@@ -116,11 +128,6 @@ section.hero .down-arrow path {
   line-height: 1.5rem;
 }
 
-.open-nav {
-  transform: translateX(0%);
-}
-
-/* Основная часть сайта */
 section.shop {
   width: 80%;
   max-width: 900px;
