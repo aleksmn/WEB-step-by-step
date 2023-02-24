@@ -80,10 +80,6 @@ header .menu path {
   fill: white;
 }
 
-section {
-  margin-top: 4rem;
-}
-
 section.hero {
   color: white;
   height: 90vh;
@@ -119,6 +115,8 @@ section.hero .down-arrow path {
   -o-object-fit: cover;
      object-fit: cover;
   height: 11rem;
+  -webkit-clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
+          clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
 }
 .more-info .title {
   font-weight: bold;
@@ -131,6 +129,7 @@ section.hero .down-arrow path {
 section.shop {
   width: 80%;
   max-width: 900px;
+  margin-top: 4rem;
   margin-right: auto;
   margin-left: auto;
   /* Товары */
@@ -316,7 +315,7 @@ footer {
   }
 }
 @media only screen and (min-width: 920px) {
-  .menu {
+  svg.menu {
     display: none;
   }
   nav {
@@ -378,7 +377,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 3rem;
-    margin-bottom: 8rem;
+    margin-top: 8rem;
   }
   .feature img {
     width: 25rem;
