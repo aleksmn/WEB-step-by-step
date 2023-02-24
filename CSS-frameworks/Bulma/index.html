@@ -26,6 +26,16 @@
     .navbar {
       background-color: rgba(133, 255, 237, 0.5);
     }
+
+    .navbar-brand a {
+      font-weight: bold;
+      font-size:1.5rem;
+      color:rgb(147, 64, 17);
+    }
+
+    .navbar-brand a:hover {
+      color:rgb(232, 107, 34);
+    }
   </style>
 
 </head>
@@ -33,12 +43,13 @@
 <body>
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
-
+ 
     <div class="container">
 
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
-          <img class="logo" src="images/logo.svg" width="120" height="30">
+          MyCoffee
+          <!-- <img class="logo" src="images/logo.svg" width="120" height="30"> -->
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -93,7 +104,7 @@
       <h1 class="title has-text-primary is-size-1 is-size-2-mobile">
         Фирменный стиль
       </h1>
-      <p class="subtitle has-text-weight-light my-1">
+      <p class="subtitle is-size-4 has-text-weight-light my-1">
         Почему как всегда непредсказуемо привлечение аудитории
       </p>
 
@@ -106,8 +117,10 @@
   </section>
 
 
+  
   <!-- Колонки -->
   <section class="section">
+    
     <div class="container">
       <div class="columns is-vcentered is-multiline">
         <div class="column is-3-desktop is-6-tablet">
