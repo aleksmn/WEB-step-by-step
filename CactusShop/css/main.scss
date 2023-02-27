@@ -136,10 +136,11 @@ section.hero {
 .more-info {
 
     img {
+        clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
         width: 100%;
         object-fit: cover;
         height: 11rem;
-        clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
+        
     }
 
     .title {
@@ -393,6 +394,8 @@ footer {
 }
 
 @media only screen and (min-width: 920px) {
+
+
     svg.menu {
         display: none;
     }
@@ -444,8 +447,9 @@ footer {
     }
 
     section.hero {
+        border: 2px solid red;
         color: black;
-        height: auto;
+        height: 600px;
         width: 40%;
         margin-bottom: 8rem;
 
@@ -469,6 +473,7 @@ footer {
         grid-template-columns: repeat(2, auto);
         gap: 3rem;
         margin-top: 8rem;
+        border: 2px solid blue;
 
         img {
             width: 25rem;
@@ -476,7 +481,7 @@ footer {
 
         .content {
             text-align: right;
-            width: 25rem;
+            width: 23rem;
         }
     }
 
@@ -489,29 +494,35 @@ footer {
 
         .content {
             text-align: left;
-            width: 25rem;
+            width: 23rem;
             justify-self: left;
         }
     }
 }
 
-@media only screen and (min-width: 1200px) {
+
+
+@media only screen and (min-width: 1260px) {
     .wrapper {
-        width: 1200px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .feature {
         // border: 2px solid red;
         justify-content: space-evenly;
-
         gap: 0;
     }
 
-    .more-info {
-        margin-top: 200px;
+    // Стрелка вниз
+    section.hero svg.down-arrow {
+        margin-top: 100px;
     }
+
 }
+
+
+
 
 // Анимации
 

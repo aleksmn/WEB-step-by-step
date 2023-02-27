@@ -111,12 +111,12 @@ section.hero .down-arrow path {
 
 /* Основная часть сайта */
 .more-info img {
+  -webkit-clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
+          clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 11rem;
-  -webkit-clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
-          clip-path: polygon(13% 0, 100% 0%, 87% 100%, 0% 100%);
 }
 .more-info .title {
   font-weight: bold;
@@ -357,8 +357,9 @@ footer {
     color: red;
   }
   section.hero {
+    border: 2px solid red;
     color: black;
-    height: auto;
+    height: 600px;
     width: 40%;
     margin-bottom: 8rem;
   }
@@ -378,13 +379,14 @@ footer {
     grid-template-columns: repeat(2, auto);
     gap: 3rem;
     margin-top: 8rem;
+    border: 2px solid blue;
   }
   .feature img {
     width: 25rem;
   }
   .feature .content {
     text-align: right;
-    width: 25rem;
+    width: 23rem;
   }
   .feature.left {
     grid-template-areas: "left right";
@@ -394,21 +396,21 @@ footer {
   }
   .feature.left .content {
     text-align: left;
-    width: 25rem;
+    width: 23rem;
     justify-self: left;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1260px) {
   .wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .feature {
     justify-content: space-evenly;
     gap: 0;
   }
-  .more-info {
-    margin-top: 200px;
+  section.hero svg.down-arrow {
+    margin-top: 100px;
   }
 }
 @keyframes introLoad {
