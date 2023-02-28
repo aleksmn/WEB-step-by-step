@@ -8,6 +8,7 @@
     <!-- Подключаем CSS: -->
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <title>Магазин футболок</title>
 </head>
@@ -28,15 +29,15 @@
         </div>
         <div class="header-images">
             <div class="header-image">
-                <img src="images/sale.png" height="70"><br>
+                <img class="animate__animated animate__bounceInLeft" src="images/sale.png" height="70"><br>
                 <span>Низкие цены</span>
             </div>
             <div class="header-image">
-                <img src="images/gruzovik.png" height="90"><br>
+                <img class="animate__animated animate__bounce" src="images/gruzovik.png" height="90"><br>
                 <span>Доставки по всей России</span>
             </div>
             <div class="header-image">
-                <img src="images/hit.png" height="80"><br>
+                <img class="animate__animated animate__bounceInRight" src="images/hit.png" height="80"><br>
                 <span>Только хиты</span>
             </div>
         </div>
@@ -51,13 +52,13 @@
         </div>
 
         <div class="main-items">
-            <div class="main-item">
+            <div class="main-item animate__animated animate__backInDown">
                 <img src="images/tshirt-2.jpg" height="300" alt=""><br>
                 <span>Футболка</span><br>
                 <span>499 руб.</span><br>
                 <button onclick="print_contact()">Добавить в заказ</button>
             </div>
-            <div class="main-item">
+            <div class="main-item animate__animated animate__backInDown">
                 <img src="images/tshirt-3.jpg" height="300" alt=""><br>
                 <span>Футболка</span><br>
                 <span>499 руб.</span><br>
@@ -101,7 +102,7 @@
     <!-- Форма для заказа -->
 
     <section class="order-form">
-        <form>
+        <form class="wow animate__animated animate__backInRight">
             <h2>Оформление заказа</h2>
 
             <label for="fname">Имя</label><br>
@@ -132,6 +133,12 @@
 
     <!-- Подключаем JavaScript -->
     <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
 
 </body>
 
