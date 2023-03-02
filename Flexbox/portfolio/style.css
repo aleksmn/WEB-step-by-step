@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 20px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .about_wrapper {
     display: flex;
     justify-content: space-between;
