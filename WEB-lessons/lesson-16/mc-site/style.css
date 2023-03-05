@@ -151,6 +151,7 @@ section {
 	padding-left: 20px;
 	padding-right: 20px;
 	transition: 0.4s;
+	user-select: none;
 }
 
 .arrow:hover {
@@ -191,6 +192,13 @@ section {
 }
 
 .description button:hover {
-	background-color: rgb(170, 58, 43);
+	background-color: rgb(180, 62, 47);
 	cursor: pointer;
 }
+.description button:active {
+	background-color: rgb(122, 39, 27);
+	cursor: pointer;
+}
+
+
+
