@@ -200,6 +200,8 @@ section.cart .cart-column:last-child {
 }
 section.cart .cart-item {
   width: 45%;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 section.cart .cart-item .cart-item-title {
   color: #333;
@@ -219,6 +221,8 @@ section.cart .cart-price {
 
 .cart-quantity {
   width: 35%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cart-quantity .cart-quantity-input {
   height: 34px;

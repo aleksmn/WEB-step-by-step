@@ -252,6 +252,8 @@ section.cart {
 
     .cart-item {
         width: 45%;
+        display: flex;
+        flex-wrap: wrap-reverse;
 
         .cart-item-title {
             color: #333;
@@ -276,6 +278,8 @@ section.cart {
 
 .cart-quantity {
     width: 35%;
+    display: flex;
+    flex-wrap: wrap;
 
     .cart-quantity-input {
         height: 34px;
