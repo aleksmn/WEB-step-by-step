@@ -61,6 +61,7 @@ nav .close {
   float: right;
   margin: 2rem;
   width: 2.5rem;
+  cursor: pointer;
 }
 nav .close path {
   fill: black;
@@ -412,9 +413,6 @@ footer {
   .feature {
     justify-content: space-evenly;
     gap: 0;
-  }
-  section.hero svg.down-arrow {
-    margin-top: 100px;
   }
 }
 @keyframes introLoad {
