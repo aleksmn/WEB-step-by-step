@@ -5,8 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <!-- Подключаем Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <!-- Мои стили -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -52,16 +58,29 @@
 
   <div class="container">
 
-    <h3 class="display-3 text-center my-5">
-      Основной заголовок
-      <br><small class="text-muted text-center">Подзаголовок</small>
-    </h3>
+    <h1 class="display-2 text-center mt-5 mb-3">
+      Знакомство с Bootstrap
+    </h1>
 
-    <p class="lead text-center">
-      This is a lead paragraph. It stands out from regular paragraphs.
+    <p class="lead text-center mb-5 text-secondary">
+      Самый популярный CSS фреймворк
     </p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestiae cumque deserunt temporibus dolorum illum,
+    <figure class="text-end text-secondary">
+      <blockquote class="blockquote">
+        <p>A well-known quote, contained in a blockquote element.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Someone famous in <cite title="Source Title">Source Title</cite>
+      </figcaption>
+    </figure>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi aspernatur, eius nostrum cumque dolore accusamus
+      nesciunt, culpa beatae facere quisquam autem labore dolorem architecto nam deleniti reiciendis dicta, animi alias?
+    </p>
+
+    <p>Lorem ipsum dolor sit amet <mark>consectetur adipisicing</mark> elit. Non molestiae cumque deserunt temporibus
+      dolorum illum,
       mollitia hic quo et sequi, error minima provident culpa? Harum modi officia numquam veniam assumenda!</p>
 
     <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -72,6 +91,12 @@
     <p><small>This line of text is meant to be treated as fine print.</small></p>
     <p><strong>This line rendered as bold text.</strong></p>
     <p><em>This line rendered as italicized text.</em></p>
+
+
+    <h2>Кнопки</h2>
+
+    <button type="button" class="btn btn-primary">Читать дальше</button>
+
 
 
     <table class="table table-striped">
@@ -144,8 +169,8 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
 </body>
 
