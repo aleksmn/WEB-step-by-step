@@ -13,13 +13,13 @@ app.set("view engine", "ejs")
 
 const weather_api_key = process.env.WEATHER_API_KEY;
 
-app.get("/", (rec, res) => {
-  // res.send("Hello world!")
-  // res.sendFile(__dirname + "/index.html");
+app.get("/", (req, res) => {
+  res.send("Hello world!")
+
 
   // const sendData = { city:"My City", iconUrl:"my url", description:"my descr", temp:"my temp", humidity: "my humidity", speed:"my speed" };
 
-  res.render("index", {sendData: false})
+  // res.render("index", {sendData: false})
 
 });
 
@@ -62,6 +62,6 @@ app.post("/", async (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is running on port http://localhost:" + port);
 });
