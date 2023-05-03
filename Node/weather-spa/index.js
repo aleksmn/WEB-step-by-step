@@ -41,27 +41,21 @@ app.post("/", async (req, res) => {
       const iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png";
       const { speed } = weatherData.wind;
 
-      // res.send(`
-      //       <h3>${name}: ${temp} °С, ${description}.</h3>
-      //       <img src=${iconUrl}>`);
+      const sendData = {
+        city: city,
+        iconUrl: iconUrl,
+        description: description,
+        temp: Math.round(temp),
+        humidity: humidity,
+        speed: Math.round(speed),
+      };
 
-      // res.send({ name, iconUrl, description, temp, humidity, speed });
-
-        const sendData = {
-          city: city,
-          iconUrl: iconUrl,
-          description: description,
-          temp: Math.round(temp),
-          humidity: humidity,
-          speed: Math.round(speed),
-        };
-
-        res.render("index", { sendData: sendData });
+      res.render("index", { sendData: sendData });
 
     });
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is running on port http://localhost:" + port);
 });
