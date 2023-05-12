@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const port = 3050;
 
+const path = require("path");
+
+
+app.use("/static", express.static(path.resolve(__dirname + "/static")));
+
+
+
 app.get("/", (req, res) => {
 
   res.sendFile(__dirname + "/index.html");
