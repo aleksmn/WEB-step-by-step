@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 3000;
+const port = 3050;
 const app = express();
 const https = require("https");
 
@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
   // const sendData = { city:"My City", iconUrl:"my url", description:"my descr", temp:"my temp", humidity: "my humidity", speed:"my speed" };
 
-  res.render("index", {sendData: false})
+  res.render("index", {sendData: false, error: ''})
 
 });
 
@@ -31,28 +31,40 @@ app.post("/", async (req, res) => {
   https.get(url, function (response) {
     console.log(response.statusCode, response.statusMessage); /// -> 200 OK
 
-    response.on("data", function (data) {
-      const weatherData = JSON.parse(data);
-      // console.log(weatherData);
-      const city = weatherData.name;
-      const { temp, humidity } = weatherData.main;
-      const { description } = weatherData.weather[0];
-      const { icon } = weatherData.weather[0];
-      const iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png";
-      const { speed } = weatherData.wind;
+    if (response.statusCode === 200) {
+      response.on("data", function (data) {
+        const weatherData = JSON.parse(data);
+        // console.log(weatherData);
+        const city = weatherData.name;
+        const { temp, humidity } = weatherData.main;
+        const { description } = weatherData.weather[0];
+        const { icon } = weatherData.weather[0];
+        const iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png";
+        const { speed } = weatherData.wind;
+  
+        const sendData = {
+          city: city,
+          iconUrl: iconUrl,
+          description: description,
+          temp: Math.round(temp),
+          humidity: humidity,
+          speed: Math.round(speed),
+        };
+  
+        res.render("index", { sendData: sendData, error: '' });
+  
+      });
 
-      const sendData = {
-        city: city,
-        iconUrl: iconUrl,
-        description: description,
-        temp: Math.round(temp),
-        humidity: humidity,
-        speed: Math.round(speed),
-      };
 
-      res.render("index", { sendData: sendData });
+    }
 
-    });
+    else {
+      
+      console.log("Город не найден")
+      const errorMsg = "Город не найден";
+      res.render("index", {sendData: false, error: errorMsg });
+    }
+
   });
 });
 

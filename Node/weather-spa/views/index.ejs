@@ -18,6 +18,12 @@
   <!-- Get Icon URL:  https://openweathermap.org/weather-conditions -->
   <div class="weather">
 
+    <% if (error) { %>
+
+      <p>Город не найден</p>
+
+    <% } %>
+
     <% if (sendData) { %>
 
     <h2 class="city">
