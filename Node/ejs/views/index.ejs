@@ -8,17 +8,16 @@
             <h2><%= subheading %></h2>
 
             <ul>
-                <% users.forEach(function(user) { %>
-                    <li>
-                        <strong>
-                            <%= user.name %>
-                        </strong>
-                        <%= user.designation %>.
-                    </li>
-                    <% }); %>
+            <%   for (let user of users) { %>
+
+                <li><strong><%= user.name %></strong>, <%= user.designation %></li>
+                    
+            <%   } %>
             </ul>
+
+
         </div>
     </main>
 
 
-    <%- include('partials/footer'); %>
+<%- include('partials/footer'); %>

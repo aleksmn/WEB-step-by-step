@@ -18,7 +18,8 @@ app.get("/", function (req, res) {
         },
         {
             name: 'Мария',
-            designation: "учитель физики"
+            designation: "учитель физики",
+            admin: true
         },
         {
             name: 'Владислав',
