@@ -5,6 +5,7 @@ const https = require("https");
 
 require("dotenv").config();
 
+// для чтения тела запроса
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/public"));
@@ -23,9 +24,10 @@ app.get("/", (req, res) => {
 
 });
 
-app.post("/", async (req, res) => {
+app.post("/", (req, res) => {
   // res.send("Запрос принят!")
-  let city = await req.body.city;
+  let city = req.body.city;
+
   const url = `https://api.openweathermap.org/data/2.5/weather?appid=${weather_api_key}&q=${city}&units=metric&lang=ru`;
 
   https.get(url, function (response) {
@@ -34,11 +36,11 @@ app.post("/", async (req, res) => {
     if (response.statusCode === 200) {
       response.on("data", function (data) {
         const weatherData = JSON.parse(data);
-        // console.log(weatherData);
+        console.log(weatherData);
+
         const city = weatherData.name;
         const { temp, humidity } = weatherData.main;
-        const { description } = weatherData.weather[0];
-        const { icon } = weatherData.weather[0];
+        const { description, icon } = weatherData.weather[0];
         const iconUrl = "https://openweathermap.org/img/wn/" + icon + ".png";
         const { speed } = weatherData.wind;
   
@@ -48,18 +50,17 @@ app.post("/", async (req, res) => {
           description: description,
           temp: Math.round(temp),
           humidity: humidity,
-          speed: Math.round(speed),
+          speed: Math.round(speed)
         };
   
         res.render("index", { sendData: sendData, error: '' });
   
       });
 
-
-    }
-
+    } 
+    
     else {
-      
+
       console.log("Город не найден")
       const errorMsg = "Город не найден";
       res.render("index", {sendData: false, error: errorMsg });
