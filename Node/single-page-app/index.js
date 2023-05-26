@@ -1,6 +1,6 @@
 const express = require("express");
 
-const port = 3050;
+const port = 3080;
 
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use("/static", express.static(__dirname + "/static"));
 
 
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
