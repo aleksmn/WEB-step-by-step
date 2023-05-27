@@ -1,43 +1,63 @@
 
-function calc() {
-    const operation = prompt("Введите действие: ")
-    const a = parseFloat(prompt("Введите первое число: "))
-    const b = parseFloat(prompt("Введите второе число: "))
+function sumNums(a, b) {
 
-    if (operation === "+") {
+    //parseInt() - получить целое число
+    //parseFloat() - получить дробное число 
+
+    alert(a + b)
+
+}
+
+function floorDiv(a, b) {
+
+    const remainder = a % b;
+
+    alert((a - remainder) / b)
+}
+
+
+
+
+
+function calc() {
+    alert("Добро пожаловать в Калькулятор!")
+    const choice = prompt("Выберите действие:\n1 - сумма\n2 - целочисленное деление")
+
+    const a = parseFloat(prompt("Введите число: "));
+    const b = parseFloat(prompt("Введите второе число:"));
+
+    if (choice === '1') {
         sumNums(a, b)
     }
 
-    else {
-        alert("Такого действия нет!")
+    else if (choice === '2') {
+        floorDiv(a, b)
+
     }
 
+    // добавить * / - 
+
 }
 
-function sumNums(a, b) {
-    alert(a + b)
-}
-
-// Вызов функции
-// calc()
-
+// Калькулятор - вызов
+calc()
 
 
 
 //// Строки
 
-const firstName = 'Владимир';
-const job = 'программист';
-const birthYear = 1995;
+// const firstName = 'Владимир';
+// const job = 'программист';
+// const birthYear = 1995;
 
-console.log(firstName)
-console.log(firstName.length)
-// Первая буква
-console.log(firstName[0])
-// Последний символ
-console.log(firstName[firstName.length - 1])
+// console.log(firstName)
+// console.log(firstName.length)
+// // Первая буква
+// console.log(firstName[0])
+// // Последний символ
+// console.log(firstName[firstName.length - 1])
 
-console.log(firstName.indexOf('Влад'))
+// console.log(firstName.indexOf('Влад'))
 
 
 
