@@ -1,17 +1,21 @@
 const playBtn = document.getElementById("play-btn");
 
-
+// добавляем "слушатель событий"
 playBtn.addEventListener('click', function () {
+
     // Создаем случайные числа от 1 до 6 для каждого игрока
     let randomNumber1 = Math.floor(Math.random() * 6 + 1);
     let randomNumber2 = Math.floor(Math.random() * 6 + 1);
+
+    console.log(randomNumber1, randomNumber2)
 
     // Подбираем картинку под полученные числа
     let src1 = `images/dice${randomNumber1}.png`;
     let src2 = `images/dice${randomNumber2}.png`;
 
-    document.querySelector(".img1").setAttribute("src", src1);
-    document.querySelector(".img2").setAttribute("src", src2);
+
+    document.querySelector(".img1").src = src1;
+    document.querySelector(".img2").src = src2;
 
 
 
