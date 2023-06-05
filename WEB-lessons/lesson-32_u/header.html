@@ -4,7 +4,7 @@
 <head>
     <title>Page Title</title>
     <style>
-        html,
+      
         body {
             height: 100%;
             margin: 0;
@@ -12,38 +12,56 @@
             margin: auto;
         }
 
-        .flex {
+        header {
             display: flex;
+            height: 60vh;
 
         }
 
-        .full-height {
-            height: 60vh;
+        .header-content {
             width: 50%;
             background: rgb(249, 192, 192);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 60px;
         }
 
-        .full-height2 {
-            height: 60vh;
+        .header-content .btn {
+            background-color: rgb(35, 157, 157);
+            display: block;
+            width: fit-content;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: white;
+            border-radius: 4px;
+        }
 
+        .hero-image {
             background-image: url(images/gian-cescon-00ByEXKcSkA-unsplash.jpg);
             background-position: 30% 60%;
             background-size: cover;
-
             width: 50%;
-
         }
     </style>
 
 </head>
 
 <body>
-    <div class="flex">
-        <div class="full-height">I am a DIV that will stretch to fit the whole width and height of the browser window!
+    <header>
+        <div class="header-content">
+            <h1>Яркие футболки для счастливой жизни!</h1>
+            <p>Lorem ipsum dolor sit amet</p>
+            <a class="btn" href="#">Читать дальше</a>
         </div>
 
-        <div class="full-height2"></div>
-    </div>
+        <div class="hero-image"></div>
+    </header>
 
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quam doloremque soluta porro consequatur provident
     asperiores, temporibus minima repellat? Ex aperiam sequi earum dolore cum dolorem eius. Autem maiores odio, fuga

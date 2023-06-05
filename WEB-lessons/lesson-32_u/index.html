@@ -11,6 +11,8 @@
 
 
     <title>Магазин футболок</title>
+
+
 </head>
 
 <body>
@@ -21,38 +23,19 @@
 
     <!-- Шапка страницы -->
     <header>
-
-        <div class="header-info">
-            <div class="header-text">
-                <span>ФУТБОЛКИ С ПРИНТАМИ</span> <br>
-                <span class="price">499 <sup>руб.</sup></span><br>
-                <span class="price-text"> ПОЧЕМУ ТАК ДЕШЕВО? </span>
-            </div>
-            <div class="header-images">
-                <div class="header-image">
-                    <img src="images/sale.png" height="70"><br>
-                    <span>Низкие цены</span>
-                </div>
-                <div class="header-image">
-                    <img src="images/gruzovik.png" height="90"><br>
-                    <span>Доставки по всей России</span>
-                </div>
-                <div class="header-image">
-                    <img src="images/hit.png" height="80"><br>
-                    <span>Только хиты</span>
-                </div>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1>Яркие футболки для счастливой жизни!</h1>
+                <p>Lorem ipsum dolor sit amet</p>
+                <a class="btn" href="#main">Читать дальше</a>
             </div>
         </div>
 
-        <div class="hero-image">
-            <img src="images/gian-cescon-00ByEXKcSkA-unsplash.jpg" width="400" alt="">
-
-        </div>
-
+        <div class="hero-image"></div>
     </header>
 
     <!-- Основная часть страницы -->
-    <main>
+    <main id="main">
         <div class="main-text">
             <h2>ФУТБОЛКИ</h2>
             <span>100% хлопок</span>
@@ -61,57 +44,49 @@
 
         <div class="main-items">
 
-            <div class="arrow">
-                <img src="images/left.PNG" width="50" onclick="rand_tshirt()">
-            </div>
-
             <div class="main-item">
-                <img id="ts-image-1" src="images/tshirt-1.jpg" height="300" width="270" alt=""><br>
+                <img src="images/tshirt-1.jpg" height="300" width="270" alt=""><br>
                 <span>Футболка</span><br>
                 <span>499 руб.</span><br>
                 <button onclick="alert('Товар добавлен в заказ')">Добавить в заказ</button>
             </div>
             <div class="main-item">
-                <img id="ts-image-2" src="images/tshirt-2.jpg" height="300" width="270" alt=""><br>
+                <img src="images/tshirt-2.jpg" height="300" width="270" alt=""><br>
+                <span>Футболка</span><br>
+                <span>499 руб.</span><br>
+                <button onclick="prompt('Введите ваше имя')">Добавить в заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-3.jpg" height="300" width="270" alt=""><br>
                 <span>Футболка</span><br>
                 <span>499 руб.</span><br>
                 <button onclick="prompt('Введите ваше имя')">Добавить в заказ</button>
             </div>
 
-            <div class="arrow">
-                <img src="images/right.PNG" width="50" onclick="rand_tshirt()">
+
+            <div class="main-item">
+                <img src="images/tshirt-3.jpg" height="300" width="270" alt=""><br>
+                <span>Футболка</span><br>
+                <span>499 руб.</span><br>
+                <button onclick="alert('Товар добавлен в заказ')">Добавить в заказ</button>
             </div>
+            <div class="main-item">
+                <img src="images/tshirt-1.jpg" height="300" width="270" alt=""><br>
+                <span>Футболка</span><br>
+                <span>499 руб.</span><br>
+                <button onclick="prompt('Введите ваше имя')">Добавить в заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-2.jpg" height="300" width="270" alt=""><br>
+                <span>Футболка</span><br>
+                <span>499 руб.</span><br>
+                <button onclick="prompt('Введите ваше имя')">Добавить в заказ</button>
+            </div>
+
         </div>
+
+
     </main>
-
-    <!-- Купон "Розыгрыш" -->
-    <section class="kupon">
-        <div class="kupon-text">
-            <span>
-                РОЗЫГРЫШ<br>
-                10 000 <sup>руб.</sup>
-            </span><br>
-            <span class="accent">
-                Среди обладателей<br>
-                купонов
-            </span><br>
-            <span>Вечером 1 июня команда разыграет приз в прямом эфире!</span>
-        </div>
-        <div class="kupon-image">
-            <img src="images/money.jpg" width="200" height="200">
-        </div>
-    </section>
-    <br><br>
-
-    <!-- Заказ -->
-
-    <section class="order">
-        <h2>ВАШ ЗАКАЗ</h2>
-        <div class="yellow">
-            <h3>Корзина пуста</h3>
-        </div>
-        <div class="grey">В корзине пусто!</div>
-    </section>
 
     <!-- Форма для оформления заказа -->
 
@@ -169,11 +144,11 @@
     <div class="rating">
         <h2>Оцени наш сайт!</h2>
 
-        <img src="images/star_2.png" width="75" height="68" id="star-1" onmouseenter="star(1)">
-        <img src="images/star_2.png" width="75" height="68" id="star-2" onmouseenter="star(2)">
-        <img src="images/star_2.png" width="75" height="68" id="star-3" onmouseenter="star(3)">
-        <img src="images/star_2.png" width="75" height="68" id="star-4" onmouseenter="star(4)">
-        <img src="images/star_2.png" width="75" height="68" id="star-5" onmouseenter="star(5)">
+        <img src="images/star_2.png" id="star-1" onmouseenter="star(1)">
+        <img src="images/star_2.png" id="star-2" onmouseenter="star(2)">
+        <img src="images/star_2.png" id="star-3" onmouseenter="star(3)">
+        <img src="images/star_2.png" id="star-4" onmouseenter="star(4)">
+        <img src="images/star_2.png" id="star-5" onmouseenter="star(5)">
 
 
         <p id="reset-rating" onclick="resetRating()">Сброс</p>

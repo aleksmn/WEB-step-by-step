@@ -1,60 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    height: 100%;
     margin: 0;
+    
+    
+}
+
+header {
+    display: flex;
+    height: 70vh;
+    /* max-width: 1200px; */
+    margin: 0 auto 100px auto;
+
+}
+
+.header-wrapper {
+    flex: 1;
+    /* background: rgb(249, 192, 192); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    box-sizing: border-box;
+    padding: 60px;
     font-family: sans-serif;
-    color: rgb(53, 53, 53);
-}
+    font-size: 1.2rem;
 
-header {
-    background-color: #05f4fc;
-    padding: 20px 0;
 
 }
 
-.header-text {
+.header-content {
+    /* border: 2px solid red; */
+    max-width: 500px;
+}
+
+.header-content .btn {
+    background-color: rgb(35, 157, 157);
+    display: block;
+    width: fit-content;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.price {
-    color: red;
-    font-size: 40px;
-}
-
-.price sup {
-    font-size: 20px;
-}
-
-.price-text {
+    padding: 10px;
     font-size: 18px;
-    background-color: red;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
     color: white;
+    border-radius: 4px;
 }
 
-.header-images {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    align-items: flex-end;
+.hero-image {
+    background-image: url(images/gian-cescon-00ByEXKcSkA-unsplash.jpg);
+    background-position: 30% 60%;
+    background-size: cover;
+    width: 50%;
 }
-
-.header-image {
-    margin: 0 30px;
-    text-align: center;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 
 /* Main */
 
 main {
     text-align: center;
+    max-width:  1400px;
+    margin: auto;
 }
 
 main h2 {
@@ -65,20 +74,12 @@ main h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.main-items .arrow {
-    transition: 0.2s;
-    user-select: none;
-}
-
-.main-items .arrow:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
 
 .main-item {
-    margin: 30px 20px;
+    margin: 30px 50px;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
     padding: 30px 24px;
@@ -101,61 +102,8 @@ main h2 {
     background-color: rgb(175, 26, 26);
 }
 
-/* Купон "Розыгрыш" */
-
-.kupon {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(228, 36, 36);
-    box-shadow: 10px 10px 20px rgba(65, 65, 65, 0.373);
-    margin-top: 40px;
-}
-
-.kupon-text {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    margin-left: 40px;
-    margin-top: 24px;
-}
-
-.kupon-text .accent {
-    color: yellow;
-    text-transform: uppercase;
-}
-
-/*  Object-fit property
-    https://www.w3schools.com/css/css3_object-fit.asp */
-
-.kupon-image img {
-    padding: 0px;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
 
 
-/* Заказ */
-
-.order {
-    margin-top: 50px;
-    margin-left: 45px;
-}
-
-.order .yellow {
-    background-color: yellow;
-}
-
-.order .yellow h3 {
-    padding: 20px 0 20px 20px;
-}
-
-.order .grey {
-    color: rgb(70, 70, 70);
-}
-
-/* Форма для оформления заказа */
 
 /* Форма для оформления заказа */
 
@@ -163,6 +111,7 @@ main h2 {
     max-width: 460px;
     margin: 0 auto;
     font-size: 18px;
+    padding: 20px 40px;
 }
 
 .order-form input {
@@ -331,6 +280,11 @@ main h2 {
     margin: 60px auto;
 }
 
+.rating img {
+    width: 60px;
+    height: 53px;
+}
+
 .rating button {
     background: rgb(54, 179, 217);
     border: none;
@@ -348,4 +302,24 @@ main h2 {
 .rating button:hover {
     background: rgb(43, 140, 169);
     text-decoration: none;
+}
+
+
+@media screen and (max-width:600px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .header-content, .hero-image{
+        width: 100%;
+    }
+    .hero-image {
+        height: 500px;
+    }
+    .header-wrapper {
+        font-size: 1rem;
+        padding: 20px;
+        order: 1;
+    }
+
 }
