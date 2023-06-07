@@ -14,29 +14,26 @@
             font-size: 1.2rem;
         }
 
-        .sidebar {
-            margin: 0;
-            padding: 0;
+        nav {
             width: 200px;
             background-color: rgb(11, 12, 19);
-
             position: fixed;
             height: 100%;
             overflow: auto;
         }
 
-        .sidebar a {
+        nav a {
             display: block;
             color: rgb(240, 233, 233);
             padding: 16px;
             text-decoration: none;
         }
 
-        .sidebar a.active {
+        nav a.active {
             background-color: rgb(129, 4, 170);
         }
 
-        .sidebar a:hover:not(.active) {
+        nav a:hover:not(.active) {
             background-color: rgb(46, 50, 87);
         }
 
@@ -54,14 +51,14 @@
 
 
         @media screen and (max-width: 800px) {
-            .sidebar {
+            nav {
                 width: 100%;
                 height: auto;
                 position: relative;
                 font-size: 1rem;
             }
 
-            .sidebar a {
+            nav a {
                 float: left;
             }
 
@@ -71,7 +68,7 @@
         }
 
         @media screen and (max-width: 400px) {
-            .sidebar a {
+            nav a {
                 text-align: center;
                 float: none;
             }
@@ -82,7 +79,7 @@
 <body>
 
 
-    <nav class="sidebar">
+    <nav>
         <a class="active" href="#home">Главная</a>
         <a href="hovernav.html">Блог</a>
         <a href="topnav-dropdown.html">Контакты</a>

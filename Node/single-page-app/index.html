@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single Page App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/static/css/index.css">
   <script type="module" src="/static/js/app0.js" defer></script>
 
@@ -13,12 +15,15 @@
 <body>
   
   <nav class="nav">
-    <a href="/" class="nav__link" data-link>Главная</a>
-    <a href="/posts" class="nav__link" data-link>Блог</a>
-    <a href="/contacts" class="nav__link" data-link>Контакты</a>
+    <a href="/" class="nav__link" data-link><i class="fa fa-home"></i> Главная</a>
+    <a href="/posts" class="nav__link" data-link><i class="fa-solid fa-pencil"></i> Блог</a>
+    <a href="/contacts" class="nav__link" data-link><i class="fa-regular fa-address-book"></i> Контакты</a>
   </nav>
 
-  <div id="app"></div>
+  <div id="app" class="content">
+    <h1>Это тестовый контент</h1>
+    Это тестовый контент
+  </div>
 
 </body>
 
