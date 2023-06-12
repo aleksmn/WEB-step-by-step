@@ -1,45 +1,22 @@
-const myDiv = document.getElementById('demo');
+const myDiv = document.createElement('div')
 
-console.log(myDiv);
+console.log(myDiv)
 
-myDiv.innerHTML = "<h1>Циклы и массивы!</h1>";
+document.querySelector("body").appendChild(myDiv)
 
-
-myDiv.style.color = "blue";
-myDiv.style.fontSize = "1.5rem";
+myDiv.classList.add('main')
 
 
-
-// myDiv.style.fontFamily = "sans";
-// myDiv.style.backgroundColor = "lightgrey";
-// myDiv.style.padding = "30px";
-
-
-// myDiv.classList.add('main');
-
-
-
-// setTimeout(function () {
-//     myDiv.innerHTML += "<p>Этот текст появится через 5 секунд</p>";
-// }, 5000);
-
-
-
-
-myDiv.innerHTML += '<p>новый текст</p>';
-
-myDiv.innerHTML += '<p>еще новый текст</p>';
 
 
 // Цикл
 
-for (let n = 0; n < 10; n = n + 1) {
+for (let n = 10; n > 0; n = n - 1) {
+
     myDiv.innerHTML += `<p>Номер ${n}</p>`;
+
+
 }
-
-
-
-
 
 
 
@@ -105,16 +82,19 @@ while (number <= 12) {
 
 
 
-// Массивы
+// Массивы Array
 
-// const users = ["Кирилл", "Дмитрий", "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
 
 // console.log(users);
 
 // console.log(users[0]);
 // console.log(users[1]);
-
 // console.log(users.length);
+
+
+
+// Как вывести последний элемент массива?
 
 
 // // Последний элемент массива:
@@ -129,17 +109,41 @@ while (number <= 12) {
 // }
 
 
+
+
+
 // For of
-
-
-
 // // Перебор массива
 
-// for (let u of users) {
+for (let user of users) {
 
-//     myDiv.innerHTML += u + "<br>";
+    myDiv.innerHTML += user + "<br>";
 
-// }
+}
+
+
+
+
+// Методы массива
+// Добавление элементов
+
+// users.push('Алексей');
+
+// users.unshift('Михаил');
+
+
+// // // Удаление элементов
+
+// // users.pop()
+
+// let deletedLastUser = users.pop();
+
+// console.log(deletedLastUser, users);
+
+
+
+
+
 
 
 
@@ -237,6 +241,8 @@ users.splice(2, 1, "Александр", "Елена");
 console.log(users);
 
 */
+
+
 
 // Функция удаления элемента
 // Как удалить Дмитрия?
