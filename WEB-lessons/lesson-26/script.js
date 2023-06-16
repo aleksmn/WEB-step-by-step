@@ -11,12 +11,12 @@ myDiv.classList.add('main')
 
 // Цикл
 
-for (let n = 10; n > 0; n = n - 1) {
+// for (let n = 10; n > 0; n = n - 1) {
 
-    myDiv.innerHTML += `<p>Номер ${n}</p>`;
+//     myDiv.innerHTML += `<p>Номер ${n}</p>`;
 
 
-}
+// }
 
 
 
@@ -84,20 +84,20 @@ while (number <= 12) {
 
 // Массивы Array
 
-// const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
 
-// console.log(users);
+console.log(users);
 
-// console.log(users[0]);
-// console.log(users[1]);
-// console.log(users.length);
+console.log(users[0]);
+console.log(users[1]);
+console.log(users.length);
 
 
 
 // Как вывести последний элемент массива?
 
 
-// // Последний элемент массива:
+// Последний элемент массива:
 // console.log(users[users.length - 1]);
 
 
@@ -110,26 +110,70 @@ while (number <= 12) {
 
 
 
+// ====================
+// Методы массива
+// Добавление элементов
 
+users.push('Алексей');
+users.unshift('Михаил');
+ 
+
+// Удаление элементов
+let delUser = users.pop()
+users.shift()
+
+
+
+// Получаем индекс элемента
+
+console.log(users.indexOf("Кирилл"))
+console.log(users.indexOf("qwerty"))
+
+// Проверка, есть ли такой элемент
+console.log(users.includes("qwewrt"))
+
+
+
+// Удаление по индексу
+
+users.splice(0, 1)
+
+console.log(users)
+
+
+
+// Написать программу, которая принимает от  пользователя
+// имя и удаляет это имя из массива
+// если такого имени нет, выводит в консоль сообщение об этом.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// Вывод массива на страницу ///
 
 // For of
 // // Перебор массива
-
 for (let user of users) {
-
-    myDiv.innerHTML += user + "<br>";
-
+    myDiv.innerHTML +="<p>" + user + "</p>";
 }
 
 
 
 
-// Методы массива
-// Добавление элементов
 
-// users.push('Алексей');
 
-// users.unshift('Михаил');
 
 
 // // // Удаление элементов
@@ -275,3 +319,11 @@ console.log(delItem(users, "Дмитрий"));
 
 
 */
+
+
+
+
+
+
+
+
