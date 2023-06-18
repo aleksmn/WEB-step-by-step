@@ -11,12 +11,43 @@ myDiv.classList.add('main')
 
 // Цикл
 
-// for (let n = 10; n > 0; n = n - 1) {
+// Все четные числа от 0 до 100
 
-//     myDiv.innerHTML += `<p>Номер ${n}</p>`;
+// Объявляем переменные "копилки"
 
+// let sum1 = 0 // четные
+// let sum2 = 0 // нечетные
+// let sum3 = 0 // кратные трем
+
+// for (let i = 0; i <= 500; i = i + 1) {
+
+//     if (i % 2 === 0) {
+//         myDiv.innerHTML += `<p style="color:red">Четное: ${i}</p>`;
+//         sum1 = sum1 + i
+//     }
+
+//     else if (i % 3 === 0) {
+//         myDiv.innerHTML += `<p style="color:green">Кратно трем: ${i}</p>`;
+//         sum3 = sum3 + i
+//     }
+
+//     else {
+//         myDiv.innerHTML += `<p style="color:blue">Нечетное: ${i}</p>`;
+//         sum2 = sum2 + i
+//     }
 
 // }
+
+// // Выводим суммы:
+// myDiv.innerHTML += `<hr>`;
+// myDiv.innerHTML += `<p style="color:red">Сумма четных: ${sum1}</p>`;
+// myDiv.innerHTML += `<p style="color:blue">Сумма нечетных: ${sum2}</p>`;
+// myDiv.innerHTML += `<p style="color:green">Сумма кратных трем: ${sum3}</p>`;
+// myDiv.innerHTML += `<p style="color:grey">Общая сумма: ${sum1 + sum2 + sum3}</p>`;
+
+
+
+
 
 
 
@@ -84,13 +115,13 @@ while (number <= 12) {
 
 // Массивы Array
 
-const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
 
-console.log(users);
+// console.log(users);
 
-console.log(users[0]);
-console.log(users[1]);
-console.log(users.length);
+// console.log(users[0]);
+// console.log(users[1]);
+// console.log(users.length);
 
 
 
@@ -114,31 +145,31 @@ console.log(users.length);
 // Методы массива
 // Добавление элементов
 
-users.push('Алексей');
-users.unshift('Михаил');
+// users.push('Алексей');
+// users.unshift('Михаил');
  
 
-// Удаление элементов
-let delUser = users.pop()
-users.shift()
+// // Удаление элементов
+// let delUser = users.pop()
+// users.shift()
 
 
 
-// Получаем индекс элемента
+// // Получаем индекс элемента
 
-console.log(users.indexOf("Кирилл"))
-console.log(users.indexOf("qwerty"))
+// console.log(users.indexOf("Кирилл"))
+// console.log(users.indexOf("qwerty"))
 
-// Проверка, есть ли такой элемент
-console.log(users.includes("qwewrt"))
+// // Проверка, есть ли такой элемент
+// console.log(users.includes("qwewrt"))
 
 
 
-// Удаление по индексу
+// // Удаление по индексу
 
-users.splice(0, 1)
+// users.splice(0, 1)
 
-console.log(users)
+// console.log(users)
 
 
 
