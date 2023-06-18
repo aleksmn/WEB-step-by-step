@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.column {
+    flex: 1 100%;
+    padding: 40px;
+
+}
+
+.left {
+    background: rgb(203, 253, 214);
+    text-align: right;
+}
+
+.left img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.right {
+    background: rgb(207, 252, 250);
+}
+
+
+
+
+
+@media screen and (min-width: 800px) {
+    .column {
+      /* Доступное пространство будет разделено поровну 
+      между элеметами этими элементами */
+      flex: 1;
+
+    }
+}
