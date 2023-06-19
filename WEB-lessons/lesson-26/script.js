@@ -196,9 +196,9 @@ while (number <= 12) {
 
 // For of
 // // Перебор массива
-for (let user of users) {
-    myDiv.innerHTML +="<p>" + user + "</p>";
-}
+// for (let user of users) {
+//     myDiv.innerHTML +="<p>" + user + "</p>";
+// }
 
 
 
@@ -357,4 +357,47 @@ console.log(delItem(users, "Дмитрий"));
 
 
 
+// 
 
+
+
+// Написать функцию, которая находит сумму элементов массива.
+// function sumArray(arr) {
+//     let sum = 0;
+
+//     // Написать код
+
+//     return sum;
+//   }
+  
+// console.log(sumArray([1, 2, 3, 4, 5])); // 15
+
+
+
+
+// 1. напишем цикл, который выводит все элементы массива
+// 2. напишем функцию
+// 3. считаем сумму
+// 4. делаем правильный вывод результата
+
+
+// function sumArray(arr) {
+//     let sum = 0;
+
+//     for (let i of arr) {
+//         myDiv.innerHTML += i + '<br>'
+//         sum += i
+
+//     }
+
+//     myDiv.innerHTML += '<b>' + sum + '</b>'
+
+//     return sum;
+// }
+  
+
+
+// // Вызов функции
+// let result = sumArray([888, 22, 0.3, 103, 5])
+
+// console.log(result*100)
