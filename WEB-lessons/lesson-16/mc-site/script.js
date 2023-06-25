@@ -31,7 +31,7 @@ function change_image(n) {
     // if (current_image < 0) { current_image = mob_images.length - 1 }
     // if (current_image > (mob_images.length - 1)) { current_image = 0 }
 
-    current_image = current_image % mob_images.length
+    current_image = (current_image + mob_images.length) % mob_images.length
 
     console.log(current_image);
 
