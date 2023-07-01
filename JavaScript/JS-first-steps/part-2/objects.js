@@ -18,6 +18,14 @@
 
 // Создание класса
 
+// Объектно-ориентированное программирования
+
+// Основные принципы
+// 1. Абстракция
+// 2. Наследование
+// 3. Полиморфизм
+// 4. Инкапсуляция (скрытие методов от внешнего использования)
+
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -45,6 +53,10 @@ class Student extends Person {
         console.log(`Год обучения: ${this.year} `)
     }
 
+    work() {
+        console.log(`Ученик ${this.name} изучает предмет.`)
+    }
+
 }
 
 
@@ -62,6 +74,10 @@ class Teacher extends Person {
     getSubject() {
         console.log(this.subject)
     }
+
+    work() {
+        console.log(`Учитель ${this.name} объясняет материал урока.`)
+    }
 }
 
 
@@ -70,13 +86,15 @@ student1 = new Student("Виталий", 12, 3)
 student1.speak()
 student1.doHomeWork()
 student1.getYear()
+student1.work()
 
 
-teacher1 = new Teacher("Виталий", 42, 'информатика')
+teacher1 = new Teacher("Дмитрий", 42, 'информатика')
 
 teacher1.speak()
 teacher1.checkHomeWork()
 teacher1.getSubject()
+teacher1.work()
 
 
 
