@@ -5,6 +5,7 @@ html {
 body {
     height: 100%;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
     
     
 }
@@ -26,10 +27,8 @@ header {
     align-items: end;
     box-sizing: border-box;
     padding: 60px;
-    font-family: sans-serif;
     font-size: 1.2rem;
-
-
+    font-weight: 300;
 }
 
 .header-content {
@@ -46,9 +45,13 @@ header {
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-    font-family: sans-serif;
     color: white;
     border-radius: 4px;
+}
+
+.header-content .btn:hover {
+    background-color: rgb(25, 137, 137);
+   
 }
 
 .hero-image {
@@ -156,7 +159,6 @@ main h2 {
     background-image: linear-gradient(to bottom, #34d94d, #32b82b);
     border: 1px solid rgb(51, 189, 51);
     border-radius: 12px;
-    font-family: Arial;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 30px;
@@ -231,7 +233,6 @@ main h2 {
 /* Содержимое модального окна */
 .modal-content {
     font-size: 18px;
-    font-family: sans-serif;
     line-height: 28px;
     background-color: rgb(255, 255, 255);
     margin: auto;
@@ -289,7 +290,6 @@ main h2 {
     background: rgb(54, 179, 217);
     border: none;
     border-radius: 12px;
-    font-family: Arial;
     color: #ffffff;
     font-size: 16px;
     padding: 8px 20px;
