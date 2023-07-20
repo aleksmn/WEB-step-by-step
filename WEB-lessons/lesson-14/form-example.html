@@ -8,7 +8,7 @@
         margin-right: auto;
     }
 
-    input{
+    input, textarea{
         width: 100%;
         padding: 12px 20px;
         margin-bottom: 8px;
@@ -16,6 +16,10 @@
         border-radius: 4px;
         box-sizing: border-box;
         font-size: 16px;
+    }
+
+    textarea {
+        resize: none;
     }
     
 
@@ -25,7 +29,7 @@
         font-size: 16px;
     }
 
-    button {
+    form button {
         width: 100%;
         background-color: #5957ca;
         color: white;
@@ -36,16 +40,16 @@
         cursor: pointer;
         font-size: 16px;
     }
-    /* 
-    button:hover {
+
+    form button:hover {
         background-color: #414092;
     }
 
     .form-container {
         border-radius: 5px;
-        background-color: #f2f2f2;
+        background-color: rgb(242, 242, 242);
         padding: 20px;
-    } */
+    } 
 </style> 
 
 <body>
@@ -67,13 +71,8 @@
                 <label for="password">Введите пароль</label>
                 <input type="password" id="password" name="password" placeholder="Пароль...">
 
-                <!-- <label for="country">Страна</label>
-                <select id="country" name="country">
-                    <option value="russia">Россия</option>
-                    <option value="australia">Австралия</option>
-                    <option value="canada">Канада</option>
-                    <option value="usa">США</option>
-                </select> -->
+                <label for="comment">Комментарий</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите комментарий..."></textarea>
 
                 <button type="submit">Отправить</button>
             </form>
