@@ -1,7 +1,7 @@
 body {
     --nav-width: 200px;
     margin: 0 0 0 var(--nav-width);
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     max-width: 1000px;
 }
@@ -40,6 +40,7 @@ body {
 
 a {
     color: #009579;
+    text-decoration: none;
 }
 
 
