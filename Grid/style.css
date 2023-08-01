@@ -5,7 +5,6 @@ body {
 #page {
   display: grid;
   width: 100%;
-  min-height: 100vh;
   grid-template-areas: 
     "head head"
     "nav  main"
@@ -44,3 +43,21 @@ footer {
 
 
 
+@media screen and (max-width: 600px) {
+  /* main {
+    background-color: red;
+  } */
+
+  #page {
+    grid-template-areas: 
+    "head head"
+    "nav nav"
+    "main main"
+    "foot foot";
+
+    grid-template-rows: 200px 100px 1fr 200px;
+
+  }
+
+
+}
