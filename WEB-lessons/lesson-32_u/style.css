@@ -83,10 +83,17 @@ main h2 {
 
 .main-item {
     margin: 30px 50px;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+    box-shadow: 4px 4px 12px 0px rgba(34, 60, 80, 0.2);
 
     padding: 30px 24px;
 }
+
+
+
+
+
+
 
 .main-item img {
     object-fit: cover;
@@ -306,7 +313,8 @@ main h2 {
 
 
 
-/* Медиазапросы */
+/*************** Медиазапросы *******************/
+/* Проверка ширины окна браузера (экрана) */
 
 @media screen and (max-width:600px) {
 
@@ -314,14 +322,18 @@ main h2 {
         flex-wrap: wrap;
         height: auto;
     }
+
     .header-content, .hero-image{
         width: 100%;
     }
+    
     .hero-image {
-        height: 500px;
+        height: 400px;
     }
+
     .header-wrapper {
-        font-size: 1rem;
+        /* 1rem = 16px */
+        font-size: 0.9rem;
         padding: 20px;
         order: 1;
 
@@ -329,3 +341,11 @@ main h2 {
 
 }
 
+
+
+@media screen and (max-width:760px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+
+}
