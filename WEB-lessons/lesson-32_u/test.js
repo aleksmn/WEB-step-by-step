@@ -45,31 +45,94 @@ function floorDiv(a, b) {
 }
 
 
-
-
-
 function calc() {
-    alert("Добро пожаловать в Калькулятор!")
-    const choice = prompt("Выберите действие:\n1 - сумма\n2 - целочисленное деление")
+    alert("Добро пожаловать в калькулятор!")
 
-    const a = parseFloat(prompt("Введите число: "));
-    const b = parseFloat(prompt("Введите второе число:"));
+    choice = prompt(`Введите действия: 
+    1 - сумма
+    2 - вычитание
+    3 - умножение
+    4 - деление
+    5 - деление нацело
+    `)
+
+    if (parseInt(choice) > 5 || parseInt(choice) < 1) {
+        alert(`Неверный ввод действия`)
+        return
+    }
+
+    a = prompt("Введите первое число: ")
+    b = prompt("Введите второе число: ")
+
+    // Получаем числа
+    a = parseFloat(a)
+    b = parseFloat(b)
 
     if (choice === '1') {
-        sumNums(a, b)
+        alert(`${a} + ${b} = ${a + b}`)
     }
-
     else if (choice === '2') {
-        floorDiv(a, b)
-
+        alert(`${a} - ${b} = ${a - b}`)
+    }
+    else if (choice === '3') {
+        alert(`${a} * ${b} = ${a * b}`)
+    }
+    else if  (choice === '4') {
+        alert(`${a} / ${b} = ${a + b}`)
     }
 
-    // добавить * / - 
+    else if (choice === '5') {
+        floorDiv(a, b)
+    }
+
+    else {
+        alert(`Неверный ввод действия`)
+    }
+    
+    
+    
+    
 
 }
 
-// Калькулятор - вызов
+
+
+// Вызов функции
 calc()
+
+
+
+
+
+
+
+
+
+
+
+
+// function calc() {
+//     alert("Добро пожаловать в Калькулятор!")
+//     const choice = prompt("Выберите действие:\n1 - сумма\n2 - целочисленное деление")
+
+//     const a = parseFloat(prompt("Введите число: "));
+//     const b = parseFloat(prompt("Введите второе число:"));
+
+//     if (choice === '1') {
+//         sumNums(a, b)
+//     }
+
+//     else if (choice === '2') {
+//         floorDiv(a, b)
+
+//     }
+
+//     // добавить * / - 
+
+// }
+
+// Калькулятор - вызов
+// calc()
 
 
 
