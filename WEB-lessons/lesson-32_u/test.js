@@ -48,7 +48,7 @@ function floorDiv(a, b) {
 function calc() {
     alert("Добро пожаловать в калькулятор!")
 
-    choice = prompt(`Введите действия: 
+    let choice = prompt(`Введите действие: 
     1 - сумма
     2 - вычитание
     3 - умножение
@@ -61,12 +61,12 @@ function calc() {
         return
     }
 
-    a = prompt("Введите первое число: ")
-    b = prompt("Введите второе число: ")
+    let a = prompt("Введите первое число: ");
+    let b = prompt("Введите второе число: ");
 
     // Получаем числа
-    a = parseFloat(a)
-    b = parseFloat(b)
+    a = parseFloat(a);
+    b = parseFloat(b);
 
     if (choice === '1') {
         alert(`${a} + ${b} = ${a + b}`)
@@ -88,9 +88,6 @@ function calc() {
     else {
         alert(`Неверный ввод действия`)
     }
-    
-    
-    
     
 
 }
