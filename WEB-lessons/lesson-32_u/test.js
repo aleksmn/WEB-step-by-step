@@ -71,6 +71,8 @@ function calc() {
     if (choice === '1') {
         alert(`${a} + ${b} = ${a + b}`)
     }
+
+
     else if (choice === '2') {
         alert(`${a} - ${b} = ${a - b}`)
     }
@@ -78,7 +80,7 @@ function calc() {
         alert(`${a} * ${b} = ${a * b}`)
     }
     else if  (choice === '4') {
-        alert(`${a} / ${b} = ${a + b}`)
+        alert(`${a} / ${b} = ${a / b}`)
     }
 
     else if (choice === '5') {
