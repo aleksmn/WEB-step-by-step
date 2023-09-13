@@ -4,20 +4,21 @@ const closeBtn = document.getElementById("close");
 
 
 // Открыть модальное окно
-openBtn.onclick = function () {
-    modal.style.display = "block";
-}
+openBtn.addEventListener("click", function () {
+  modal.style.display = "block";
+})
+
 
 // По клику на <span> (x), закрыть модальное окно
-closeBtn.onclick = function () {
-    console.log('Закрыть!');
+closeBtn.addEventListener('click', function () {
     modal.style.display = "none";
-}
+}) 
+
 
 // По клику на свободное место, закрыть модальное окно
-modal.onclick = function (event) {
-  // console.log(event);
-  if (event.target === modal) {
+modal.addEventListener("click", function(event){
+
+  if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+})
