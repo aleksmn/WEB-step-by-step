@@ -1,30 +1,24 @@
-console.log("Привет!");
-
 // Калькулятор
 
-function calc() {
-    let a = parseFloat(prompt("Введите a"));
-    let b = parseFloat(prompt("Введите b"));
+const calcBtn = document.getElementById('calcBtn')
 
-    let sum = a + b;
+calcBtn.onclick = function () {
+  const result = document.getElementById("result");
+  const input1 = document.getElementById("num1");
+  const input2 = document.getElementById("num2");
 
-    alert("a + b = " + sum)
+  const a = parseFloat(input1.value);
+  const b = parseFloat(input2.value);
+
+  if (isNaN(a) || isNaN(b)) {
+    result.innerText = "Введите числа";
+    return
+  }
+
+  
+  let resultText = `${a} + ${b} = ${a + b}\n${a} - ${b} = ${a - b}` + 
+                 `\n${a} * ${b} = ${a * b}\n${a} / ${b} = ${a / b}\n`;
+
+  result.innerText = resultText;
 }
 
-// Работа с текстом
-
-function textCalc(){
-
-    let text = prompt('Введите текст: ');
-
-    console.log("Длина текста: " + text.length);
-    console.log("Первая буква: " + text[0])
-    console.log("Последняя буква: " + (text[text.length - 1]))
-
-}
-
-// Вызываем функции:
-
-// calc()
-
-// textCalc()
