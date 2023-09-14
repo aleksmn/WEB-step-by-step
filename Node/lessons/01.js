@@ -16,7 +16,7 @@ console.log(b)
 
 // Константы
 
-let username = "Витя";
+let username = "Kirill";
 
 username = "Aleksander"  
 
