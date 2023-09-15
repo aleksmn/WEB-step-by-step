@@ -56,10 +56,22 @@ const router = async () => {
   }
 
   // Проверка:
-  // console.log(potentialMatches);
-  // console.log(match);
+  console.log(potentialMatches);
+  console.log(match);
 
-  const view = new match.route.view(getParams(match));
+
+  // console.log(getParams(match))
+  // const view = new match.route.view(getParams(match));
+
+  // Простой способ
+  let params = {}
+  if (match.result.length == 2) {
+    params = {
+      'id': match.result[1]
+    }
+  }
+
+  const view = new match.route.view(params);
 
   document.querySelector("#app").innerHTML = await view.getHtml();
 
