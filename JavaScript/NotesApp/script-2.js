@@ -33,7 +33,7 @@ function createNoteElement(id, content, color) {
   element.placeholder = "Новая заметка!";
   element.style.backgroundColor = COLORS[color];
 
-  element.addEventListener("change", () => {
+  element.addEventListener("keyup", () => {
     updateNote(id, element.value);
   });
 

@@ -17,7 +17,7 @@ function createNoteElement(id, content) {
   element.value = content;
   element.placeholder = "Новая заметка!";
 
-  element.addEventListener("change", () => {
+  element.addEventListener("keyup", () => {
     updateNote(id, element.value);
   });
 
