@@ -56,11 +56,13 @@ body{
     color: #fff;
     background-color: #f78b2d;
     border: none;
+    font-size: 2rem;
 }
 .equal{
     background-color: #c7db00;
     color: #fff;
     border: none;
+    font-size: 2rem;
 }
 .equal:hover{
     background-color: #7aa802;
