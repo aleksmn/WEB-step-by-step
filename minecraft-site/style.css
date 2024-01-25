@@ -1,0 +1,204 @@
+body {
+	margin: 0px;
+	background-image: url("images/fon.png");
+	color: white;
+	font-family: Roboto, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 20px;
+}
+
+.enter-menu {
+	text-align: right;
+	margin: 0 20px;
+}
+
+.enter-menu a {
+	color: white;
+	margin-left: 10px;
+}
+
+.menu_header {
+
+	margin: 10px 0;
+	display: flex;
+
+}
+
+.menu_item {
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+}
+
+
+.welcome {
+	margin-top: 20px;
+	background-color: black;
+	position: relative;
+}
+
+
+.welcome-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about_text {
+	font-size: 22px;
+	line-height: 1.2em;
+	text-shadow: 2px 3px 4px #000000;
+	max-width: 500px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 25%;
+}
+
+.welcome-buttons {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.welcome-buttons button {
+	width: 160px;
+	text-align: left;
+	font-weight: bold;
+}
+
+button img {
+	vertical-align: middle;
+}
+
+section {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+/* About Section */
+
+.about {
+	font-family: Roboto, sans-serif;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.section-heading {
+	margin-bottom: 60px;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+
+.about-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.about-content {
+	margin-left: 20px;
+	max-width: 500px;
+	font-size: 15px;
+}
+
+.about-item {
+	/* border: 1px solid blue; */
+	display: flex;
+	margin-top: 25px;
+}
+
+.about-item h3 {
+	/* border: 1px solid red; */
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+/* Slider Section */
+
+
+
+
+.slider-wrapper {
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 60px;
+	justify-content: center;
+}
+
+.slider-image {
+	display: flex;
+	align-items: center;
+}
+
+.slider-image img {
+	height: 450px;
+	width: 230px;
+	object-fit: cover;
+}
+
+.arrow {
+	font-size: 50px;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	user-select: none;
+}
+
+.arrow:hover {
+	cursor: pointer;
+	color: rgb(224, 118, 118);
+}
+
+.description {
+	max-width: 350px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 100px;
+	border: 2px solid white;
+	padding: 30px;
+}
+
+.description-name {
+	font-size: 30px;
+	font-weight: bold;
+	color: rgb(212, 75, 56);
+	margin-bottom: 40px;
+}
+
+.description-text {
+	font-size: 20px;
+	color: white;
+}
+
+.description button {
+	color: white;
+	background-color: rgb(212, 75, 56);
+	padding: 20px;
+	border-radius: 12px;
+	border: none;
+	font-size: 22px;
+	margin-top: 100px;
+	transition: 0.2s;
+}
+
+.description button:hover {
+	background-color: rgb(180, 62, 47);
+	cursor: pointer;
+}
+.description button:active {
+	background-color: rgb(122, 39, 27);
+	cursor: pointer;
+}
+
+
+
