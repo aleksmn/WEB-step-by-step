@@ -1,3 +1,4 @@
+
 const myDiv = document.createElement('div')
 
 console.log(myDiv)
@@ -8,60 +9,16 @@ myDiv.classList.add('main')
 
 
 
-
 // Цикл
 
-// Все четные числа от 0 до 100
+for (let i = 10; i > 0; i--) {
 
-// Объявляем переменные "копилки"
+    myDiv.innerHTML += `<p>Привет ${i}</p>`;
 
-// let sum1 = 0 // четные
-// let sum2 = 0 // нечетные
-// let sum3 = 0 // кратные трем
-
-// for (let i = 0; i <= 500; i = i + 1) {
-
-//     if (i % 2 === 0) {
-//         myDiv.innerHTML += `<p style="color:red">Четное: ${i}</p>`;
-//         sum1 = sum1 + i
-//     }
-
-//     else if (i % 3 === 0) {
-//         myDiv.innerHTML += `<p style="color:green">Кратно трем: ${i}</p>`;
-//         sum3 = sum3 + i
-//     }
-
-//     else {
-//         myDiv.innerHTML += `<p style="color:blue">Нечетное: ${i}</p>`;
-//         sum2 = sum2 + i
-//     }
-
-// }
-
-// // Выводим суммы:
-// myDiv.innerHTML += `<hr>`;
-// myDiv.innerHTML += `<p style="color:red">Сумма четных: ${sum1}</p>`;
-// myDiv.innerHTML += `<p style="color:blue">Сумма нечетных: ${sum2}</p>`;
-// myDiv.innerHTML += `<p style="color:green">Сумма кратных трем: ${sum3}</p>`;
-// myDiv.innerHTML += `<p style="color:grey">Общая сумма: ${sum1 + sum2 + sum3}</p>`;
+}
 
 
 
-
-
-
-
-// Выводим строку каждые 2 секунды
-
-// for (let i = 0; i < 11; i += 2) {
-
-//     function myFunc () {
-//         myDiv.innerHTML += `<p>Секунда ${i}</p>`;
-//     }
-
-//     setTimeout(myFunc, i * 1000);
-
-// }
 
 
 
@@ -115,29 +72,28 @@ while (number <= 12) {
 
 // Массивы Array
 
-// const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
+const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
 
-// console.log(users);
+console.log(users);
 
-// console.log(users[0]);
+console.log(users[0]);
+
 // console.log(users[1]);
-// console.log(users.length);
+
+console.log(users.length);
+
+// Перебираем цикло
+
+for (let i = 0; i < users.length; i++) {
+
+    myDiv.innerHTML += "<p>" + users[i] + "</p>";
+
+}
 
 
 
-// // Как вывести последний элемент массива?
 
 
-// // Последний элемент массива:
-// console.log(users[users.length - 1]);
-
-
-
-// for (let i = 0; i < users.length; i++) {
-
-//     myDiv.innerHTML += "<p>" + users[i] + "</p>";
-
-// }
 
 
 
