@@ -115,21 +115,21 @@ while (number <= 12) {
 
 // Массивы Array
 
-const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
+// const users = ["Кирилл", "Дмитрий", 'Вася', "Иван", "Артем"];
 
-console.log(users);
+// console.log(users);
 
-console.log(users[0]);
-console.log(users[1]);
-console.log(users.length);
-
-
-
-// Как вывести последний элемент массива?
+// console.log(users[0]);
+// console.log(users[1]);
+// console.log(users.length);
 
 
-// Последний элемент массива:
-console.log(users[users.length - 1]);
+
+// // Как вывести последний элемент массива?
+
+
+// // Последний элемент массива:
+// console.log(users[users.length - 1]);
 
 
 
