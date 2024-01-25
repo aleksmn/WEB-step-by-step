@@ -1,0 +1,22 @@
+body {
+	background-image: url("images/fon.png");
+	color: white;
+	font-family: Roboto, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-header {
+	display: flex;
+	
+}
+
+.menu-item {
+	display: flex;
+	margin-left: 20px;
+	align-items: center;
+}
