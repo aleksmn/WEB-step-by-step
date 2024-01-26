@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: 'StratosSkyeng', sans-serif;
+    background-image: url(./images/back.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.header {
+    height: 100vh;
+    background-image: url("images/head.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content {
+    position: relative;
+    padding-top: 75px;
+    border-top: 25px solid black;
+}
+
+#table {
+    width: 1200px;
+    height: 100vh;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
+
+tr, td {
+    border: 25px solid white;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 0;
+}
+
+p {
+    width: max-content;
+    padding: 10px 30px;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 23px auto;
+}
+
+img {
+    width: 560px;
+}
+
+a {
+    display: block;
+    background-color: #894AFF;
+    color: white;
+    padding: 11px 30px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    text-decoration: none;
+    font-size: 38px;
+    position: absolute;
+    right: 80px;
+    bottom: 75px;
+}
