@@ -11,11 +11,11 @@ myDiv.classList.add('main')
 
 // Цикл
 
-for (let i = 10; i > 0; i--) {
+// for (let i = 1; i < 11; i++) {
 
-    myDiv.innerHTML += `<p>Привет ${i}</p>`;
+//     myDiv.innerHTML += `<p>Привет ${i}</p>`;
 
-}
+// }
 
 
 
@@ -82,12 +82,47 @@ console.log(users[0]);
 
 console.log(users.length);
 
-// Перебираем цикло
 
-for (let i = 0; i < users.length; i++) {
 
-    myDiv.innerHTML += "<p>" + users[i] + "</p>";
 
+// Перебираем циклом
+
+// for (let i = 0; i < users.length; i++) {
+//     myDiv.innerHTML += "<p>" + users[i] + "</p>";
+// }
+
+// // Способ 2
+// // FOR OF
+
+// for (let name of users) {
+//     myDiv.innerHTML += `<p>${name}</p>`;
+// }
+
+
+
+
+// ====================
+// Методы массива
+
+// Добавление элементов
+users.push('Алексей');
+users.unshift('Василий');
+
+
+// Удаление элементов
+// последний
+users.pop()
+// первый
+users.shift()
+
+
+// Удаление по индексу
+users.splice(3, 1)
+
+
+// Вывод массива
+for (let name of users) {
+    myDiv.innerHTML += `<p>${name}</p>`;
 }
 
 
@@ -97,17 +132,23 @@ for (let i = 0; i < users.length; i++) {
 
 
 
-// ====================
-// Методы массива
-// Добавление элементов
 
-// users.push('Алексей');
-// users.unshift('Михаил');
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
-// // Удаление элементов
-// let delUser = users.pop()
-// users.shift()
+
 
 
 
