@@ -49,10 +49,10 @@ function generateQuote() {
         image.src = `./images/${randomImg}`;
 
         if (randomQuote.length <= 48) {
-            quote.style.fontSize = '40px';
+            quote.style.fontSize = '36px';
             quote.style.justifyContent = 'center';
         } else {
-            quote.style.fontSize = '36px';
+            quote.style.fontSize = '30px';
             quote.style.justifyContent = 'left';
         }
 

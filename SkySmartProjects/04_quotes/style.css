@@ -6,6 +6,7 @@
 }
 
 :root {
+    /* Объявляем переменную */
     --text-color: #6FE4FF;
 }
 
@@ -13,38 +14,35 @@ body {
     background-color: #f2f2f2;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .main {
-    max-width: 1049px;
+    max-width: 1050px;
     margin: 0 auto;
-    margin-top: 107px;
+    margin-top: 100px;
     text-align: center;
 }
 
 .main__title {
     color: var(--text-color);
-    font-size: 84px;
-    line-height: 0.96;
-    font-weight: 400;
+    font-size: 60px;
+    line-height: 0.9;
+    font-weight: normal;
 }
 
 .main__button {
     font-size: 24px;
-    font-weight: 400;
-    margin-top: 84px;
+    margin-top: 60px;
     padding: 15px 33px;
     background-color: var(--text-color);
     color: black;
     border: none;
     cursor: pointer;
-    /* position: absolute; */
-    /* bottom: 5%; */
-    /* left: calc(50% - 312px / 2); */
 }
 
 .main__button:hover {
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .main__button:active {
@@ -57,27 +55,17 @@ body {
 }
 
 .main__img {
-    max-width: 440px;
+    max-width: 400px;
 }
 
 .main__quote {
-    font-size: 36px;
+    font-size: 24px;
     color: var(--text-color);
     padding: 32px 94px;
     text-align: left;
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.main__img, .main__quote {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.main__img.show, .main__quote.show {
-    opacity: 1;
-    transition: opacity 0.5s ease;
 }
 
 .main__quote-wrap {
@@ -92,4 +80,16 @@ body {
     display: block;
     width: 100%;
     box-shadow: 0 0 16px 4px var(--text-color);
+}
+
+
+
+.main__img, .main__quote {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.main__img.show, .main__quote.show {
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
