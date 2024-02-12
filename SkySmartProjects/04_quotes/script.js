@@ -28,41 +28,52 @@ const ending = [
     'бойся не ошибаться.',
 ];
 
-generateQuote();
+
 
 function generateQuote() {
-    const randomBeginning = getRandomElement(beginning, beginning.length);
-    const randomEnd = getRandomElement(ending, ending.length);
-    const randomImg = getRandomElement(images, images.length);
-
-    const randomQuote = randomBeginning + ' ' + randomEnd;
-
-    setTimeout(hide, 100);
 
     function hide() {
         image.classList.remove('show');
         quote.classList.remove('show');
-        setTimeout(show, 500);
     }
 
     function show() {
         image.src = `./images/${randomImg}`;
 
-        if (randomQuote.length <= 48) {
-            quote.style.fontSize = '36px';
-            quote.style.justifyContent = 'center';
-        } else {
-            quote.style.fontSize = '30px';
-            quote.style.justifyContent = 'left';
-        }
-
         quote.textContent = randomQuote;
+
+        if (randomQuote.length > 40) {
+            quote.style.justifyContent = "left";
+            quote.style.fontSize = "30px";
+            
+        }
+        else {
+            quote.style.justifyContent = "center";
+            quote.style.fontSize = "38px";
+            
+        }
 
         image.classList.add('show');
         quote.classList.add('show');
     }
 
-    function getRandomElement(arr, endIndex) {
-        return arr[Math.floor(Math.random() * endIndex)]
+    function getRandomElement(arr) {
+        const index = Math.floor(Math.random() * arr.length)
+        return arr[index]
     }
+
+    const randomBeginning = getRandomElement(beginning);
+    const randomEnd = getRandomElement(ending);
+    const randomImg = getRandomElement(images);
+
+    const randomQuote = randomBeginning +  randomEnd;
+
+    setTimeout(show, 500);
+
+    setTimeout(hide, 100);
+
 }
+
+
+generateQuote();
+
