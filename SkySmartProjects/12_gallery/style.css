@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'StratosSkyeng', sans-serif;
+    font-family: sans-serif;
     background-color: #0F0804;
 }
 
@@ -39,6 +43,7 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0.17);
     backdrop-filter: blur(11.5px);
+    transition: 0.1s;
 }
 
 .header__link:hover {
@@ -75,6 +80,10 @@ body {
     align-items: center;
 }
 
+.image {
+    width: 100%;
+}
+
 .image__title {
     max-width: 260px;
     font-size: 24px;
@@ -101,9 +110,7 @@ body {
 }
 
 
-.image {
-    width: 100%;
-}
+
 
 .image__buttons {
     position: absolute;
