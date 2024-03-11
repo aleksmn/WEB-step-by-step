@@ -5,7 +5,11 @@ const startButton = document.querySelector(".button__start");
 const stopButton = document.querySelector(".button__stop");
 const timer = document.querySelector('.timer');
 
-let intervalId;
+console.log(hoursInput, minutesInput, secondsInput)
+console.log(startButton, stopButton, timer)
+
+
+let interval;
 let remainingTime;
 
 
@@ -16,7 +20,7 @@ function startTimer(event) {
     const seconds = parseInt(secondsInput.value ? secondsInput.value : 0);
     remainingTime = hours * 3600 + minutes * 60 + seconds;
     setTimeout(() => {
-        intervalId = setInterval(updateTimer, 1000);
+        interval = setInterval(updateTimer, 1000);
         hideElement(startButton);
         showElement(stopButton);
         setTimeout(() => {
@@ -27,7 +31,7 @@ function startTimer(event) {
 }
 
 function stopTimer() {
-    clearInterval(intervalId);
+    clearInterval(interval);
     setTimeout(() => {
         hideElement(stopButton);
         showElement(startButton);
