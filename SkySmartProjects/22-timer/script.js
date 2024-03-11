@@ -31,7 +31,7 @@ function startTimer(event) {
         setTimeout(() => {
             stopButton.style.opacity = 0.1;
         }, 1000)
-        document.documentElement.requestFullscreen();
+        // document.documentElement.requestFullscreen();
     }, 1000);
 }
 
