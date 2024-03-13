@@ -4,7 +4,7 @@ if (localStorage.getItem('text_in_editor') !== null) {
     document.getElementById('editor').innerHTML = localStorage.getItem('text_in_editor');
 }
 // отслеживаем каждое нажатие клавиши и при каждом нажатии выполняем команду
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keyup', function (e) {
     // записываем содержимое нашего редактора в хранилище
     localStorage.setItem('text_in_editor', document.getElementById('editor').innerHTML);
 });
