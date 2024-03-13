@@ -1,10 +1,12 @@
-// если в нашем хранилище уже что-то есть…
-if (localStorage.getItem('text_in_editor') !== null) {
-    // …то отображаем его содержимое в нашем редакторе
-    document.getElementById('editor').innerHTML = localStorage.getItem('text_in_editor');
-}
+// Текствый редактор
+const editor = document.getElementById('editor');
+
 // отслеживаем каждое нажатие клавиши и при каждом нажатии выполняем команду
-document.addEventListener('keyup', function (e) {
+editor.addEventListener('keyup', function () {
     // записываем содержимое нашего редактора в хранилище
-    localStorage.setItem('text_in_editor', document.getElementById('editor').innerHTML);
+    localStorage.setItem('text_in_editor', editor.innerHTML);
 });
+
+// Если в локальном хранилище что-то есть, то отображаем содержимое в редакторе
+// обращаемся по ключу
+editor.innerHTML = localStorage.getItem("text_in_editor");
