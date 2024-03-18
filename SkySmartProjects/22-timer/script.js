@@ -19,24 +19,20 @@ function startTimer(event) {
     const minutes = parseInt(minutesInput.value ? minutesInput.value : 0);
     const seconds = parseInt(secondsInput.value ? secondsInput.value : 0);
     remainingTime = hours * 3600 + minutes * 60 + seconds;
-    setTimeout(() => {
-        interval = setInterval(updateTimer, 1000);
-        hideElement(startButton);
-        showElement(stopButton);
-        setTimeout(() => {
-            stopButton.style.opacity = 0.1;
-        }, 1000)
-        // document.documentElement.requestFullscreen();
-    }, 1000);
+
+    interval = setInterval(updateTimer, 1000);
+    hideElement(startButton);
+    showElement(stopButton);
+
 }
 
-function stopTimer() {
+function stopTimer(event) {
+    event.preventDefault();
     clearInterval(interval);
-    setTimeout(() => {
-        hideElement(stopButton);
-        showElement(startButton);
-        document.exitFullscreen();
-    }, 2000);
+
+    hideElement(stopButton);
+    showElement(startButton);
+
 }
 
 function hideElement(element) {
