@@ -1,15 +1,15 @@
-const map = document.getElementById("myCanvas");
-const canvas = map.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 
-canvas.fillStyle = "#58A8D8";
+ctx.fillStyle = "#58A8D8";
 
-canvas.fillRect(200, 200, 440, 320);
+ctx.fillRect(200, 200, 440, 320);
 
 
-// canvas.fillStyle = "#58A8D8";
+// ctx.fillStyle = "#58A8D8";
 
-// canvas.beginPath();
-// canvas.moveTo(200, 200);
-// canvas.lineTo(500, 350);
-// canvas.lineTo(200, 500);
-// canvas.fill();
+// ctx.beginPath();
+// ctx.moveTo(200, 200);
+// ctx.lineTo(500, 350);
+// ctx.lineTo(200, 500);
+// ctx.fill();
