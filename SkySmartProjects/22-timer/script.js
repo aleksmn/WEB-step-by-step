@@ -27,7 +27,10 @@ function startTimer(event) {
 }
 
 function stopTimer(event) {
-    event.preventDefault();
+    if (event) {
+        event.preventDefault();
+    }
+    
     clearInterval(interval);
 
     hideElement(stopButton);
