@@ -1,10 +1,10 @@
 const canvas = document.querySelector('#game');
-const ctx = map.getContext('2d');
+const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'rgb(228, 164, 87)';
 
 const grid = 15;
 const paddleHeight = grid * 5;
-const maxPaddleY = map.height - grid - paddleHeight;
+const maxPaddleY = canvas.height - grid - paddleHeight;
 
 const leftCounter = document.querySelector('#leftCounter');
 const rightCounter = document.querySelector('#rightCounter');
@@ -18,23 +18,23 @@ let paddleSpeed = 7;
 
 const leftPaddle = {
     x: grid * 2,
-    y: map.height / 2 - paddleHeight / 2,
+    y: canvas.height / 2 - paddleHeight / 2,
     width: grid,
     height: paddleHeight,
     dy: 0,
 }
 
 const rightPaddle = {
-    x: map.width - grid * 3,
-    y: map.height / 2 - paddleHeight / 2,
+    x: canvas.width - grid * 3,
+    y: canvas.height / 2 - paddleHeight / 2,
     width: grid,
     height: paddleHeight,
     dy: 0,
 }
 
 const ball = {
-    x: map.width / 2,
-    y: map.height / 2,
+    x: canvas.width / 2,
+    y: canvas.height / 2,
     width: grid,
     height: grid,
     dx: ballSpeed,
@@ -42,17 +42,17 @@ const ball = {
     isResetted: false,
 }
 
-function renderMap() {
-    ctx.fillRect(0, 0, map.width, grid); // Верхняя граница
-    ctx.fillRect(0, map.height - grid, map.width, grid) // Нижняя граница
+function rendercanvas() {
+    ctx.fillRect(0, 0, canvas.width, grid); // Верхняя граница
+    ctx.fillRect(0, canvas.height - grid, canvas.width, grid) // Нижняя граница
 
-    for (let i = grid; i < map.height - grid; i += grid * 2) {
-        ctx.fillRect(map.width / 2, i, grid, grid); // Разделительная линия
+    for (let i = grid; i < canvas.height - grid; i += grid * 2) {
+        ctx.fillRect(canvas.width / 2, i, grid, grid); // Разделительная линия
     }
 }
 
-function clearMap() {
-    ctx.clearRect(0, 0, map.width, map.height);
+function clearcanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 function renderLeftPaddle() {
@@ -78,16 +78,16 @@ function moveBall() {
 }
 
 function resetGame() {
-    if ((ball.x < 0 || ball.x > map.width) && !ball.isResetted) {
+    if ((ball.x < 0 || ball.x > canvas.width) && !ball.isResetted) {
         if (ball.x < 0) {
             leftCounter.textContent = 0;
-        } else if (ball.x > map.width) {
+        } else if (ball.x > canvas.width) {
             rightCounter.textContent = 0;
         }
         ball.isResetted = true;
         setTimeout(() => {
-            ball.x = map.width / 2;
-            ball.y = map.height / 2;
+            ball.x = canvas.width / 2;
+            ball.y = canvas.height / 2;
             ball.isResetted = false;
         }, 1000);
     }
@@ -112,8 +112,8 @@ function collideWallsWithBall() {
         ball.y = grid;
         ball.dy = -ball.dy;
     }
-    else if (ball.y > map.height - grid) {
-        ball.y = map.height - grid;
+    else if (ball.y > canvas.height - grid) {
+        ball.y = canvas.height - grid;
         ball.dy = -ball.dy;
     }
 }
@@ -145,7 +145,7 @@ function collidePaddlesWithBall() {
 function aiControl() {
     let direction = 0;
 
-    if (ball.x > Math.random() * map.width / 2) {
+    if (ball.x > Math.random() * canvas.width / 2) {
         if (ball.y < rightPaddle.y) {
             direction = -1;
         }
@@ -159,7 +159,7 @@ function aiControl() {
 
 
 function loop() {
-    clearMap();
+    clearcanvas();
 
     renderLeftPaddle();
     renderRightPaddle();
@@ -175,7 +175,7 @@ function loop() {
     collidePaddlesWithBall(); // 24 
 
     resetGame(); // 24
-    renderMap();
+    rendercanvas();
     requestAnimationFrame(loop);
 }
 
