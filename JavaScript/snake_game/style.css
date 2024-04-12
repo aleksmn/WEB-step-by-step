@@ -48,6 +48,9 @@ body {
 .play-board .food {
     background: rgb(191, 27, 27);
 }
+.play-board .head {
+    background: rgb(27, 191, 35);
+}
 
 
 .controls {
