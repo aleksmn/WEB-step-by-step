@@ -12,12 +12,22 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let intervalId;
 let score = 0;
+let gameOver = false;
 
 
 // Получим highscore из локального хранилища
-let highScore = 0;
+let highScore = localStorage.getItem("high-score") || 0;
+console.log(highScore)
 
-highScoreElement.innerText = `High-score: ${highScore}`
+highScoreElement.innerText = `High Score: ${highScore}`
+
+
+const handleGameOver = () => {
+    clearInterval(intervalId);
+    addEventListener;
+    alert("Game Over! Press OK to replay")
+    location.reload();
+}
 
 
 const updateFoodPosition = () => {
@@ -57,7 +67,7 @@ controls.forEach(button => button.addEventListener("click", () => changeDirectio
 
 
 const initGame = () => {
-
+    if (gameOver) return handleGameOver();
 
     let html = `<div class="food" style="grid-area:${foodY} / ${foodX}"></div>`;
 
@@ -71,9 +81,12 @@ const initGame = () => {
         score++;
 
         // Увеличиваем highscore
-        // ...
+        highScore = score >= highScore ? score : highScore;
+        localStorage.setItem("high-score", highScore);
 
         scoreElement.innerText = `Score: ${score}`;
+        highScoreElement.innerText = `High Score: ${highScore}`
+
          
     }
 
@@ -88,12 +101,21 @@ const initGame = () => {
     snakeBody[0] = [snakeX, snakeY];
 
 
+    // проверяем столкновения со стеной
+    if (snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+        gameOver = true;
+    }
 
     // Создадим div для каждой части змейки
     for (let i = 0; i < snakeBody.length; i++) {
         html += `<div class="head" style="grid-area:${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
 
+        if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]) {
+            gameOver = true;
+        }
+       
     }
+
 
     playBoard.innerHTML = html;
 
@@ -102,3 +124,5 @@ const initGame = () => {
 // Запуск
 updateFoodPosition();
 intervalId = setInterval(initGame, 100);
+
+document.addEventListener("keyup", changeDirection)
