@@ -1,3 +1,4 @@
+// Александр
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'rgb(228, 164, 87)';
@@ -36,7 +37,7 @@ const ball = {
     y: canvas.height / 2,
     width: grid,
     height: grid,
-    dx: ballSpeed,
+    dx: -ballSpeed,
     dy: ballSpeed,
     isResetted: false
 }
@@ -107,6 +108,8 @@ function collideWallsWithPaddle(paddle) {
 
 
 function isCollides(object1, object2) {
+    // функция возвращает true если объект 1 и объект 2 пересекаются
+    // иначе возвращает false
     const width1 = object1.x + object1.width;
     const width2 = object2.x + object2.width;
     const height1 = object1.y + object1.height;
@@ -117,6 +120,20 @@ function isCollides(object1, object2) {
         && object2.y < height1;
 }
 
+// провекра столкновения ракетки и мяча
+function collidePaddlesWithBall() {
+
+    if (isCollides(ball, rightPaddle)) {
+        ball.dx = -ball.dx;
+        ball.x = rightPaddle.x - ball.width;
+    }
+
+    else if (isCollides(ball, leftPaddle)) {
+        ball.dx = -ball.dx;
+        ball.x = leftPaddle.x + leftPaddle.width;
+    }
+
+}
 
 // Основной цикл программы
 function loop() {
@@ -139,22 +156,22 @@ function loop() {
 
 // Отслеживаем нажатия на кнопки
 document.addEventListener('keydown', (event) => {
-    console.log(event)
-    if (event.key == 'w' || event.key == 'ц') {
+    if (event.key === 'w' || event.key === 'ц') {
         leftPaddle.dy = -paddleSpeed;
     }
-    else if (event.key == "s" || event.key == 'ы') {
+    else if (event.key === "s" || event.key === "ы") {
         leftPaddle.dy = paddleSpeed;
     }
 });
 
-document.addEventListener('keyup', (event) => {
-
-    if (event.key == 'w' || event.key == "s" || event.key == 'ы' || event.key == 'ы') {
+// Отслеживаем событие, когда отпустили кнопку
+document.addEventListener('keyup', (event) => { 
+    if (event.key === 'w' || event.key === 's' || event.key === 'ы' || event.key === 'ц') {
         leftPaddle.dy = 0;
     }
-    
-});
+})
+
+
 
 
 // запускаем цикл
