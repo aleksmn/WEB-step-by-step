@@ -3,34 +3,89 @@ const form = gameBoard.querySelector('.board__form');
 const startButton = form.querySelector('.board__button');
 const input = form.querySelector('.board__input');
 
-let totalTime = 60;
-let totalFlips = 0;
-let intervalId;
+startButton.addEventListener("click", (event) => {
+  event.preventDefault()
+  let columns = input.value;
+  let count;
+  if (input.value >= 2 && input.value <= 6 && input.value % 2 == 0) {
+    count = input.value * input.value;
+  } else {
+    alert("Нужно написать четное число в указанном диапазоне.");
+    return;
+  }
 
-function createBoard(columns) {
+  createBoard(count, columns);
+});
+
+
+function createBoard(count, columns) {
+
   gameBoard.textContent = "";
 
-  // Создание клона шаблона
   const template = document.querySelector('#gameTableTemplate').cloneNode(true).content;
-  // В шаблоне находится таблица
   const gameTable = template.querySelector('.table');
-  // В шаблоне находится кнопка "Рестарт"
   const restartBtn = template.querySelector(".table__button");
 
-  // Добавляются правила для grid-контейнера в зависимости от значения параметра columns
+  for (let i = 0; i < count; i++) {
+    gameTable.append(createCard());
+  }
+
   gameTable.style = `
   grid-template-columns: repeat(${columns}, 1fr);
   grid-template-rows: repeat(${columns}, 1fr);
   `;
 
-  // Получившаяся таблица добавляется в игровое поле
   gameBoard.append(gameTable);
 
-  // Слушатель события клика на кнопке "Рестарт"
   restartBtn.addEventListener("click", () => {
-    // Обновление страницы
     location.reload();
   });
-  // Добавление кнопки "Рестарт" в игровое поле
+
   gameBoard.append(restartBtn);
+
+};
+
+
+function createCard(flippedIcon) {
+  // Клонирование шаблона
+  const template = document.querySelector('#cardTemplate').cloneNode(true).content;
+  // Поиск нужного элемента
+  const card = template.querySelector('.card');
+  // Добавление иконки, название которой передаем через параметр flippedIcon
+  card.querySelector('#flippedIcon').classList.add(`fa-${flippedIcon}`);
+  // card.addEventListener('click', (event) => gameLogic(event, card));
+
+  // rutern card означает, что получившийся объект "выбрасывается" в то место, где будет вызвана функция createCard
+  return card;
+}
+
+
+function createIconsArray(initialCount) {
+  // Массив названий иконок
+  const cardsIcons = [
+    "compass",
+    "cloud",
+    "play",
+    "bolt",
+    "stop",
+    "cogs",
+    "atom",
+    "basketball-ball",
+    "arrows",
+    "angle-left",
+    "bars",
+    "file",
+    "filter",
+    "gear",
+    "folder",
+    "folder-open",
+    "shield",
+    "scissors",
+    "pen-clip",
+  ];
+
+
+  // Выбор нужного количества иконок с помощью среза
+  // slice
+  let cards = cardsIcons.slice(0, Math.floor(initialCount / 2));
 };
