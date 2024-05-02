@@ -2,9 +2,8 @@ const input = document.querySelector(".search__input")
 const button = document.querySelector(".search__button")
 const select = document.querySelector(".search__select")
 
-button.addEventListener("click", submitRequest);
 
-
+// Функция для поиска
 function submitRequest(event) {
     event.preventDefault();
     let params;
@@ -27,3 +26,8 @@ function submitRequest(event) {
         window.location.href = `https://www.${searchEngine}.com/${params}` + value;
     }
 }
+
+
+
+// Вызываем функцию по нажатию кнопки
+button.addEventListener("click", submitRequest);
