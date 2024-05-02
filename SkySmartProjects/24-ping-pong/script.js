@@ -16,6 +16,8 @@ rightCounter.textContent = 0;
 let ballSpeed = 7;
 let paddleSpeed = 7;
 
+let interval;
+
 const leftPaddle = {
     x: grid * 2,
     y: canvas.height / 2 - paddleHeight / 2,
@@ -176,7 +178,7 @@ function loop() {
 
     resetGame(); // 24
     rendercanvas();
-    requestAnimationFrame(loop);
+
 }
 
 
@@ -195,6 +197,6 @@ document.addEventListener('keyup', (event) => {
 })
 
 
-requestAnimationFrame(loop);
-
+// Запускаем игру
+interval = setInterval(loop, 1000 / 60);
 
