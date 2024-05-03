@@ -59,6 +59,19 @@ function createCard(flippedIcon) {
   return card;
 }
 
+// Дублирование всех элементов входящего массива
+function dublicateElements(array) {
+  const newArr = [];
+
+  // Перебирается массив array и каждый элемент массива (item) дважды вставляется в новый массив
+  array.forEach((item) => {
+    newArr.push(item, item);
+  });
+
+  return newArr;
+}
+
+
 
 function createIconsArray(initialCount) {
   // Массив названий иконок
@@ -84,8 +97,29 @@ function createIconsArray(initialCount) {
     "pen-clip",
   ];
 
-
   // Выбор нужного количества иконок с помощью среза
-  // slice
   let cards = cardsIcons.slice(0, Math.floor(initialCount / 2));
+  // Создание пар элементов
+  const duobleCards = dublicateElements(cards);
+  // Случайное перемешивание элементов и возврат итогового массива
+  return shuffleArray(duobleCards);
 };
+
+// Перемешивание элементов массива
+function shuffleArray(array) {
+  let currentIndex = array.length;
+
+  while (currentIndex !== 0) {
+    const randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    const temp = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temp;
+  };
+
+  return array;
+}
+
+
+// console.log(createIconsArray(16))
