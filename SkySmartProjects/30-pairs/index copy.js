@@ -19,16 +19,22 @@ startButton.addEventListener("click", (event) => {
 
 
 function createBoard(count, columns) {
-
   gameBoard.textContent = "";
 
+  // Создание клона шаблона
   const template = document.querySelector('#gameTableTemplate').cloneNode(true).content;
+  // В шаблоне находится таблица
   const gameTable = template.querySelector('.table');
+  // В шаблоне находится кнопка "Рестарт"
   const restartBtn = template.querySelector(".table__button");
 
-  for (let i = 0; i < count; i++) {
-    gameTable.append(createCard());
-  }
+  // Создание определенного количества иконок
+  const icons = createIconsArray(count);
+
+  // Заполнение ячеек карточками
+  icons.forEach((icon) => {
+    gameTable.append(createCard(icon));
+  });
 
   gameTable.style = `
   grid-template-columns: repeat(${columns}, 1fr);
@@ -42,9 +48,7 @@ function createBoard(count, columns) {
   });
 
   gameBoard.append(restartBtn);
-
 };
-
 
 function createCard(flippedIcon) {
   // Клонирование шаблона
@@ -53,9 +57,8 @@ function createCard(flippedIcon) {
   const card = template.querySelector('.card');
   // Добавление иконки, название которой передаем через параметр flippedIcon
   card.querySelector('#flippedIcon').classList.add(`fa-${flippedIcon}`);
-  // card.addEventListener('click', (event) => gameLogic(event, card));
 
-  // rutern card означает, что получившийся объект "выбрасывается" в то место, где будет вызвана функция createCard
+  // ruturn card означает, что получившийся объект "выбрасывается" в то место, где будет вызвана функция createCard
   return card;
 }
 
