@@ -16,10 +16,13 @@ const leftCounter = document.querySelector('#leftCounter');
 const rightCounter = document.querySelector('#rightCounter');
 
 //  Скорость мяча
-let ballSpeed = 7;
+let ballSpeed = 5;
 
 // Скорость ракетки
-let paddleSpeed = 7;
+let paddleSpeed = 5;
+
+// Интервал
+let intervalId;
 
 
 // Объект левая ракетка
@@ -30,8 +33,6 @@ const leftPaddle = {
     height: paddleHeight,
     dy: 0
 }
-
-
 
 
 // Объект правая ракетка
@@ -46,9 +47,43 @@ const rightPaddle = {
 
 // Объект мяч
 const ball = {
-    
+    x: grid * 3,
+    y: canvas.height / 2,
+    width: grid,
+    height: grid,
+    dx: ballSpeed,
+    dy: -ballSpeed,
 }
 
+
+
+function moveBall() {
+    // перемещаем мяч по оси x и y
+    ball.x += ball.dx
+    ball.y += ball.dy
+
+
+}
+
+function collideWallsWithBall() {
+    // столкновение мяча со стенками
+    if (ball.y > canvas.height - grid) {
+        ball.dy = -ball.dy;
+    }
+
+    else if (ball.y < grid) {
+        ball.dy = -ball.dy;
+    }
+
+
+}
+
+
+
+
+function clearcanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
 
 
@@ -57,8 +92,9 @@ function renderPaddle(paddle) {
 }
 
 
-
-
+function renderBall() {
+    ctx.fillRect(ball.x, ball.y, ball.width, ball.height);
+}
 
 function rendercanvas() {
     // Верхняя стенка
@@ -79,14 +115,16 @@ function rendercanvas() {
 
 // Функция основного цикла игры
 function loop() {
-
+    clearcanvas()
     rendercanvas()
-
+    moveBall()
     renderPaddle(leftPaddle)
     renderPaddle(rightPaddle)
+    renderBall()
+    collideWallsWithBall()
 
 }
 
 
 
-loop()
+intervalId = setInterval(loop, 1000/120)
