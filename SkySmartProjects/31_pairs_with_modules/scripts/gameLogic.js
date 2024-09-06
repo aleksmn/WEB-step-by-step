@@ -1,4 +1,14 @@
 import { stopTimer, totalTime } from "./timer.js";
+import { generateConfetti } from "./confetti.js";
+
+const confettiArray = generateConfetti(150);
+
+function startConfetti() {
+  const confettiElement = document.querySelector('.confetti');
+  confettiArray.forEach((item) => {
+    confettiElement.append(item);
+  });
+};
 
 let totalFlips = 0;
 
@@ -74,7 +84,9 @@ function isWin() {
   if (Array.from(gameTable.children).every((card) => card.classList.contains('flip'))) {
     setTimeout(() => {
       stopTimer();
+      startConfetti();
       alert("Вы победили!");
+      
     }, 1500)
   }
 }
